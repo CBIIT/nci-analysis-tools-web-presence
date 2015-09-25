@@ -14,43 +14,32 @@
 
 <link rel="stylesheet"
 	href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css" />
-<link rel="stylesheet" href="/common/css/style.css" />
+<link rel="stylesheet" href="/common/css/style-tmp.css" />
 <link rel="stylesheet" href="./meanstorisk.css" />
 </head>
 
 <body>
 	<div class="main-div">
 		<!-- blockcontent was here -->
-		<div id="wrapper">
-			<div id="logos">
-				<div id="left">
-					<a href="http://www.cancer.gov" target="_blank"><img
-						src="/common/images/nci.jpg" width="286" height="40" border="0"
-						alt="National Cancer Institute" title="National Cancer Institute" /></a>
-				</div>
-				<div id="right">
-					<a href="http://www.cancer.gov" target="_blank"><img
-						src="/common/images/nih.jpg" width="322" height="40" border="0"
-						alt="at the National Institutes of Health"
-						title="at the National Institutes of Health" /></a>
-				</div>
-			</div>
+		<div>
+			<a href="http://dceg.cancer.gov" target="_blank"><img
+				src="/common/images/DCEG-logo.svg"
+				alt="National Cancer Institute, NCI Division of Cancer Epidemiology &amp; Genetics"
+				title="National Cancer Institute, NCI Division of Cancer Epidemiology &amp; Genetics"
+				border="0" height="120"></a>
 		</div>
-		<br>
-		<div id="banners">
-			<div id="left">
-				<img src="/common/images/DCEG-BB-HREB.png"
-					alt="Banner for NCI Division of Cancer Epidemiology, Genetics Biostatistics Branch, Hormonal and Reproductive Epidemiology Branch "
-					height="43" />
-			</div>
+		<div>
+			<img src="/common/images/DCEG-BB-HREB.png"
+				alt="Banner for Biostatistics Branch, Hormonal and Reproductive Epidemiology Branch "
+				height="33">
 		</div>
-		<br>
 		<div class='top_section'>
 			<h2 class='title' align="center">From Difference in Means to
 				Risk Stratification: A Web Tool</h2>
 			<div id="helpGlossaryLinks">
 				<a href="#" onclick="openHelpWindow('help.html')">Help</a> <a
-					href="#" onclick="openHelpWindow('/common/html/meansToRiskGlossary.html')">Glossary</a>
+					href="#"
+					onclick="openHelpWindow('/common/html/meansToRiskGlossary.html')">Glossary</a>
 			</div>
 			<br>
 			<div class='input_panel'>
@@ -128,7 +117,7 @@
 									size='40' value='0.1, 0.05, 0.01, 0.005, 0.001' id='prevalence' /></label></TD>
 						</TR>
 					</TABLE>
-					
+
 					<INPUT type='button' value='Calculate' id='calculate_button'
 						style='margin: 10px; float: left;' /> <INPUT type='button'
 						value='Download Excel File' id='download_button'
