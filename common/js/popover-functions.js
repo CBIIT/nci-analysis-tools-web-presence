@@ -94,8 +94,10 @@ function termDisplay(e) {
             return popoverTemplate;
         }
 
-        if (!$self.data('ui-tooltip')) {
-          var close = function() { $self.tooltip('close'); }
+        if ($self.data('ui-tooltip')) {
+          $self.tooltip('enable');
+        } else {
+          var close = function() { $self.tooltip('close').tooltip('disable'); }
           $self.tooltip(options).on('mouseout', close);
           $(document).on('touchend', close);
         }
