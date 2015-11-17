@@ -94,14 +94,12 @@ function termDisplay(e) {
             return popoverTemplate;
         }
 
-        if ($self.data('ui-tooltip')) {
-          $self.tooltip('enable');
-        } else {
-          var close = function() { $self.tooltip('close').tooltip('disable'); }
-          $self.tooltip(options).on('mouseout', close);
+        if (!$self.data('ui-tooltip')) {
+          $self.tooltip(options).tooltip('open');
+          var close = function() { $self.tooltip('destroy'); }
+          $self.tooltip(options).on('mouseleave', close);
           $(document).on('touchend', close);
         }
 
-        $self.tooltip('open');
     }
 }
