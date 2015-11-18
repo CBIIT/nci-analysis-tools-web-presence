@@ -1,0 +1,62 @@
+[adamant-modal],
+[adamant-modal-static] {
+  background: #FFF;
+  bottom: 65px;
+  overflow: auto;
+  left: 50%;
+  margin-left: -384px;
+  min-width: 320px;
+  position: fixed;
+  top: 30px;
+  width: 768px;
+}
+[adamant-modal].adamant-show:not(.adamant-fadein),
+[adamant-modal-static].adamant-show:not(.adamant-fadein),
+[adamant-modal-background].adamant-show:not(.adamant-fadein) {
+  opacity: 0;
+}
+[adamant-modal].adamant-fadein,
+[adamant-modal-static].adamant-fadein {
+  opacity: 1;
+  transition: 1s linear;
+}
+[adamant-modal].adamant-fadeout,
+[adamant-modal-static].adamant-fadeout {
+  opacity: 0;
+  transition: 1s linear;
+}
+[adamant-modal]:not(.adamant-show),
+[adamant-modal-static]:not(.adamant-show),
+[adamant-modal-background]:not(.adamant-show) {
+  display: none;
+}
+[adamant-modal-background] {
+  background: #000;
+  bottom: 0px;
+  left: 0px;
+  opacity: .5;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+}
+@media (max-width: 898px) {
+  [adamant-modal],
+  [adamant-modal-static] {
+    bottom: 30px;
+    left: 30px;
+    margin-left: 0px;
+    right: 30px;
+    width: auto;
+  }
+}
+@media (max-width: 588px) {
+  [adamant-modal],
+  [adamant-modal-static] {
+    bottom: 0px;
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+}
