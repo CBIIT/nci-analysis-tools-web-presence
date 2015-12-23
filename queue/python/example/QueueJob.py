@@ -7,10 +7,11 @@ from twisted.internet import reactor, defer
 from PropertyUtil import PropertyUtil
 from stompest.async import Stomp
 from stompest.async.listener import SubscriptionListener
+from stompest.async.listener import DisconnectListener
 from stompest.config import StompConfig
 from stompest.protocol import StompSpec
 
-class QueueJob(object):
+class QueueJob(DisconnectListener):
 
     def __init__(self, config=None):
 
@@ -33,7 +34,14 @@ class QueueJob(object):
             'activemq.prefetchSize': '100',
         }
         client.subscribe(self.QUEUE, headers, listener=SubscriptionListener(self.consume, errorDestination=self.ERROR_QUEUE))
+	client.add(listener=self)
 
     # Consumer for Jobs in Queue, needs to be rewrite by the individual projects
     def consume(self, client, frame):
 	print('in Queue Job')
+
+    def onCleanup(self, connect):
+	print 'In clean up ...'
+    def onConnectionLost(self, connect, reason):
+	self.run()
+
