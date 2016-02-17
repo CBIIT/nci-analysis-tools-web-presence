@@ -24,8 +24,9 @@ $(document).ready(function() {
               target.removeClass('adamant-show').removeClass('adamant-fadeout').removeClass('adamant-fadein');
               background.remove();
               target.trigger('adamant.modal.hidden');
-            },1000);
-          }
+            },$.adamant.modal.fadeTime);
+          },
+          "fadeTime": 1000
         },
         "location": "/common/adamant-meow/adamant-modal"
        }
