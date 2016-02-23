@@ -95,11 +95,12 @@ function termDisplay(e) {
         }
 
         if (!$self.data('ui-tooltip')) {
+          $self.tooltip(options).on('mouseleave', function() { $self.tooltip('destroy'); });
           $self.tooltip(options).tooltip('open');
-          var close = function() { $self.tooltip('destroy'); }
-          $self.tooltip(options).on('mouseleave', close);
-          $(document).on('touchend', close);
         }
 
     }
 }
+$(function() {
+  $(document).on('touchend', function() { $("."+options.tooltipClass).tooltip('destroy'); });
+});
