@@ -1,5 +1,5 @@
 #!/usr/bin/sh
 
-SERVER_ROOT=/analysistools-sandbox/public_html/wsgi/apc
+APC_WSGI_ROOT=/analysistools-sandbox/public_html/wsgi/apc
 
-$SERVER_ROOT/apachectl stop
+$APC_WSGI_ROOT/apachectl stop
