@@ -1,7 +1,7 @@
 #!/usr/bin/sh
 
-APPS_ROOT=/analysistools/public_html/apps/apc
-WSGI_ROOT=/analysistools/public_html/wsgi/apc
+APPS_ROOT=/analysistools/public_html/apps
+WSGI_ROOT=/analysistools/public_html/wsgi
 APC_PORT=8040
 
 mod_wsgi-express setup-server $APPS_ROOT/apc/apc.wsgi \
