@@ -1,13 +1,14 @@
 #!/usr/bin/sh
 
-APPS_ROOT=/analysistools/public_html/apps
-WSGI_ROOT=/analysistools/public_html/wsgi
-APC_PORT=8040
+# Example values 
+# apc_root  = /analysistools/public_html/apps/apc
+# wsgi_root = /analysistools/public_html/wsgi/apc
+# port      = 8040
 
-mod_wsgi-express setup-server $APPS_ROOT/apc/apc.wsgi \
---port $APC_PORT \
+mod_wsgi-express setup-server @apc_root@/apc.wsgi \
+--port @port@ \
 --user apache \
 --group apache \
---server-root $WSGI_ROOT/apc \
---working-directory $APPS_ROOT/apc \
+--server-root @wsgi_root@ \
+--working-directory @apc_root@ \
 --error-log-name apc.log
