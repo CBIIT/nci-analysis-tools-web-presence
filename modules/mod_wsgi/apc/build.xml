@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="apc_wsgi" default="replace" basedir=".">
+      <target name="replace" depends="port_exists">
+        <replace file="setup-apc.sh" token="@port@" value="${port}"/>
+      </target>
+      
+      <target name="replace" depends="apc_root_exists">
+       <replace file="setup-apc.sh" token="@apc_root@" value="${apc_root}"/>
+      </target>
+      
+      <target name="replace" depends="wsgi_root_exists">
+       <replace file="setup-apc.sh" token="@wsgi_root@" value="${wsgi_root}"/>
+      </target>
+      
+      <target name="port_exists" unless="port">
+        <fail>APC port not specified</fail>
+      </target>
+      
+      <target name="apc_root_exists" unless="apc_root">
+        <fail>APC root directory not specified</fail>
+      </target>
+      
+      <target name="wsgi_root_exists" unless="wsgi_root">
+        <fail>APC wsgi directory not specified</fail>
+      </target>
+</project>
