@@ -4,4 +4,4 @@
 # sample value for @wsgi_root@:
 # /analysistools/public_html/wsgi/apc
 
-@wsgi_root@/apachectl start
+@wsgi_root@/apachectl restart
