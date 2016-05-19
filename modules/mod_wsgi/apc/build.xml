@@ -5,6 +5,8 @@
          <replace file="setup-apc.sh" token="@port@" value="${port}"/>
 	       <replace file="setup-apc.sh" token="@apc_root@" value="${apc_root}"/>
 	       <replace file="setup-apc.sh" token="@wsgi_root@" value="${wsgi_root}"/>
+         <replace file="start-apc.sh" token="@wsgi_root@" value="${wsgi_root}"/>
+         <replace file="stop-apc.sh" token="@wsgi_root@" value="${wsgi_root}"/>
       </target>
 
       <target name="port_exists" unless="port">

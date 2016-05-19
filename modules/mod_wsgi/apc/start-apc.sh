@@ -1,5 +1,7 @@
 #!/usr/bin/sh
 
-WSGI_ROOT=/analysistools/public_html/wsgi
+# Application start script
+# sample value for @wsgi_root@:
+# /analysistools/public_html/wsgi/apc
 
-$WSGI_ROOT/apc/apachectl start
+@wsgi_root@/apachectl start
