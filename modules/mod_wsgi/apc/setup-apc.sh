@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/bin/sh
 
 # Example values:
 # ant 	-Dport=8040 \
