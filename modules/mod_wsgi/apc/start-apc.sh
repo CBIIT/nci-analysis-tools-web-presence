@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/bin/sh
 
 # Application start script
 # sample value for @wsgi_root@:
