@@ -13,3 +13,5 @@ mod_wsgi-express setup-server @apc_root@/apc.wsgi \
 --server-root @wsgi_root@ \
 --working-directory @apc_root@ \
 --error-log-name apc.log
+
+chmod 755 setup-apc.sh stop-apc.sh start-apc.sh
