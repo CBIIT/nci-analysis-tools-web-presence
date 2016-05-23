@@ -1,5 +1,7 @@
-#!/usr/bin/sh
+#!/bin/sh
 
-WSGI_ROOT=/analysistools/public_html/wsgi
+# Application stop script
+# sample value for @wsgi_root@
+# /analysistools/public_html/wsgi/apc
 
-$WSGI_ROOT/apc/apachectl stop
+@wsgi_root@/apachectl stop
