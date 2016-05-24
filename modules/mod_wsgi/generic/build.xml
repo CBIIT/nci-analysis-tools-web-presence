@@ -14,7 +14,10 @@ mod_wsgi-express setup-server ${app_root}/${name}.wsgi \
 --working-directory ${app_root} \
 --error-log-name ${name}.log
 
-chmod 755 setup-${name}.sh start-${name}.sh stop-${name}.sh
+chmod 755 ${wsgi_root}/setup-${name}.sh
+chmod 755 ${wsgi_root}/start-${name}.sh
+chmod 755 ${wsgi_root}/stop-${name}.sh
+
 </echo>
 
 <echo file = "start-${name}.sh">
