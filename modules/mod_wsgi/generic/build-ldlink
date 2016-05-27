@@ -1,6 +1,0 @@
-#!/bin/sh
-
-ant -Dname=LDlink \
--Dport=8090 \
--Dapp_root=/analysistools/public_html/apps/LDlink \
--Dwsgi_root=/analysistools/public_html/wsgi/LDlink
