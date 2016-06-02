@@ -23,14 +23,14 @@ if [ "$APP_NAME" ] && [ "$APP_PORT" ] && [ "$APP_ROOT" ]
 then
 
 # Create app_root if it does not exist
-if [ ! -d "$APP_ROOT" ]; then mkdir -p $APP_ROOT/app $APP_ROOT/wsgi $APP_ROOT/logs; fi
+mkdir -p $APP_ROOT/app $APP_ROOT/wsgi $APP_ROOT/logs
 
 
 # Additional configuration directives
 cat << EOF > $APP_ROOT/wsgi/additional-configuration.conf
 
 # Do not serve certain filetypes
-<FilesMatch "\.(py|ini|conf)$">
+<FilesMatch "\.(conf|db|ini|py|wsgi|xml|R|r|md)$">
   Require all denied
 </FilesMatch>
 
@@ -51,7 +51,7 @@ mod_wsgi-express setup-server $APP_ROOT/app/$APP_NAME.wsgi \\
 --directory-index index.html \\
 --log-directory $APP_ROOT/logs \\
 --rotate-logs \\
---error-log-name $APP_NAME.log
+--error-log-name $APP_NAME.log \\
 --include-file $APP_ROOT/wsgi/additional-configuration.conf
 EOF
 
@@ -60,7 +60,7 @@ EOF
 cat << EOF > $APP_ROOT/start-$APP_NAME.sh
 #!/bin/bash
 
-. $APP_ROOT/apachectl start
+. $APP_ROOT/wsgi/apachectl start
 EOF
 
 
@@ -68,7 +68,7 @@ EOF
 cat << EOF > $APP_ROOT/stop-$APP_NAME.sh
 #!/bin/bash
 
-. $APP_ROOT/apachectl stop
+. $APP_ROOT/wsgi/apachectl stop
 EOF
 
 chmod 755 $APP_ROOT/setup-$APP_NAME.sh
