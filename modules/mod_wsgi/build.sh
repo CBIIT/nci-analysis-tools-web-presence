@@ -23,7 +23,19 @@ if [ "$APP_NAME" ] && [ "$APP_PORT" ] && [ "$APP_ROOT" ]
 then
 
 # Create app_root if it does not exist
-if [ ! -d "$APP_ROOT" ]; then mkdir -p $APP_ROOT/app; fi
+if [ ! -d "$APP_ROOT" ]; then mkdir -p $APP_ROOT/app $APP_ROOT/wsgi $APP_ROOT/logs; fi
+
+
+# Additional configuration directives
+cat << EOF > $APP_ROOT/wsgi/additional-configuration.conf
+
+# Do not serve certain filetypes
+<FilesMatch "\.(py|ini|conf)$">
+  Require all denied
+</FilesMatch>
+
+EOF
+
 
 # Create setup-<app>.sh
 cat << EOF > $APP_ROOT/setup-$APP_NAME.sh
@@ -33,11 +45,14 @@ mod_wsgi-express setup-server $APP_ROOT/app/$APP_NAME.wsgi \\
 --port $APP_PORT \\
 --user apache \\
 --group apache \\
---server-root $APP_ROOT \\
+--server-root $APP_ROOT/wsgi \\
 --document-root $APP_ROOT/app \\
 --working-directory $APP_ROOT/app \\
 --directory-index index.html \\
+--log-directory $APP_ROOT/logs \\
+--rotate-logs \\
 --error-log-name $APP_NAME.log
+--include-file $APP_ROOT/wsgi/additional-configuration.conf
 EOF
 
 
@@ -63,5 +78,10 @@ chmod 755 $APP_ROOT/stop-$APP_NAME.sh
 else
 echo Please provide parameters in the following format:
 echo ./build.sh --name app_name --port 0000 --root /path/to/app/root
+echo
+echo This script will generate three folders in the specified directory: 
+echo   /app  - Contains application files
+echo   /wsgi - Contains wsgi configuration files
+echo   /logs - Contains log files
 
 fi
