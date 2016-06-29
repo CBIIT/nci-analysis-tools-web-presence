@@ -97,7 +97,15 @@
             </div>
             <div class="tools-section">
                 <h4>
-                <a href="/econsent/">Econsent</a>
+                <a href="/econsent/">eConsent</a>
+            </h4>
+                <div>
+                    Description goes here.
+                </div>
+            </div>
+            <div class="tools-section">
+                <h4>
+                <a href="http://ncidose-dev.nci.nih.gov/">NCIDose</a>
             </h4>
                 <div>
                     Description goes here.
