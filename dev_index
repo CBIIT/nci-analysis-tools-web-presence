@@ -97,10 +97,10 @@
             </div>
             <div class="tools-section">
                 <h4>
-                <a href="/econsent/">eConsent</a>
+                <a href="/econsent/">Electronic Consent (eConsent)</a>
             </h4>
                 <div>
-                    Description goes here.
+                   A web-based tool that provides an electronic informed consent (eConsent) platform for consenting participants either on site or at home (or other remote location) using a computer based consent form rather than traditional paper documentation.
                 </div>
             </div>
             <div class="tools-section">
@@ -108,7 +108,7 @@
                 <a href="http://ncidose-dev.nci.nih.gov/">NCIDose</a>
             </h4>
                 <div>
-                    Description goes here.
+                    A web-based tool for the NCICT (currently a Windows-based computational tool) users to register and submit a Software Transfer Agreement (STA) form in order to download and use the NCICT program.                
                 </div>
             </div>
             <h3 class="tools-owner-title">DCCPS Analysis Tools</h3>
