@@ -55,6 +55,12 @@
                     This is a web-based tool that conducts pathway analysis using summary data from GWAS and helps researchers to investigate the association between a predefined pathway and an outcome using summary results from GWAS. The backend is a R package "ARTP2" developed by DCEG.
                 </div>
             </div>
+            <h3 class="tools-owner-title">DCCPS Analysis Tools</h3>
+            <div class="tools-section">
+                <h4><a href="/jpsurv">JPSurv</a></h4>
+                <div>JPSurv version 2.0 R package is a tool for estimating and presenting survival trend. It can be used to predict survival in any given year and any time interval. Two implemented statistical methods are joinpoint survival model and trend measures. Five supported types of trend measures are Annual percentage changes of hazard, Annual percentage changes of cumulative relative survival, Annual changes of cumulative relative survival, Average annual absolute percent changes, and Average annual relative percent changes.
+                </div>
+            </div>
         </div>
     </div>
     <footer class="container footer">
