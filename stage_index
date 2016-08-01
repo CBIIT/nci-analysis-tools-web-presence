@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>NCI Analysis Tools Home Page</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="common/css/style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="http://www.cancer.gov/" target="cancerGov"><img class="img-responsive" src="common/images/nci-logo-full.svg" alt="National Cancer Institute" title="National Cancer Institute"></a>
+        </div>
+    </header>
+    <div class="container">
+        <div id="landing-blockcontent">
+            <h3 class="tools-owner-title">DCEG Analysis Tools</h3>
+            <div class="tools-section">
+                <h4><a href="/biomarkerTools">Biomarker Tools</a></h4>
+                <div>This toolset estimates risk stratification from early biomarker data and includes math and strategies to advance biomarkers or other risk measures identified case-control studies to clinical or public health applications. The toolset will show quantities for which people's intuition is poor, such as need for high specificity for a single marker of a rare disease to improve management by some serious intervention. The toolset will allow to evaluate the feasibility of biomarkers called promising before they get press office attention; investigators spend efforts on hopeless pursuit; wasteful. unethical clinical testing begins. Thus, using these strategies will allow focusing on the most promising markers early on, making specific improvements if required, or abandoning markers that are most likely to fail.
+                </div>
+            </div>
+            <div class="tools-section">
+                <h4><a href="/apc">Age Period Cohort (APC) Web Tool</a></h4>
+                <div>Age-Period-Cohort analysis identifies patterns in cancer incidence or mortality rates from population-based Count (numerator) and Population (denominator) data. Often the data come from a Cancer Registry (e.g., SEER) in the form of a table showing the numbers of cancer cases or cancer deaths (counts) and corresponding person-years at risk (population) for particular age groups and calendar time periods. This toolset provides a comprehensive solution to age-period-cohort analysis for cancer endpoints in defined populations and time periods.</div>
+            </div>
+            <div class="tools-section">
+                <h4><a href="/LDlink">LDLink</a></h4>
+                <div>A suite of web-based applications designed to easily and efficiently explore linkage disequilibrium in population subgroups. All population genotype data originates from Phase 3 of the 1000 Genomes Project and variant RS numbers are indexed based on dbSNP build 142.
+                </div>
+            </div>
+            <div class="tools-section">
+                <h4><a href="http://soccer.nci.nih.gov">SOCcer Web Tool</a></h4>
+                <div>A standardized occupation coding tool for computer-assisted epidemiologic research. To assist epidemiological researchers incorporate occupational risk into their studies, SOCcer imports free-text job descriptions and suggests the best-fitting SOC-2010 standardized occupation classification code for each job. The application is not intended to replace expert coders, but rather prioritizes job descriptions that would most benefit from expert coders.
+                </div>
+            </div>
+            <div class="tools-section">
+                <h4>
+                    <a href="/lungCancerScreening">Lung Cancer Screening Risk
+                        Assessment Tool</a>
+                </h4>
+                <div>Statistical analysis tool that predicts a person's risk of lung cancer death based on a series of demographic and clinical risk factors for lung cancer. Findings from the tool support defining the high-risk targeting population for low-dose CT screening where benefits of screening overweigh harms thus improving the selection process for lung-cancer screening.</div>
+            </div>            
+            <div class="tools-section">
+                <h4>
+                    <a href="/nevustool">Moles to Melanoma: Recognizing the ABCDE Features</a>
+                </h4>
+                <div>
+                    A web-based educational tool with a collection of pictures assembled to help patients and others in the lay public recognize dysplastic nevi and melanomas that started in dysplastic nevi. Dysplastic nevi (DN) are atypical moles that are important risk markers for melanoma, and precursor lesions for some melanomas.
+                </div>
+            </div>
+            <div class="tools-section">
+                <h4>
+                    <a href="/pathway">Pathway Analysis Tool</a>
+                </h4>
+                <div>
+                    This is a web-based tool that conducts pathway analysis using summary data from GWAS and helps researchers to investigate the association between a predefined pathway and an outcome using summary results from GWAS. The backend is a R package "ARTP2" developed by DCEG.
+                </div>
+            </div>
+            <h3 class="tools-owner-title">DCCPS Analysis Tools</h3>
+            <div class="tools-section">
+                <h4><a href="/jpsurv">JPSurv</a></h4>
+                <div>JPSurv version 2.0 R package is a tool for estimating and presenting survival trend. It can be used to predict survival in any given year and any time interval. Two implemented statistical methods are joinpoint survival model and trend measures. Five supported types of trend measures are Annual percentage changes of hazard, Annual percentage changes of cumulative relative survival, Annual changes of cumulative relative survival, Average annual absolute percent changes, and Average annual relative percent changes.
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="container footer">
+        <div class="center-block">
+            <ul class="list-inline">
+                <li><a href="http://www.cancer.gov/" title="Home" target="_blank">Home</a></li>
+                <li>|</li>
+                <li><a href="http://www.cancer.gov/global/web/policies" title="Policies" target="_blank">Policies</a></li>
+                <li>|</li>
+                <li><a href="http://www.cancer.gov/global/web/policies/accessibility" title="Accessibility" target="_blank">Accessibility</a></li>
+                <li>|</li>
+                <li><a href="http://cancer.gov/global/viewing-files" title="Viewing Files" target="_blank">Viewing Files</a></li>
+                <li>|</li>
+                <li><a href="http://www.cancer.gov/global/web/policies/foia" title="FOIA" target="_blank">FOIA</a></li>
+            </ul>
+            <ul class="list-inline">
+                <li><a href="http://www.hhs.gov/" target="_blank">U.S. Department of Health and Human Services</a></li>
+                <li>|</li>
+                <li><a href="http://www.nih.gov" target="_blank">National Institutes of Health</a></li>
+                <li>|</li>
+                <li><a href="http://www.cancer.gov/" target="_blank">National Cancer Institute</a></li>
+                <li>|</li>
+                <li><a href="http://usa.gov" target="_blank">USA.gov</a></li>
+            </ul>
+            <div class="text-center">NIH ... Turning Discovery Into Health<sup>®</sup></div>
+        </div>
+    </footer>
+</body>
+
+</html>
