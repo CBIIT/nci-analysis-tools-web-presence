@@ -53,6 +53,7 @@ mod_wsgi-express setup-server $APP_ROOT/app/$APP_NAME.wsgi \\
 --rotate-logs \\
 --error-log-name $APP_NAME.log \\
 --include-file $APP_ROOT/wsgi/additional-configuration.conf \\
+--socket-timeout 300 \\
 --reload-on-changes
 EOF
 
