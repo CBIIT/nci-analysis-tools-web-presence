@@ -52,7 +52,8 @@ mod_wsgi-express setup-server $APP_ROOT/app/$APP_NAME.wsgi \\
 --log-directory $APP_ROOT/logs \\
 --rotate-logs \\
 --error-log-name $APP_NAME.log \\
---include-file $APP_ROOT/wsgi/additional-configuration.conf
+--include-file $APP_ROOT/wsgi/additional-configuration.conf \\
+--reload-on-changes
 EOF
 
 
