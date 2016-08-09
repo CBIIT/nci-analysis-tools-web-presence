@@ -43,8 +43,6 @@ cat << EOF > $APP_ROOT/setup-$APP_NAME.sh
 
 mod_wsgi-express setup-server $APP_ROOT/app/$APP_NAME.wsgi \\
 --port $APP_PORT \\
---user apache \\
---group apache \\
 --server-root $APP_ROOT/wsgi \\
 --document-root $APP_ROOT/app \\
 --working-directory $APP_ROOT/app \\
@@ -54,6 +52,7 @@ mod_wsgi-express setup-server $APP_ROOT/app/$APP_NAME.wsgi \\
 --error-log-name $APP_NAME.log \\
 --include-file $APP_ROOT/wsgi/additional-configuration.conf \\
 --socket-timeout 300 \\
+--processes 4 \\
 --reload-on-changes
 EOF
 
