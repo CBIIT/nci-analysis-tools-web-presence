@@ -36,7 +36,6 @@ cat << EOF > $APP_ROOT/wsgi/additional-configuration.conf
 
 EOF
 
-
 # Create setup-<app>.sh
 cat << EOF > $APP_ROOT/setup-$APP_NAME.sh
 #!/bin/bash
