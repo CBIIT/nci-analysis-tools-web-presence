@@ -51,6 +51,9 @@ mod_wsgi-express setup-server $APP_ROOT/app/$APP_NAME.wsgi \\
 --rotate-logs \\
 --error-log-name $APP_NAME.log \\
 --include-file $APP_ROOT/wsgi/additional-configuration.conf \\
+--header-buffer-size 50000000 \\
+--response-buffer-size 50000000 \\
+--initial-workers 1 \\
 --socket-timeout 300 \\
 --queue-timeout 300 \\
 --shutdown-timeout 300 \\
