@@ -52,7 +52,9 @@ mod_wsgi-express setup-server $APP_ROOT/app/$APP_NAME.wsgi \\
 --error-log-name $APP_NAME.log \\
 --include-file $APP_ROOT/wsgi/additional-configuration.conf \\
 --socket-timeout 300 \\
---processes 4 \\
+--queue-timeout 300 \\
+--processes 5 \\
+--threads 1 \\
 --reload-on-changes
 EOF
 
