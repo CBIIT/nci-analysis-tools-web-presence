@@ -36,6 +36,7 @@ cat << EOF > $APP_ROOT/wsgi/additional-configuration.conf
 
 EOF
 
+
 # Create setup-<app>.sh
 cat << EOF > $APP_ROOT/setup-$APP_NAME.sh
 #!/bin/bash
@@ -52,7 +53,10 @@ mod_wsgi-express setup-server $APP_ROOT/app/$APP_NAME.wsgi \\
 --include-file $APP_ROOT/wsgi/additional-configuration.conf \\
 --socket-timeout 300 \\
 --queue-timeout 300 \\
---processes 5 \\
+--shutdown-timeout 300 \\
+--eviction-timeout 300 \\
+--connect-timeout 300 \\
+--processes 3 \\
 --threads 1 \\
 --reload-on-changes
 EOF
