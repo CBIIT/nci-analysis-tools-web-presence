@@ -49,7 +49,7 @@ function termDisplay(e) {
     if (definition || term) {
         var popoverTemplate = $(default_template);
 
-        if(!term || term.length === 0){
+        if (!term || term.length === 0) {
             popoverTemplate.find(".default-tooltip-title").detach();
         }
 
@@ -60,47 +60,65 @@ function termDisplay(e) {
                 of: $(this),
             },
             tooltipClass: "default-tooltip",
-            items: "[data-term]",// can use multiple elements
+            items: "[data-term]", // can use multiple elements
             placement: 'top',
             title: term
         };
 
-        if(!e.data) {
+        if (!e.data) {
             popoverTemplate.find(".default-tooltip-title").text(term);
             popoverTemplate.find(".default-tooltip-content").text(definition);
-        }
-        else {
-            if(e.data.titleClass)
+        } else {
+            if (e.data.titleClass)
                 popoverTemplate.find("." + e.data.titleClass).text(term);
             else
                 popoverTemplate.find(".default-tooltip-title").text(term);
 
-            if(e.data.contentClass)
+            if (e.data.contentClass)
                 popoverTemplate.find("." + e.data.contentClass).text(definition);
             else
                 popoverTemplate.find(".default-tooltip-content").text(definition);
 
-            if(e.data.tooltipPosition)
+            if (e.data.tooltipPosition)
                 options.position = e.data.tooltipPosition;
 
-            if(e.data.template)
+            if (e.data.template)
                 popoverTemplate = $(e.data.template);
 
-            if(e.data.tooltipContainerClass)
+            if (e.data.tooltipContainerClass)
                 options.tooltipClass = e.data.tooltipContainerClass;
         }
 
-        options['content'] = function() {
+        options['content'] = function () {
             return popoverTemplate;
         }
 
         if (!$self.data('ui-tooltip')) {
-          $self.tooltip(options).on('mouseleave', function() { $self.tooltip('destroy'); });
-          $self.tooltip(options).tooltip('open');
-        }
+            if ($self.popover) {
+                $self.popover({
+                    selector: options.items,
+                    placement: options.placement,
+                    template: popoverTemplate,
+                    title: options.title,
+                    container: 'body'
+                }).on('mouseleave', function () {
+                    $self.popover('hide');
+                });
 
+                $self.popover('show');
+            }
+            else {
+                $self.tooltip(options).on('mouseleave', function () {
+                    $self.tooltip('destroy');
+                });
+                $self.tooltip(options).tooltip('open');
+            }
+        }
     }
 }
-$(function() {
-  $(document).on('touchend', function() { $("."+options.tooltipClass).tooltip('destroy'); });
+
+$(function () {
+    $(document).on('touchend', function () {
+        $("." + options.tooltipClass).tooltip('destroy');
+    });
 });
