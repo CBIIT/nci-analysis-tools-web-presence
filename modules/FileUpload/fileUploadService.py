@@ -16,4 +16,4 @@ def upload_file(request, itemName, fileSavePath):
     dt =  endTime - startTime
     ms = (dt.days * 24 * 60 * 60 + dt.seconds)*1000 + dt.microseconds / 1000
     print "Time for uploading file is {0} second.".format(ms) 
-    return "File Upload is complted"
+    return "File Upload is completed"
