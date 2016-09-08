@@ -31,7 +31,7 @@
     $(document).on("click touchstart", ".classForTooltips", customOptions, termDisplay);
 
 **/
-var default_template = "<div><div class='arrow'></div><div class='default-tooltip-title'></div><div class='default-tooltip-content'></div></div>";
+var default_template = "<div class='default-tooltip'><div class='arrow'></div><div class='default-tooltip-title'></div><div class='default-tooltip-content'></div></div>";
 
 var $_Glossary = {};
 
@@ -65,10 +65,10 @@ function termDisplay(e) {
             title: term
         };
 
-        if (!e.data) {
-            popoverTemplate.find(".default-tooltip-title").text(term);
-            popoverTemplate.find(".default-tooltip-content").text(definition);
-        } else {
+        popoverTemplate.find(".default-tooltip-title").text(term);
+        popoverTemplate.find(".default-tooltip-content").text(definition);
+		
+        if (e.data) {
             if (e.data.titleClass)
                 popoverTemplate.find("." + e.data.titleClass).text(term);
             else
@@ -93,27 +93,25 @@ function termDisplay(e) {
             return popoverTemplate;
         }
 
-        if (!$self.data('ui-tooltip')) {
-            if ($self.popover) {
-                $self.popover({
-                    selector: options.items,
-                    placement: options.placement,
-                    template: popoverTemplate,
-                    title: options.title,
-                    container: 'body'
-                }).on('mouseleave', function () {
-                    $self.popover('hide');
-                });
+		if ($self.popover) {
+			$self.popover({
+				selector: options.items,
+				placement: options.placement,
+				template: popoverTemplate,
+				title: options.title,
+				container: 'body'
+			}).on('mouseleave', function () {
+				$self.popover('hide');
+			});
 
-                $self.popover('show');
-            }
-            else {
-                $self.tooltip(options).on('mouseleave', function () {
-                    $self.tooltip('destroy');
-                });
-                $self.tooltip(options).tooltip('open');
-            }
-        }
+			$self.popover('show');
+		}
+		else {
+			$self.tooltip(options).on('mouseleave', function () {
+				$self.tooltip('destroy');
+			});
+			$self.tooltip(options).tooltip('open');
+		}
     }
 }
 
