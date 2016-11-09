@@ -50,7 +50,7 @@ function termDisplay(e) {
         var popoverTemplate = $(default_template);
 
         if (!term || term.length === 0) {
-            popoverTemplate.find(".default-tooltip-title").detach();
+            popoverTemplate.find(".default-tooltip-title").remove();
         }
 
         var options = {
@@ -94,6 +94,8 @@ function termDisplay(e) {
         }
 
 		if ($self.popover) {
+            $(options.items).not(this).popover('hide');
+
 			$self.popover({
 				selector: options.items,
 				placement: options.placement,
@@ -107,6 +109,8 @@ function termDisplay(e) {
 			$self.popover('show');
 		}
 		else {
+            $(options.items).not(this).tooltip('close');
+            
 			$self.tooltip(options).on('mouseleave', function () {
 				$self.tooltip('destroy');
 			});
