@@ -55,6 +55,14 @@
                     This is a web-based tool that conducts pathway analysis using summary data from GWAS and helps researchers to investigate the association between a predefined pathway and an outcome using summary results from GWAS. The backend is a R package "ARTP2" developed by DCEG.
                 </div>
             </div>
+             <div class="tools-section">
+                <h4>
+                <a href="https://ncidose.nci.nih.gov/">NCIDose</a>
+            </h4>
+                <div>
+                    A web-based tool for the NCIDose (currently a Windows-based computational tool) users to register and submit a Software Transfer Agreement (STA) form in order to download and use the NCICT other software programs.                
+                </div>
+            </div>
         </div>
     </div>
     <footer class="container footer">
