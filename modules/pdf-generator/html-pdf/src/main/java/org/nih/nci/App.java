@@ -2,12 +2,14 @@ package org.nih.nci;
 
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
-import com.itextpdf.text.PageSize;
+import com.itextpdf.text.Rectangle;
 import com.itextpdf.text.pdf.PdfWriter;
 import com.itextpdf.tool.xml.XMLWorkerHelper;
 
-import java.io.*;
-import java.nio.charset.StandardCharsets;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -48,9 +50,8 @@ public class App {
             e.printStackTrace();
         }
 
-        System.out.println("Hello World.");
-
-        Document document = new Document(PageSize.LETTER.rotate());
+        Rectangle rectangle = new Rectangle(900, 595);
+        Document document = new Document(rectangle, 54, 54, 54, 54);
 
         PdfWriter writer;
         try {
@@ -68,8 +69,7 @@ public class App {
 
             document.open();
 
-            XMLWorkerHelper.getInstance().parseXHtml(writer, document,
-                    new ByteArrayInputStream(html.getBytes(StandardCharsets.UTF_8)), new FileInputStream(css));
+            XMLWorkerHelper.getInstance().parseXHtml(writer, document, new FileInputStream(html), new FileInputStream(css));
 
             document.close();
 
@@ -84,7 +84,7 @@ public class App {
     }
 
     private static void usage() {
-        System.err.println("Usage: java " + App.class.getName() + " <html-string> <output-location> <css-location>");
+        System.err.println("Usage: java " + App.class.getName() + " <html-location> <output-location> <css-location>");
     }
 
 }
