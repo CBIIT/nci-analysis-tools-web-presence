@@ -51,7 +51,7 @@ public class App {
         }
 
         Rectangle rectangle = new Rectangle(900, 595);
-        Document document = new Document(rectangle, 54, 54, 54, 54);
+        Document document = new Document(rectangle, 54, 54, 54, 36);
 
         PdfWriter writer;
         try {
