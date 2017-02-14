@@ -1,0 +1,94 @@
+h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 0px;
+}
+
+body {
+    background-color: #fff;
+    color: #777;
+    font-size: 10pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    margin: 10px 0px;
+}
+
+table.results_summary {
+    font-size: 10pt;
+}
+
+table.results_summary td, th {
+    padding-right:20px;
+    padding-bottom:3px;
+}
+
+table.results_summary td.indent, th.indent {
+    padding-left:30px;
+}
+
+a { color: #a90101 }
+
+.text-bold {
+    font-weight: bold;
+    font-size:1.2em
+}
+
+table.results_header {
+    width: 100%;
+}
+
+table.results_header th {
+    border: 1px;
+    border-color: #777;
+    padding: 10px;
+    text-align: center;
+}
+
+table.results_table {
+    width: 100%;
+    /*border: 1px solid red;*/
+}
+
+table.results_table th.results_title {
+    width: 50%;
+    /*border: 1px;
+    background-color: lightgreen;
+    border-color: #777;*/
+    padding: 10px 0px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 11pt;
+}
+
+table.results_table td.results_desc {
+    width: 50%;
+    /*border: 1px;
+    background-color: lightblue;
+    border-color: #777;*/
+    text-align: left;
+    font-size: 10pt;
+    padding: 10px 0px;
+}
+
+
+table.results_table td.results_grid {
+     width: 50%;
+     text-align: center;
+}
+
+table.results_table td.results_legend {
+    width: 50%;
+    /*border: 1px;
+    background-color: lightblue;
+    border-color: #777;*/
+    text-align: left;
+    font-size: 10pt;
+    padding: 10px 0px;
+}
+
+
+
+
+
