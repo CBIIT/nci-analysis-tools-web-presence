@@ -62,14 +62,17 @@
                     This is a web-based tool that conducts pathway analysis using summary data from GWAS and helps researchers to investigate the association between a predefined pathway and an outcome using summary results from GWAS. The backend is a R package "ARTP2" developed by DCEG.
                 </div>
             </div>
-             <div class="tools-section">
+            <div class="tools-section">
                 <h4>
-                     <a href="https://ncidose.nci.nih.gov/">NCIDose</a>
-                 </h4>
+                <a href="https://ncidose-sandbox.nci.nih.gov/">NCIDose</a>
+            	</h4>
                 <div>
-                    This website is designed to share the major developments in dose assessment tools and resources with other researchers. Anyone who is interested in obtaining these resources for research can download and submit the Software Transfer Agreement to the NCI Technology Transfer Center.                </div>
-                     </div>
+                    This website is designed to share the major developments in dose assessment tools and resources with other researchers. Anyone who is interested in obtaining these resources for research can download and submit the Software Transfer Agreement to the NCI Technology Transfer Center.
+                </div>
+            </div>
+            
         </div>
+
             <h3 class="tools-owner-title">DCCPS Analysis Tools</h3>
             <div class="tools-section">
                 <h4><a href="/jpsurv">JPSurv</a></h4>
