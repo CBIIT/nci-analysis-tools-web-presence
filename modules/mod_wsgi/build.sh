@@ -34,6 +34,9 @@ cat << EOF > $APP_ROOT/wsgi/additional-configuration.conf
   Require all denied
 </FilesMatch>
 
+# Workaround for process timeout
+WSGIApplicationGroup %{GLOBAL}
+
 EOF
 
 
