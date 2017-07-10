@@ -37,7 +37,7 @@ dbus-uuidgen > /var/lib/dbus/machine-id
 
 
 ## Running tests
-The sample `pom.xml` in the `tests/` directory includes junit 4.0.0 and selenium 3.4.0. The website url is passed in as a system property through the xml file.
+The sample `pom.xml` in the `tests/` directory includes junit 4.11 and selenium 3.4.0. The website url is passed in as a system property through the xml file.
 To execute the tests, ensure that firefox is running on a specified framebuffer:
 
 ```bash
