@@ -38,7 +38,7 @@ dbus-uuidgen > /var/lib/dbus/machine-id
 
 ## Running tests
 The sample `pom.xml` in the `tests/` directory includes junit 4.11 and selenium 3.4.0. The website url is passed in as a system property through the xml file.
-To execute the tests, ensure that firefox is running on a specified framebuffer:
+To execute the tests, ensure that a specified framebuffer is available:
 
 ```bash
 Xvfb :10 -screen 1 1920x1080x24 +extension RANDR &
@@ -52,3 +52,5 @@ pushd /tests
 mvn clean
 mvn test "-Dwebsite.url=https://google.com"
 ```
+
+The test results are stored in the `tests/target/surefire-reports/` directory. These reports can be published via the Jenkins JUnit plugin.
