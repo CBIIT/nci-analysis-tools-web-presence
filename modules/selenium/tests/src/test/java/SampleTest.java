@@ -12,7 +12,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class TestICRPWebsite {
+public class SampleTest {
 
     @Test
     public void shouldAssertTrue() {
