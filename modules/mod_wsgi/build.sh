@@ -82,8 +82,8 @@ EOF
 cat << EOF > $APP_ROOT/stop-$APP_NAME.sh
 #!/bin/bash
 
-. $APP_ROOT/wsgi/apachectl stop
 pkill -f $APP_ROOT
+. $APP_ROOT/wsgi/apachectl stop
 EOF
 
 chmod 755 $APP_ROOT/setup-$APP_NAME.sh
