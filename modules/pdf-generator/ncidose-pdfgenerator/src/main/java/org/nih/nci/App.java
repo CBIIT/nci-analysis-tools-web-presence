@@ -297,14 +297,15 @@ public class App {
 
         p = new Paragraph();
         p.setMarginLeft(28f);
-        text = new Text("Authorized Official for Recipient:").addStyle(italicStyle);
-        p.add(text);
+        p
+                .add(new Text("Authorized Official").setBold().addStyle(italicStyle))
+                .add(new Text(" for Recipient:")).addStyle(italicStyle);
         document.add(p);
 
         p = new Paragraph();
         p.setMarginTop(10);
         p.setMarginLeft(28f);
-        text = new Text("Name: _________________________________________  Title: _____________________\n").addStyle(normalStyle);
+        text = new Text("Name: ______________________________________ Job Title: _____________________\n").addStyle(normalStyle);
         p.add(text);
         text = new Text("Signature: ______________________________________  Date: _____________________").addStyle(normalStyle);
         p.add(text);
@@ -313,8 +314,8 @@ public class App {
         p = new Paragraph();
         p.setMarginLeft(28f);
         p.setMarginTop(10);
-        text = new Text("Read and Understood by Recipient Investigator:").addStyle(italicStyle);
-        p.add(text);
+        text = new Text("Read and Understood by ").addStyle(italicStyle);
+        p.add(text).add(new Text("Recipient Investigator:").setBold().addStyle(italicStyle));
         document.add(p);
 
         p = new Paragraph();
@@ -324,7 +325,7 @@ public class App {
                 .add(new Text(jObject.getFirst()).addStyle(italicStyle))
                 .add(new Text(" "))
                 .add(new Text(jObject.getLast()).addStyle(italicStyle))
-                .add(new Tab()).add(new Text("Title: ").addStyle(normalStyle))
+                .add(new Tab()).add(new Text("Job Title: ").addStyle(normalStyle))
                 .add(new Text(jObject.getTitle()).addStyle(italicStyle)).add(new Text("\n"));
         text = new Text("Signature: ____________________________________  Date: _____________________").addStyle(normalStyle);
         p.add(text);
@@ -333,8 +334,10 @@ public class App {
         p = new Paragraph();
         p.setMarginLeft(28f);
         p.setMarginTop(10);
-        text = new Text("Recipient’s Mailing Address for Legal Notices:").addStyle(normalStyle);
-        p.add(text);
+        p
+                .add(new Text("Recipient’s ").addStyle(italicStyle))
+                .add(new Text("Mailing Address ").setBold().addStyle(italicStyle))
+                .add(new Text("for Legal Notices:").addStyle(italicStyle));
         document.add(p);
 
         p = new Paragraph();
@@ -360,13 +363,14 @@ public class App {
 
         p = new Paragraph();
         p.setMarginLeft(28f);
-        text = new Text("Authorized Official for Provider:").addStyle(italicStyle);
-        p.add(text);
+        p
+                .add(new Text("Authorized Official").setBold().addStyle(italicStyle))
+                .add(new Text(" for Provider:")).addStyle(italicStyle);
         document.add(p);
 
         p = new Paragraph();
         p.setMarginLeft(28f);
-        text = new Text("Name: _________________________________________  Title: _____________________\n").addStyle(normalStyle);
+        text = new Text("Name: ______________________________________ Job Title: _____________________\n").addStyle(normalStyle);
         p.add(text);
         text = new Text("Signature: ______________________________________  Date: _____________________").addStyle(normalStyle);
         p.add(text);
@@ -375,8 +379,8 @@ public class App {
         p = new Paragraph();
         p.setMarginLeft(28f);
         p.setMarginTop(10);
-        text = new Text("Read and Understood by Provider’s Investigator:").addStyle(italicStyle);
-        p.add(text);
+        text = new Text("Read and Understood by ").addStyle(italicStyle);
+        p.add(text).add(new Text("Provider’s Investigator:").setBold().addStyle(italicStyle));
         document.add(p);
 
         p = new Paragraph();
