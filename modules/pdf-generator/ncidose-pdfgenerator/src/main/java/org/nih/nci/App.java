@@ -64,7 +64,6 @@ public class App {
 
         PdfWriter writer = new PdfWriter(dest, new WriterProperties().addXmpMetadata());
         PdfDocument pdfDoc = new PdfDocument(writer);
-        Document document = new Document(pdfDoc, PageSize.LETTER, false);
 
         pdfDoc.setTagged();
         pdfDoc.getCatalog().setViewerPreferences(new PdfViewerPreferences().setDisplayDocTitle(true));
@@ -98,137 +97,137 @@ public class App {
         byte[] bytes = IOUtils.toByteArray(istream);
         PdfFont symbol = PdfFontFactory.createFont(bytes, PdfEncodings.IDENTITY_H, true);
 
-        Text checkbox = new Text("\u2611");//
-        checkbox.setFont(symbol);
-        checkbox.setFontSize(12);
+        Text checkbox = new Text("\u2611")
+            .setFont(symbol)
+            .setFontSize(12);
 
-        Paragraph p = new Paragraph();
-        p.setMarginTop(20);
-        p.setTextAlignment(TextAlignment.CENTER);
-        Text text = new Text("SOFTWARE TRANSFER AGREEMENT").addStyle(titleStyle);
-        p.add(text);
-        document.add(p);
+        Document document = new Document(pdfDoc, PageSize.LETTER, false)
+            .add(new Paragraph()
+                .setMarginTop(20)
+                .setTextAlignment(TextAlignment.CENTER)
+                .add(new Text("SOFTWARE TRANSFER AGREEMENT")
+                    .addStyle(titleStyle)))
 
-        p = new Paragraph();
-        p.setMarginLeft(56f);
-        text = new Text("Provider: National Cancer Institute (NCI)").addStyle(normalStyle);
-        p.add(text);
-        document.add(p);
+            .add(new Paragraph()
+                .setMarginLeft(56f)
+                .add(new Text("Provider: National Cancer Institute (NCI)")
+                    .addStyle(normalStyle)))
 
-        p = new Paragraph();
-        p.setMarginLeft(56f);
-        text = new Text("Recipient Institution: ").addStyle(normalStyle);
-        p.add(text);
-        text = new Text(jObject.getInstitution()).addStyle(italicStyle).setUnderline();
-        p.add(text);
-        document.add(p);
+            .add(new Paragraph()
+                .setMarginLeft(56f)
+                .add(new Text("Provider: National Cancer Institute (NCI)")
+                    .addStyle(normalStyle)))
 
+            .add(new Paragraph()
+                .setMarginLeft(56f)
+                .add(new Text(jObject.getInstitution())
+                    .addStyle(italicStyle)
+                    .setUnderline()))
 
-        p = new Paragraph();
-        p.setMarginLeft(28f);
-        text = new Text("WHEREAS, Provider has certain proprietary software and associated material described " +
-                "below (hereinafter, collectively referred to as Software) ");
-        text.addStyle(normalStyle);
-        p.add(text).add(new Text("[Describe all items being " +
-                "transferred such as; software, executable code, source code, documentation, data and all " +
-                "other associated materials]").addStyle(italicStyle));
-        p.add(new Text(":").addStyle(normalStyle));
-        document.add(p);
+            .add(new Paragraph()
+                .setMarginLeft(28f)
+                .add(new Text("WHEREAS, Provider has certain proprietary software and associated material described "
+                    + "below (hereinafter, collectively referred to as Software)")
+                    .addStyle(normalStyle))
+                .add(new Text("[Describe all items being transferred such as; software, executable code, source code, "
+                    + "documentation, data and all other associated materials]")
+                    .addStyle(italicStyle))
+                .add(new Text(":")
+                    .addStyle(normalStyle)));
 
+        // add descriptions of software components
+        for (String str : jObject.getSoftwareText())
+            document.add(new Paragraph()
+                .setMarginLeft(56f)
+                .add(checkbox)
+                .add(new Text(str)
+                    .addStyle(normalStyle)
+                    .setBold()));
 
-        for (String str : jObject.getSoftwareText()) {
-            p = new Paragraph();
-            p.setMarginLeft(56f);
-            text = new Text(str);
-            text.addStyle(normalStyle).setBold();
-            p.add(checkbox).add(text);
-            document.add(p);
-        }
+        document
+            .add(new Paragraph()
+                .setMarginLeft(28f)
+                .add(new Text("Provider agrees to transfer such Software to Recipient Investigator, to be used solely "
+                    + "in connection with the following research activity and for the following reasons (hereinafter "
+                    + "Project)")
+                    .addStyle(normalStyle))
+                .add(new Text("[Describe with specificity the scope of use of Software under this agreement]")
+                    .addStyle(italicStyle))
+                .add(new Text(":")
+                    .addStyle(normalStyle)))
 
-        p = new Paragraph();
-        p.setMarginLeft(28f);
-        text = new Text("Provider agrees to transfer such Software to Recipient Investigator, to be used solely in " +
-                "connection with the following research activity and for the following reasons (hereinafter " +
-                "Project)");
-        text.addStyle(normalStyle);
-        p.add(text).add(new Text("[Describe with specificity the scope of use of Software under this agreement]").addStyle(italicStyle));
-        p.add(new Text(":").addStyle(normalStyle));
-        document.add(p);
+            .add(new Paragraph()
+                .setMarginLeft(56f)
+                .add(new Text(jObject.getPurpose())
+                    .addStyle(italicStyle)
+                    .setUnderline()))
 
-        p = new Paragraph();
-        p.setMarginLeft(56f);
-        text = new Text(jObject.getPurpose());
-        text.addStyle(italicStyle).setUnderline();
-        p.add(text);
-        document.add(p);
+            .add(new Paragraph()
+                .setMarginLeft(28f)
+                .add(new Text("NOW, THEREFORE, in consideration of the premises and mutual covenants contained "
+                    + "herein, the Provider and Recipient agree as follows:")
+                    .addStyle(normalStyle)))
 
-        p = new Paragraph();
-        p.setMarginLeft(28f);
-        text = new Text("NOW, THEREFORE, in consideration of the premises and mutual covenants contained " +
-                "herein, the Provider and Recipient agree as follows:");
-        text.addStyle(normalStyle);
-        p.add(text);
-        document.add(p);
+            .add(new List()
+                .setListSymbol("")
 
-        List mainList = new List();
-        mainList.setListSymbol("");
+            )
+        ;
 
-        List numberedList = new List(ListNumberingType.DECIMAL);
-        numberedList.setMarginLeft(56f);
-        numberedList.addStyle(normalStyle);
-
-        numberedList.add("SOFTWARE SHALL NOT BE USED FOR TREATING OR DIAGNOSING " +
-                "HUMAN SUBJECTS.");
-        numberedList.add("Recipient will not license or sell or use Software for commercial purposes or " +
+        List numberedList = new List(ListNumberingType.DECIMAL)
+            .setMarginLeft(56f)
+            .addStyle(normalStyle)
+            .add("SOFTWARE SHALL NOT BE USED FOR TREATING OR DIAGNOSING " +
+                    "HUMAN SUBJECTS.")
+            .add("Recipient will not license or sell or use Software for commercial purposes or " +
                 "applications. Recipient Investigator shall retain control over Software and further " +
                 "will not transfer the Software to individuals not under Recipient Investigator’s " +
                 "direct supervision without the advance written approval of Provider. Recipient " +
                 "agrees to comply with all regulations applicable to the Project and the use of the " +
-                "Software.");
-        numberedList.add("Recipient agrees not to copy Software, in whole or in part, except as required for " +
+                "Software.")
+            .add("Recipient agrees not to copy Software, in whole or in part, except as required for " +
                 "use by Recipient Investigator for the conduct of the Project. Recipient shall not " +
                 "modify, extend, decompile, make derivatives of or reverse engineer the Software " +
-                "without written permission from Provider.");
-        numberedList.add("Information deemed confidential under this Agreement (“Confidential Information”) " +
+                "without written permission from Provider.")
+            .add("Information deemed confidential under this Agreement (“Confidential Information”) " +
                 "shall be clearly marked “CONFIDENTIAL.” Any information that is orally " +
                 "disclosed must be reduced to writing and marked “CONFIDENTIAL” by the " +
                 "provider of the information within thirty (30) days of such disclosure. To the extent " +
                 "permitted by applicable law, the Recipient agrees to employ all reasonable efforts to " +
                 "safeguard Provider’s Confidential Information to ensure that no unauthorized " +
                 "person shall have access thereto and that no unauthorized copy, publication, " +
-                "disclosure or distribution, in whole or in part, in any form shall be made.");
-        numberedList.add("In all oral presentations or written publications concerning the Project, Recipient " +
+                "disclosure or distribution, in whole or in part, in any form shall be made.")
+            .add("In all oral presentations or written publications concerning the Project, Recipient " +
                 "will acknowledge Provider’s contribution of Software unless requested otherwise. " +
                 "Recipient may publish or otherwise publicly disclose the results of the Project, but " +
                 "if Provider has given Confidential Information to Recipient, such public disclosure " +
                 "may be made only after Provider has had 30 days to review the proposed disclosure, " +
                 "except when a shortened time period under court order or the Freedom of " +
-                "Information Act pertains.");
+                "Information Act pertains.")
+        ;
 
-        numberedList.add("The obligations of Recipient under Paragraph 4 above shall not extend to any part " +
-                "of the Confidential Information:");
+        List subList = new List(ListNumberingType.ENGLISH_LOWER)
+            .addStyle(normalStyle)
+            .setMarginLeft(84f)
+            .add("that can be demonstrated to have been publicly known at the time of " +
+                "disclosure; or")
+            .add("that can be demonstrated to have been properly in the Recipient’s " +
+                "possession or that can be demonstrated to have been readily available to the " +
+                "Recipient from another proper source prior to the disclosure; or")
+            .add("that becomes part of the public domain or publicly known by publication or " +
+                "otherwise, not due to any unauthorized act by the Recipient or its " +
+                "subsidiaries; or")
+            .add("that can be demonstrated as independently developed or acquired by the " +
+                "Recipient without reference to or reliance upon such information; or")
+            .add("that is required to be disclosed by law, provided that the Recipient takes " +
+                "reasonable and lawful actions to avoid and/or minimize such disclosure.");
+
+        List mainList = new List();
+        mainList.setListSymbol("");
 
         ListItem item1 = new ListItem();
         item1.add(numberedList);
         mainList.add(item1);
-
-
-        List subList = new List(ListNumberingType.ENGLISH_LOWER);
-        subList.addStyle(normalStyle);
-        subList.setMarginLeft(84f);
-
-        subList.add("that can be demonstrated to have been publicly known at the time of " +
-                "disclosure; or");
-        subList.add("that can be demonstrated to have been properly in the Recipient’s " +
-                "possession or that can be demonstrated to have been readily available to the " +
-                "Recipient from another proper source prior to the disclosure; or");
-        subList.add("that becomes part of the public domain or publicly known by publication or " +
-                "otherwise, not due to any unauthorized act by the Recipient or its " +
-                "subsidiaries; or");
-        subList.add("that can be demonstrated as independently developed or acquired by the " +
-                "Recipient without reference to or reliance upon such information; or");
-        subList.add("that is required to be disclosed by law, provided that the Recipient takes " +
-                "reasonable and lawful actions to avoid and/or minimize such disclosure.");
 
         ListItem item2 = new ListItem();
         item2.add(subList);
@@ -386,11 +385,13 @@ public class App {
         p = new Paragraph();
         p.setMarginLeft(28f);
         p.setMarginTop(10);
-        text = new Text("Signature: ______________________________________  Date: _____________________\n" +
+        text = new Text(
                 "Choonsik Lee, PhD\n" +
                 "Senior Investigator\n" +
                 "Radiation Epidemiology Branch\n" +
-                "Division of Cancer Epidemiology & Genetics, NCI, NIH").addStyle(normalStyle);
+                "Division of Cancer Epidemiology & Genetics, NCI, NIH\n" +
+                "Signature: ______________________________________  Date: _____________________\n"
+        ).addStyle(normalStyle);
         p.add(text);
         document.add(p);
 
