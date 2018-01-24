@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="html2pdf:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/html2pdf_jar</output-path>
+    <root id="archive" name="html2pdf.jar">
+      <element id="module-output" name="html2pdf" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/itextpdf/io/7.1.0/io-7.1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/itextpdf/forms/7.1.0/forms-7.1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/itextpdf/layout/7.1.0/layout-7.1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/itextpdf/kernel/7.1.0/kernel-7.1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/itextpdf/html2pdf/2.0.0/html2pdf-2.0.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/itextpdf/pdfa/7.1.0/pdfa-7.1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/slf4j/slf4j-nop/1.7.25/slf4j-nop-1.7.25.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/commons-cli/commons-cli/1.4/commons-cli-1.4.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
