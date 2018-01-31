@@ -20,7 +20,8 @@
     </header>
     <div class="container">
         <div id="landing-blockcontent">
-            <h3 class="tools-owner-title">DCEG Analysis Tools</h3>
+            <h2 class="tools-main-title">NCI Analysis Tools</h2>
+            <h3 class="tools-owner-title">DCEG &ndash; Division of Cancer Epidemiology and Genetics</h3>
             <div class="tools-section">
                 <h4><a href="/biomarkerTools">Biomarker Tools</a></h4>
                 <div>This toolset estimates risk stratification from early biomarker data and includes math and strategies to advance biomarkers or other risk measures identified case-control studies to clinical or public health applications. The toolset will show quantities for which people's intuition is poor, such as need for high specificity for a single marker of a rare disease to improve management by some serious intervention. The toolset will allow to evaluate the feasibility of biomarkers called promising before they get press office attention; investigators spend efforts on hopeless pursuit; wasteful. unethical clinical testing begins. Thus, using these strategies will allow focusing on the most promising markers early on, making specific improvements if required, or abandoning markers that are most likely to fail.
@@ -131,7 +132,7 @@
             </div>
         </div>
 
-            <h3 class="tools-owner-title">DCCPS Analysis Tools</h3>
+            <h3 class="tools-owner-title">DCCPS &ndash; Division of Cancer Control and Population Sciences</h3>
             <div class="tools-section">
                 <h4><a href="/jpsurv">JPSurv</a></h4>
                 <div>JPSurv is a tool for estimating and presenting survival trend. It can be used to predict survival in any given year and any time interval. Two implemented statistical methods are joinpoint survival model and trend measures. Five supported types of trend measures are Annual percentage changes of hazard, Annual percentage changes of cumulative relative survival, Annual changes of cumulative relative survival, Average annual absolute percent changes, and Average annual relative percent changes.
