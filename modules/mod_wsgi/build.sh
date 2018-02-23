@@ -22,9 +22,12 @@ done
 if [ "$APP_NAME" ] && [ "$APP_PORT" ] && [ "$APP_ROOT" ]
 then
 
+# Create socket prefix directory if it does not exist
+SOCKET_PREFIX=$HOME/.wsgi/lock/$APP_NAME/
+mkdir -p $SOCKET_PREFIX
+
 # Create app_root if it does not exist
 mkdir -p $APP_ROOT/app $APP_ROOT/wsgi $APP_ROOT/logs
-
 
 # Additional configuration directives
 cat << EOF > $APP_ROOT/wsgi/additional-configuration.conf
@@ -36,6 +39,7 @@ cat << EOF > $APP_ROOT/wsgi/additional-configuration.conf
 
 # Workaround for process timeout
 WSGIApplicationGroup %{GLOBAL}
+WSGISocketPrefix $SOCKET_PREFIX
 
 EOF
 
@@ -94,7 +98,7 @@ else
 echo Please provide parameters in the following format:
 echo ./build.sh --name app_name --port 0000 --root /path/to/app/root
 echo
-echo This script will generate three folders in the specified directory: 
+echo This script will generate three folders in the specified directory:
 echo   /app  - Contains application files
 echo   /wsgi - Contains wsgi configuration files
 echo   /logs - Contains log files
