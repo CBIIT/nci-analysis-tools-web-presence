@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 #: Description  : Generates scripts to setup, start, and stop a wsgi application using mod_wsgi-express
 #: Options      : -n | --name  The name of the application (the .wsgi file should have the same name as the application)
