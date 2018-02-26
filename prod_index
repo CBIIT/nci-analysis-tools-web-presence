@@ -20,6 +20,7 @@
     </header>
     <div class="container">
         <div id="landing-blockcontent">
+            <h2 class="tools-main-title">NCI Analysis Tools</h2>
             <h3 class="tools-owner-title">DCEG Analysis Tools</h3>
             <div class="tools-section">
                 <h4><a href="/biomarkerTools">Biomarker Tools</a></h4>
@@ -46,6 +47,12 @@
                         Assessment Tool</a>
                 </h4>
                 <div>Statistical analysis tool that predicts a person's risk of lung cancer death based on a series of demographic and clinical risk factors for lung cancer. Findings from the tool support defining the high-risk targeting population for low-dose CT screening where benefits of screening overweigh harms thus improving the selection process for lung-cancer screening.</div>
+            </div>
+            <div class="tools-section">
+                <h4>
+                    <a href="/lungCancerRiskAssessment">Lung Cancer Risk Assessment Tool</a>
+                </h4>
+                <div>Statistical analysis tool that predicts a person's risk of lung cancer diagnosis and death based on a series of demographic and clinical risk factors for lung cancer.</div>
             </div>
             <div class="tools-section">
                 <h4>

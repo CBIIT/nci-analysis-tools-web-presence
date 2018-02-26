@@ -125,7 +125,7 @@ a.help {
 }
 */
 
-#landing-blockcontent h3 {
+#landing-blockcontent h3  {
     font-weight: bold;
     font-size: 130%;
 }
@@ -141,6 +141,15 @@ a.help {
     padding-bottom: 5px;
     background-color: #F5FAFF;
     color: #0C5C97;
+}
+
+.tools-main-title {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #2A71A5;
+    color: white;
+    text-align: center;
+    font-weight: bold;
 }
 
 .tools-section {
@@ -178,7 +187,7 @@ a {
     cursor: pointer;
 }
 
-h3 {
+h2, h3 {
     margin-top: 0;
 }
 
