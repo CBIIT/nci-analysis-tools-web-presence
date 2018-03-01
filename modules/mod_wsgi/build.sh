@@ -23,7 +23,7 @@ if [ "$APP_NAME" ] && [ "$APP_PORT" ] && [ "$APP_ROOT" ]
 then
 
 # Create socket prefix directory if it does not exist
-SOCKET_PREFIX=$HOME/.wsgi/lock/$APP_NAME/
+SOCKET_PREFIX=/local/content/wsgi/lock/$APP_NAME/
 mkdir -p $SOCKET_PREFIX
 
 # Create app_root if it does not exist
