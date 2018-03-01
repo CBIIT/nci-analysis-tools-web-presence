@@ -4,10 +4,12 @@
 #: Options      : -n | --name  The name of the application (the .wsgi file should have the same name as the application)
 #               : -p | --port  The port this application will be running on
 #               : -r | --root  The root directory of this application. This directory has a folder called "app" that contains all application files
+#               : -s | --socket-prefix  The socket prefix for this application. If not specified, this will default to the application's wsgi/ folder
 
 APP_NAME=
 APP_PORT=
 APP_ROOT=
+SOCKET_PREFIX=
 
 # Parse arguments
 while true; do
@@ -15,6 +17,7 @@ while true; do
     -n | --name ) APP_NAME="$2"; shift 2 ;;
     -p | --port ) APP_PORT="$2"; shift 2 ;;
     -r | --root ) APP_ROOT="$2"; shift 2 ;;
+    -s | --socket-prefix ) SOCKET_PREFIX="$2"; shift 2 ;;
     * ) break ;;
   esac
 done
@@ -22,8 +25,12 @@ done
 if [ "$APP_NAME" ] && [ "$APP_PORT" ] && [ "$APP_ROOT" ]
 then
 
+# Use default directory for socket prefix if not specified
+if [ -z "$SOCKET_PREFIX" ]; then
+  SOCKET_PREFIX=$APP_ROOT/wsgi
+fi
+
 # Create socket prefix directory if it does not exist
-SOCKET_PREFIX=/local/content/wsgi/lock/$APP_NAME/
 mkdir -p $SOCKET_PREFIX
 
 # Create app_root if it does not exist
@@ -96,7 +103,7 @@ chmod 755 $APP_ROOT/stop-$APP_NAME.sh
 
 else
 echo Please provide parameters in the following format:
-echo ./build.sh --name app_name --port 0000 --root /path/to/app/root
+echo ./build.sh --name app_name --port 0000 --root /path/to/app/root --socket-prefix /optional/path/to/socket/prefix
 echo
 echo This script will generate three folders in the specified directory:
 echo   /app  - Contains application files
