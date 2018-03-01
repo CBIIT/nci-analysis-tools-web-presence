@@ -27,7 +27,7 @@ then
 
 # Use default directory for socket prefix if not specified
 if [ -z "$SOCKET_PREFIX" ]; then
-  SOCKET_PREFIX=$APP_ROOT/wsgi
+  SOCKET_PREFIX=$APP_ROOT/wsgi/
 fi
 
 # Create socket prefix directory if it does not exist
