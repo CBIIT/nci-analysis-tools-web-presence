@@ -53,7 +53,7 @@
                     <a href="/lungCancerRiskAssessment">Lung Cancer Risk Assessment Tool</a>
                 </h4>
                 <div>Statistical analysis tool that predicts a person's risk of lung cancer diagnosis and death based on a series of demographic and clinical risk factors for lung cancer.</div>
-            </div>            
+            </div>
             <div class="tools-section">
                 <h4>
                     <a href="/nevustool">Moles to Melanoma: Recognizing the ABCDE Features</a>
@@ -72,13 +72,13 @@
             </div>
             <div class="tools-section">
                 <h4>
-                <a href="https://ncidose-stage.nci.nih.gov/">NCIDose</a>
+                <a href="https://ncidose-stage.cancer.gov/">NCIDose</a>
             	</h4>
                 <div>
                     This website is designed to share the major developments in dose assessment tools and resources with other researchers. Anyone who is interested in obtaining these resources for research can download and submit the Software Transfer Agreement to the NCI Technology Transfer Center.
                 </div>
             </div>
-        
+
 
             <h3 class="tools-owner-title">DCCPS Analysis Tools</h3>
             <div class="tools-section">
