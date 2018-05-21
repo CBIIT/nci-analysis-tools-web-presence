@@ -5,11 +5,15 @@
 #               : -p | --port  The port this application will be running on
 #               : -r | --root  The root directory of this application. This directory has a folder called "app" that contains all application files
 #               : -s | --socket-prefix  The socket prefix for this application. If not specified, this will default to the application's wsgi/ folder
+#               : -o | --processes  The number of processes
+#               : -t | --threads  The number of worker threads per process
 
 APP_NAME=
 APP_PORT=
 APP_ROOT=
 SOCKET_PREFIX=
+PROCESSES=
+THREADS=
 
 # Parse arguments
 while true; do
@@ -18,6 +22,8 @@ while true; do
     -p | --port ) APP_PORT="$2"; shift 2 ;;
     -r | --root ) APP_ROOT="$2"; shift 2 ;;
     -s | --socket-prefix ) SOCKET_PREFIX="$2"; shift 2 ;;
+    -o | --processes ) PROCESSES="$2"; shift 2 ;;
+    -t | --threads ) THREADS="$2"; shift 2 ;;
     * ) break ;;
   esac
 done
@@ -28,6 +34,16 @@ then
 # Use default directory for socket prefix if not specified
 if [ -z "$SOCKET_PREFIX" ]; then
   SOCKET_PREFIX=$APP_ROOT/wsgi/
+fi
+
+# Use default value for processes if not specified
+if [ -z "$PROCESSES" ]; then
+  PROCESSES=3
+fi
+
+# Use default value for threads if not specified
+if [ -z "$THREADS" ]; then
+  THREADS=1
 fi
 
 # Create socket prefix directory if it does not exist
@@ -75,8 +91,8 @@ mod_wsgi-express setup-server $APP_ROOT/app/$APP_NAME.wsgi \\
 --graceful-timeout 900 \\
 --connect-timeout 900 \\
 --request-timeout 900 \\
---processes 3 \\
---threads 1 \\
+--processes $PROCESSES \\
+--threads $THREADS \\
 --reload-on-changes
 EOF
 
@@ -103,7 +119,7 @@ chmod 755 $APP_ROOT/stop-$APP_NAME.sh
 
 else
 echo Please provide parameters in the following format:
-echo ./build.sh --name app_name --port 0000 --root /path/to/app/root --socket-prefix /optional/path/to/socket/prefix
+echo ./build.sh --name app_name --port 0000 --root /path/to/app/root --socket-prefix /optional/path/to/socket/prefix --processes 4 --threads 1
 echo
 echo This script will generate three folders in the specified directory:
 echo   /app  - Contains application files
