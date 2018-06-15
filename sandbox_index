@@ -10,6 +10,7 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="common/css/style.css" />
+    <script src="common/js/check-ie.js"></script>
 </head>
 
 <body>
