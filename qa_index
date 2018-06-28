@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,164 +7,228 @@
     <title>NCI Analysis Tools Home Page</title>
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="common/css/style.css" />
-    <script src="//assets.adobedtm.com/f1bfa9f7170c81b1a9a9ecdcc6c5215ee0b03c84/satelliteLib-4b219b82c4737db0e1797b6c511cf10c802c95cb.js"></script>
+    <link rel="icon" type="image/x-icon" href="common/images/favicon.ico">
+    <script src="https://assets.adobedtm.com/f1bfa9f7170c81b1a9a9ecdcc6c5215ee0b03c84/satelliteLib-4b219b82c4737db0e1797b6c511cf10c802c95cb.js"></script>
 </head>
 
 <body>
     <header>
         <div class="container">
-            <a href="http://www.cancer.gov/" target="cancerGov"><img class="img-responsive" src="common/images/nci-logo-full.svg" alt="National Cancer Institute" title="National Cancer Institute"></a>
+            <a href="https://www.cancer.gov/">
+                <img class="img-responsive" src="common/images/nci-logo-full.svg" alt="National Cancer Institute">
+            </a>
         </div>
     </header>
-    <div class="container">
+    <main class="container">
         <div id="landing-blockcontent">
-            <h2 class="tools-main-title">NCI Analysis Tools</h2>
-            <h3 class="tools-owner-title">DCEG Analysis Tools</h3>
+            <h1 class="tools-main-title">NCI Analysis Tools</h1>
+
+            <!-- DCCPS Analysis Tools -->
+            <h2 class="tools-owner-title">DCCPS &ndash; Division of Cancer Control and Population Sciences</h2>
             <div class="tools-section">
-                <h4><a href="/biomarkerTools">Biomarker Tools</a></h4>
-                <div>This toolset estimates risk stratification from early biomarker data and includes math and strategies to advance biomarkers or other risk measures identified case-control studies to clinical or public health applications. The toolset will show quantities for which people's intuition is poor, such as need for high specificity for a single marker of a rare disease to improve management by some serious intervention. The toolset will allow to evaluate the feasibility of biomarkers called promising before they get press office attention; investigators spend efforts on hopeless pursuit; wasteful. unethical clinical testing begins. Thus, using these strategies will allow focusing on the most promising markers early on, making specific improvements if required, or abandoning markers that are most likely to fail.
-                </div>
-            </div>
-            <div class="tools-section">
-                <h4><a href="/apc">Age Period Cohort (APC) Web Tool</a></h4>
-                <div>Age-Period-Cohort analysis identifies patterns in cancer incidence or mortality rates from population-based Count (numerator) and Population (denominator) data. Often the data come from a Cancer Registry (e.g., SEER) in the form of a table showing the numbers of cancer cases or cancer deaths (counts) and corresponding person-years at risk (population) for particular age groups and calendar time periods. This toolset provides a comprehensive solution to age-period-cohort analysis for cancer endpoints in defined populations and time periods.</div>
-            </div>
-            <div class="tools-section">
-                <h4><a href="/crosstalk">Comparative Age Period Cohort (CrossTalk) Web Tool</a></h4>
-                <div>This tool is a companion to the Age Period Cohort (APC) Analysis Web Tool.  The APC tool provides age-period-cohort analysis for a single cancer endpoint in a defined population and time period (one-hazard situation where single outcome is being studied), e.g. lung cancer incidence among white women ages 30 – 84 years during 1992 – 2010 in SEER-13 catchment areas. The Crosstalk tool aims at testing the differences between two hazards, e.g. the same cancer in different populations or different cancers in the same population.</div>
-            </div>
-            <div class="tools-section">
-                <h4><a href="https://ldlink-qa.nci.nih.gov/">LDLink</a></h4>
-                <div>A suite of web-based applications designed to easily and efficiently explore linkage disequilibrium in population subgroups. All population genotype data originates from Phase 3 of the 1000 Genomes Project and variant RS numbers are indexed based on dbSNP build 142.
-                </div>
-            </div>
-            <div class="tools-section">
-                <h4><a href="http://soccer-qa.nci.nih.gov">SOCcer Web Tool</a></h4>
-                <div>A standardized occupation coding tool for computer-assisted epidemiologic research. To assist epidemiological researchers incorporate occupational risk into their studies, SOCcer imports free-text job descriptions and suggests the best-fitting SOC-2010 standardized occupation classification code for each job. The application is not intended to replace expert coders, but rather prioritizes job descriptions that would most benefit from expert coders.
-                </div>
-            </div>
-            <div class="tools-section">
-                <h4>
-                    <a href="/lungCancerScreening">Lung Cancer Screening Risk
-                        Assessment Tool</a>
-                </h4>
-                <div>Statistical analysis tool that predicts a person's risk of lung cancer death based on a series of demographic and clinical risk factors for lung cancer. Findings from the tool support defining the high-risk targeting population for low-dose CT screening where benefits of screening overweigh harms thus improving the selection process for lung-cancer screening.</div>
-            </div>
-            <div class="tools-section">
-                <h4>
-                    <a href="/lungCancerRiskAssessment">Lung Cancer Risk Assessment Tool</a>
-                </h4>
-                <div>Statistical analysis tool that predicts a person's risk of lung cancer diagnosis and death based on a series of demographic and clinical risk factors for lung cancer.</div>
-            </div>
-            <div class="tools-section">
-                <h4>
-                    <a href="/nevustool">Moles to Melanoma: Recognizing the ABCDE Features</a>
-                </h4>
+                <h3>
+                    <a href="/jpsurv/">JPSurv</a>
+                </h3>
                 <div>
-                    A web-based educational tool with a collection of pictures assembled to help patients and others in the lay public recognize dysplastic nevi and melanomas that started in dysplastic nevi. Dysplastic nevi (DN) are atypical moles that are important risk markers for melanoma, and precursor lesions for some melanomas.
+                    JPSurv is a tool for estimating and presenting survival trend. It can be used to predict survival in any given year and any time interval. Two implemented statistical methods are joinpoint survival model and trend measures. Five supported types of trend measures are Annual percentage changes of hazard, Annual percentage changes of cumulative relative survival, Annual changes of cumulative relative survival, Average annual absolute percent changes, and Average annual relative percent changes.
                 </div>
             </div>
+
+            <!-- DCEG Analysis Tools -->
+            <h2 class="tools-owner-title">DCEG &ndash; Division of Cancer Epidemiology and Genetics</h2>
             <div class="tools-section">
-                <h4>
-                    <a href="/pathway">Pathway Analysis Tool</a>
-                </h4>
-                <div>
-                    This is a web-based tool that conducts pathway analysis using summary data from GWAS and helps researchers to investigate the association between a predefined pathway and an outcome using summary results from GWAS. The backend is a R package "ARTP2" developed by DCEG.
-                </div>
-            </div>
-            <div class="tools-section">
-                <h4>
-                    <a href="/absoluteRisk">Absolute Risk Calculator</a>
-                </h4>
+                <h3>
+                    <a href="/absoluteRisk/">Absolute Risk Calculator</a>
+                </h3>
                 <div>
                     A web tool for researchers to build an absolute risk model and make absolute risk predictions.
                 </div>
+            </div>
+            <div class="tools-section">
+                <h3>
+                    <a href="/apc/">Age Period Cohort (APC) Web Tool</a>
+                </h3>
+                <div>
+                    Age-Period-Cohort analysis identifies patterns in cancer incidence or mortality rates from population-based Count (numerator) and Population (denominator) data. Often the data come from a Cancer Registry (e.g., SEER) in the form of a table showing the numbers of cancer cases or cancer deaths (counts) and corresponding person-years at risk (population) for particular age groups and calendar time periods. This toolset provides a comprehensive solution to age-period-cohort analysis for cancer endpoints in defined populations and time periods.</div>
+            </div>
+            <div class="tools-section">
+                <h3>
+                    <a href="https://authorarranger-qa.nci.nih.gov/">AuthorArranger</a>
+                </h3>
+                <div>
+                    AuthorArranger is a free web tool designed to help authors of research manuscripts automatically generate correctly formatted title pages for manuscript journal submission in a fraction of the time it takes to create the pages manually. Whether your manuscript has 20 authors or 200, AuthorArranger can save you time and resources by helping you conquer journal title pages in seconds.
+                </div>
+            </div>
 
-            </div>
             <div class="tools-section">
-                <h4>
-                <a href="/melanomarisktool/">Melanoma Risk Assessment Tool (MRAT)</a>
-            </h4>
+                <h3>
+                    <a href="/biomarkerTools/">Biomarker Tools</a>
+                </h3>
                 <div>
-                    The Melanoma Risk Assessment is an interactive tool designed by scientists at the National Cancer Institute (NCI), the University of Pennsylvania, and the University of California, San Francisco, to estimate a person's absolute risk of developing invasive melanoma. The tool helps clinicians identify individuals at increased risk of melanoma in order to plan appropriate screening interventions with them.
+                    <p>
+                        This toolset estimates risk stratification from early biomarker data and includes math and strategies to advance biomarkers or other risk measures identified case-control studies to clinical or public health applications. The toolset will show quantities for which people's intuition is poor, such as need for high specificity for a single marker of a rare disease to improve management by some serious intervention.
+                    </p>
+
+                    <p>
+                        The toolset will allow to evaluate the feasibility of biomarkers called promising before they get press office attention; investigators spend efforts on hopeless pursuit; wasteful. unethical clinical testing begins. Thus, using these strategies will allow focusing on the most promising markers early on, making specific improvements if required, or abandoning markers that are most likely to fail.
+                    </p>
                 </div>
             </div>
             <div class="tools-section">
-                <h4>
-                <a href="/colorectalcancerrisk/">Colorectal Risk Assessment Tool (CCRAT)</a>
-            </h4>
-                <div>
-                    The Colorectal Risk Assessment Tool is a tool designed for doctors and health providers to use along with their patients to determine their risk for developing colorectal cancer.
-                </div>
-            </div>
-            <div class="tools-section">
-                <h4>
-                <a href="/bcrisktool/">Breast Cancer Risk Assessment Tool (BCRAT)</a>
-            </h4>
+                <h3>
+                    <a href="/bcrisktool/">Breast Cancer Risk Assessment Tool (BCRAT)</a>
+                </h3>
                 <div>
                     The Breast Cancer Risk Assessment Tool is an interactive tool designed by scientists at the National Cancer Institute (NCI) and the National Surgical Adjuvant Breast and Bowel Project (NSABP) to estimate a woman's risk of developing invasive breast cancer.
                 </div>
             </div>
             <div class="tools-section">
-                <h4>
-                <a href="/econsent/">Electronic Consent (eConsent)</a>
-            </h4>
+                <h3>
+                    <a href="/colorectalcancerrisk/">Colorectal Risk Assessment Tool (CCRAT)</a>
+                </h3>
                 <div>
-                   A web-based tool that provides an electronic informed consent (eConsent) platform for consenting participants either on site or at home (or other remote location) using a computer based consent form rather than traditional paper documentation.
+                    The Colorectal Risk Assessment Tool is a tool designed for doctors and health providers to use along with their patients to determine their risk for developing colorectal cancer.
                 </div>
             </div>
             <div class="tools-section">
-                <h4>
-                <a href="https://ncidose-qa.cancer.gov">NCIDose</a>
-                </h4>
+                <h3>
+                    <a href="/crosstalk/">Comparative Age Period Cohort (CrossTalk) Web Tool</a>
+                </h3>
+                <div>
+                    This tool is a companion to the Age Period Cohort (APC) Analysis Web Tool. The APC tool provides age-period-cohort analysis for a single cancer endpoint in a defined population and time period (one-hazard situation where single outcome is being studied), e.g. lung cancer incidence among white women ages 30 – 84 years during 1992 – 2010 in SEER-13 catchment areas. The Crosstalk tool aims at testing the differences between two hazards, e.g. the same cancer in different populations or different cancers in the same population.
+                </div>
+            </div>
+            <div class="tools-section">
+                <h3>
+                    <a href="/econsent/">Electronic Consent (eConsent)</a>
+                </h3>
+                <div>
+                    A web-based tool that provides an electronic informed consent (eConsent) platform for consenting participants either on site or at home (or other remote location) using a computer based consent form rather than traditional paper documentation.
+                </div>
+            </div>
+            <div class="tools-section">
+                <h3>
+                    <a href="https://ldlink-qa.nci.nih.gov/">LDLink</a>
+                </h3>
+                <div>
+                    A suite of web-based applications designed to easily and efficiently explore linkage disequilibrium in population subgroups. All population genotype data originates from Phase 3 of the 1000 Genomes Project and variant RS numbers are indexed based on dbSNP build 142.
+                </div>
+            </div>
+            <div class="tools-section">
+                <h3>
+                    <a href="/lungCancerRiskAssessment/">Lung Cancer Risk Assessment Tool</a>
+                </h3>
+                <div>
+                    Statistical analysis tool that predicts a person's risk of lung cancer diagnosis and death based on a series of demographic and clinical risk factors for lung cancer.
+                </div>
+            </div>
+            <div class="tools-section">
+                <h3>
+                    <a href="/lungCancerScreening/">Lung Cancer Screening Risk Assessment Tool</a>
+                </h3>
+                <div>
+                    Statistical analysis tool that predicts a person's risk of lung cancer death based on a series of demographic and clinical risk factors for lung cancer. Findings from the tool support defining the high-risk targeting population for low-dose CT screening where benefits of screening overweigh harms thus improving the selection process for lung-cancer screening.
+                </div>
+            </div>
+            <div class="tools-section">
+                <h3>
+                    <a href="/melanomarisktool/">Melanoma Risk Assessment Tool (MRAT)</a>
+                </h3>
+                <div>
+                    The Melanoma Risk Assessment is an interactive tool designed by scientists at the National Cancer Institute (NCI), the University of Pennsylvania, and the University of California, San Francisco, to estimate a person's absolute risk of developing invasive melanoma. The tool helps clinicians identify individuals at increased risk of melanoma in order to plan appropriate screening interventions with them.
+                </div>
+            </div>
+            <div class="tools-section">
+                <h3>
+                    <a href="/nevustool/">Moles to Melanoma: Recognizing the ABCDE Features</a>
+                </h3>
+                <div>
+                    A web-based educational tool with a collection of pictures assembled to help patients and others in the lay public recognize dysplastic nevi and melanomas that started in dysplastic nevi. Dysplastic nevi (DN) are atypical moles that are important risk markers for melanoma, and precursor lesions for some melanomas.
+                </div>
+            </div>
+            <div class="tools-section">
+                <h3>
+                    <a href="https://ncidose-qa.cancer.gov/">NCIDose</a>
+                </h3>
                 <div>
                     This website is designed to share the major developments in dose assessment tools and resources with other researchers. Anyone who is interested in obtaining these resources for research can download and submit the Software Transfer Agreement to the NCI Technology Transfer Center.
                 </div>
             </div>
             <div class="tools-section">
-                <h4>
-                    <a href="/perc/">PERC</a>
-                </h4>
+                <h3>
+                    <a href="/pathway/">Pathway Analysis Tool</a>
+                </h3>
                 <div>
-            A web-based tool for PERC (Polyphenol Enriched Resource for Coffee) is a complementary database and food frequency questionnaire (FFQ) module, in order to better estimate intake of phenolic and other key bioactive compounds in coffee.
-            </div>
-        </div>
-
-            <h3 class="tools-owner-title">DCCPS Analysis Tools</h3>
-            <div class="tools-section">
-                <h4><a href="/jpsurv">JPSurv</a></h4>
-                <div>JPSurv is a tool for estimating and presenting survival trend. It can be used to predict survival in any given year and any time interval. Two implemented statistical methods are joinpoint survival model and trend measures. Five supported types of trend measures are Annual percentage changes of hazard, Annual percentage changes of cumulative relative survival, Annual changes of cumulative relative survival, Average annual absolute percent changes, and Average annual relative percent changes.
+                    This is a web-based tool that conducts pathway analysis using summary data from GWAS and helps researchers to investigate the association between a predefined pathway and an outcome using summary results from GWAS. The backend is a R package "ARTP2" developed by DCEG.
                 </div>
             </div>
-    </div>
+            <div class="tools-section">
+                <h3>
+                    <a href="/perc/">PERC</a>
+                </h3>
+                <div>
+                    A web-based tool for PERC (Polyphenol Enriched Resource for Coffee) is a complementary database and food frequency questionnaire (FFQ) module, in order to better estimate intake of phenolic and other key bioactive compounds in coffee.
+                </div>
+            </div>
+            <div class="tools-section">
+                <h3>
+                    <a href="http://soccer-dev.nci.nih.gov/">SOCcer Web Tool</a>
+                </h3>
+                <div>
+                    A standardized occupation coding tool for computer-assisted epidemiologic research. To assist epidemiological researchers incorporate occupational risk into their studies, SOCcer imports free-text job descriptions and suggests the best-fitting SOC-2010 standardized occupation classification code for each job. The application is not intended to replace expert coders, but rather prioritizes job descriptions that would most benefit from expert coders.
+                </div>
+            </div>
+
+        </div>
+    </main>
     <footer class="container footer">
         <div class="center-block">
             <ul class="list-inline">
-                <li><a href="http://www.cancer.gov/" title="Home" target="_blank">Home</a></li>
+                <li>
+                    <a href="https://www.cancer.gov/" target="_blank">Home</a>
+                </li>
                 <li>|</li>
-                <li><a href="http://www.cancer.gov/global/web/policies" title="Policies" target="_blank">Policies</a></li>
+                <li>
+                    <a href="https://www.cancer.gov/global/web/policies" target="_blank">Policies</a>
+                </li>
                 <li>|</li>
-                <li><a href="http://www.cancer.gov/global/web/policies/accessibility" title="Accessibility" target="_blank">Accessibility</a></li>
+                <li>
+                    <a href="https://www.cancer.gov/global/web/policies/accessibility" target="_blank">Accessibility</a>
+                </li>
                 <li>|</li>
-                <li><a href="http://cancer.gov/global/viewing-files" title="Viewing Files" target="_blank">Viewing Files</a></li>
+                <li>
+                    <a href="https://cancer.gov/global/viewing-files" target="_blank">Viewing Files</a>
+                </li>
                 <li>|</li>
-                <li><a href="http://www.cancer.gov/global/web/policies/foia" title="FOIA" target="_blank">FOIA</a></li>
+                <li>
+                    <a href="https://www.cancer.gov/global/web/policies/foia" target="_blank">FOIA</a>
+                </li>
             </ul>
             <ul class="list-inline">
-                <li><a href="http://www.hhs.gov/" target="_blank">U.S. Department of Health and Human Services</a></li>
+                <li>
+                    <a href="https://www.hhs.gov/" target="_blank">U.S. Department of Health and Human Services</a>
+                </li>
                 <li>|</li>
-                <li><a href="http://www.nih.gov" target="_blank">National Institutes of Health</a></li>
+                <li>
+                    <a href="https://www.nih.gov" target="_blank">National Institutes of Health</a>
+                </li>
                 <li>|</li>
-                <li><a href="http://www.cancer.gov/" target="_blank">National Cancer Institute</a></li>
+                <li>
+                    <a href="https://www.cancer.gov/" target="_blank">National Cancer Institute</a>
+                </li>
                 <li>|</li>
-                <li><a href="http://usa.gov" target="_blank">USA.gov</a></li>
+                <li>
+                    <a href="https://usa.gov" target="_blank">USA.gov</a>
+                </li>
             </ul>
-            <div class="text-center">NIH ... Turning Discovery Into Health<sup>®</sup></div>
+            <div class="text-center">NIH ... Turning Discovery Into Health
+                <sup>®</sup>
+            </div>
         </div>
     </footer>
-    <script type="text/javascript">_satellite.pageBottom();</script>
+    <script>_satellite.pageBottom();</script>
 </body>
 
 </html>
