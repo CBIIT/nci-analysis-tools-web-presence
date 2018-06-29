@@ -21,9 +21,9 @@
             </a>
         </div>
     </header>
-    <main class="container">
-        <div id="landing-blockcontent">
-            <h1 class="tools-main-title">NCI Analysis Tools</h1>
+    <main>
+            <h1 class="tools-main-title"><div class="container">NCI Analysis Tools</div></h1>
+            <div id="landing-blockcontent" class="container">
 
             <!-- DCCPS Analysis Tools -->
             <h2 class="tools-owner-title">DCCPS &ndash; Division of Cancer Control and Population Sciences</h2>
@@ -118,7 +118,7 @@
 
         </div>
     </main>
-    <footer class="container footer">
+    <footer class="footer">
         <div class="center-block">
             <ul class="list-inline">
                 <li>
