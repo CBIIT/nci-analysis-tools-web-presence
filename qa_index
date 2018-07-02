@@ -174,7 +174,7 @@
             </div>
             <div class="tools-section">
                 <h3>
-                    <a href="http://soccer-dev.nci.nih.gov/">SOCcer Web Tool</a>
+                    <a href="https://soccer-qa.nci.nih.gov/">SOCcer Web Tool</a>
                 </h3>
                 <div>
                     A standardized occupation coding tool for computer-assisted epidemiologic research. To assist epidemiological researchers incorporate occupational risk into their studies, SOCcer imports free-text job descriptions and suggests the best-fitting SOC-2010 standardized occupation classification code for each job. The application is not intended to replace expert coders, but rather prioritizes job descriptions that would most benefit from expert coders.
