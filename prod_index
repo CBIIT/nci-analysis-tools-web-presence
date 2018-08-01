@@ -47,6 +47,14 @@
             </div>
             <div class="tools-section">
                 <h3>
+                    <a href="https://authorarranger.nci.nih.gov/">AuthorArranger</a>
+                </h3>
+                <div>
+                    AuthorArranger is a free web tool designed to help authors of research manuscripts automatically generate correctly formatted title pages for manuscript journal submission in a fraction of the time it takes to create the pages manually. Whether your manuscript has 20 authors or 200, AuthorArranger can save you time and resources by helping you conquer journal title pages in seconds.
+                </div>
+            </div>
+            <div class="tools-section">
+                <h3>
                     <a href="/biomarkerTools/">Biomarker Tools</a>
                 </h3>
                 <div>
