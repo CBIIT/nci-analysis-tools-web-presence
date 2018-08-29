@@ -67,6 +67,14 @@
                     </p>
                 </div>
             </div>
+             <div class="tools-section">
+                <h3>
+                    <a href="https://bcrisktool.cancer.gov/">Breast Cancer Risk Assessment Tool (BCRAT)</a>
+                </h3>
+                <div>
+                    The Breast Cancer Risk Assessment Tool is an interactive tool designed by scientists at the National Cancer Institute (NCI) and the National Surgical Adjuvant Breast and Bowel Project (NSABP) to estimate a woman's risk of developing invasive breast cancer.
+                </div>
+             </div>
             <div class="tools-section">
                 <h3>
                     <a href="https://ldlink.nci.nih.gov/">LDLink</a>
