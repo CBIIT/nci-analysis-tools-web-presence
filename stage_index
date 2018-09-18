@@ -77,6 +77,14 @@
                 </div>
             </div>
             <div class="tools-section">
+              <h3>
+                  <a href="https://ccrisktool-stage.cancer.gov/">Colorectal Risk Assessment Tool (CCRAT)</a>
+              </h3>
+              <div>
+                  The Colorectal Risk Assessment Tool is a tool designed for doctors and health providers to use along with their patients to determine their risk for developing colorectal cancer.
+              </div>
+            </div>
+            <div class="tools-section">
                 <h3>
                     <a href="https://ldlink-stage.nci.nih.gov">LDLink</a>
                 </h3>

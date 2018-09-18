@@ -77,7 +77,7 @@
             </div>
             <div class="tools-section">
                 <h3>
-                    <a href="/bcrisktool/">Breast Cancer Risk Assessment Tool (BCRAT)</a>
+                    <a href="https://bcrisktool-dev.cancer.gov/">Breast Cancer Risk Assessment Tool (BCRAT)</a>
                 </h3>
                 <div>
                     The Breast Cancer Risk Assessment Tool is an interactive tool designed by scientists at the National Cancer Institute (NCI) and the National Surgical Adjuvant Breast and Bowel Project (NSABP) to estimate a woman's risk of developing invasive breast cancer.
@@ -85,7 +85,7 @@
             </div>
             <div class="tools-section">
                 <h3>
-                    <a href="/colorectalcancerrisk/">Colorectal Risk Assessment Tool (CCRAT)</a>
+                    <a href="https://ccrisktool-dev.cancer.gov/">Colorectal Risk Assessment Tool (CCRAT)</a>
                 </h3>
                 <div>
                     The Colorectal Risk Assessment Tool is a tool designed for doctors and health providers to use along with their patients to determine their risk for developing colorectal cancer.
