@@ -173,6 +173,14 @@
             </div>
             <div class="tools-section">
                 <h3>
+                    <a href="/pimixture/">PIMixture</a>
+                </h3>
+                <div>
+                    The web tool, PIMixture estimates the absolute risk of asymptomatic disease or disease precursors. Because asymptomatic disease/disease precursors are often discovered through screening, collected data may present challenges for absolute and relative risk estimation.
+                </div>
+            </div>
+            <div class="tools-section">
+                <h3>
                     <a href="http://soccer-dev.nci.nih.gov/">SOCcer Web Tool</a>
                 </h3>
                 <div>
