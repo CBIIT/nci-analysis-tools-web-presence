@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <title>NCI Analysis Tools Home Page</title>
-
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="common/css/style.css" />
@@ -22,10 +21,19 @@
         </div>
     </header>
     <main>
-            <h1 class="tools-main-title"><div class="container">NCI Analysis Tools</div></h1>
-            <div id="landing-blockcontent" class="container">
-
-            <!-- DCCPS Analysis Tools -->
+        <h1 class="tools-main-title"><div class="container">NCI Analysis Tools</div></h1>
+        <div id="landing-blockcontent" class="container">
+            <!-- CCR Analysis Tools -->
+            <h2 class="tools-owner-title">CCR - Center for Cancer Research</h2>
+            <div class="tools-section">
+                <h3>
+                    <a href="/microarray/">MicroArray</a>
+                </h3>
+                <div>
+                    TBD
+                </div>
+            </div>
+             <!-- DCCPS Analysis Tools -->
             <h2 class="tools-owner-title">DCCPS &ndash; Division of Cancer Control and Population Sciences</h2>
             <div class="tools-section">
                 <h3>
@@ -35,7 +43,6 @@
                     JPSurv is a tool for estimating and presenting survival trend. It can be used to predict survival in any given year and any time interval. Two implemented statistical methods are joinpoint survival model and trend measures. Five supported types of trend measures are Annual percentage changes of hazard, Annual percentage changes of cumulative relative survival, Annual changes of cumulative relative survival, Average annual absolute percent changes, and Average annual relative percent changes.
                 </div>
             </div>
-
             <!-- DCEG Analysis Tools -->
             <h2 class="tools-owner-title">DCEG &ndash; Division of Cancer Epidemiology and Genetics</h2>
             <div class="tools-section">
@@ -61,7 +68,6 @@
                     AuthorArranger is a free web tool designed to help authors of research manuscripts automatically generate correctly formatted title pages for manuscript journal submission in a fraction of the time it takes to create the pages manually. Whether your manuscript has 20 authors or 200, AuthorArranger can save you time and resources by helping you conquer journal title pages in seconds.
                 </div>
             </div>
-
             <div class="tools-section">
                 <h3>
                     <a href="/biomarkerTools/">Biomarker Tools</a>
@@ -70,7 +76,6 @@
                     <p>
                         This toolset estimates risk stratification from early biomarker data and includes math and strategies to advance biomarkers or other risk measures identified case-control studies to clinical or public health applications. The toolset will show quantities for which people's intuition is poor, such as need for high specificity for a single marker of a rare disease to improve management by some serious intervention.
                     </p>
-
                     <p>
                         The toolset will allow to evaluate the feasibility of biomarkers called promising before they get press office attention; investigators spend efforts on hopeless pursuit; wasteful. unethical clinical testing begins. Thus, using these strategies will allow focusing on the most promising markers early on, making specific improvements if required, or abandoning markers that are most likely to fail.
                     </p>
@@ -188,7 +193,6 @@
                     A standardized occupation coding tool for computer-assisted epidemiologic research. To assist epidemiological researchers incorporate occupational risk into their studies, SOCcer imports free-text job descriptions and suggests the best-fitting SOC-2010 standardized occupation classification code for each job. The application is not intended to replace expert coders, but rather prioritizes job descriptions that would most benefit from expert coders.
                 </div>
             </div>
-
         </div>
     </main>
     <footer class="footer">
@@ -236,7 +240,9 @@
             </div>
         </div>
     </footer>
-    <script>_satellite.pageBottom();</script>
+    <script>
+    _satellite.pageBottom();
+    </script>
 </body>
 
 </html>
