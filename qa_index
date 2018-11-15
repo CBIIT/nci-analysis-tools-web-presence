@@ -43,6 +43,14 @@
                     JPSurv is a tool for estimating and presenting survival trend. It can be used to predict survival in any given year and any time interval. Two implemented statistical methods are joinpoint survival model and trend measures. Five supported types of trend measures are Annual percentage changes of hazard, Annual percentage changes of cumulative relative survival, Annual changes of cumulative relative survival, Average annual absolute percent changes, and Average annual relative percent changes.
                 </div>
             </div>
+            <div class="tools-section">
+                <h3>
+                    <a href="/recurrence/">Recurrence Risk Tool</a>
+                </h3>
+                <div>
+                    This tool has been developed to estimate the risk of progressing to distant recurrence using disease-specific survival typically provided by cancer registries. The disease-specific survival is assessed via cause-specific survival using SEER*Stat software.The cause-specific survival is assumed to follow a mixture-cure model and the risk of recurrence is inferred from the survival among the non-cured fraction. The cure fraction and parametric survival distribution among those not cured are estimated using CanSurv software. The current version can handle Weibull and log-logistic distributions for the non-cured survival.
+                </div>
+            </div>
             <!-- DCEG Analysis Tools -->
             <h2 class="tools-owner-title">DCEG &ndash; Division of Cancer Epidemiology and Genetics</h2>
             <div class="tools-section">
