@@ -24,6 +24,18 @@
     <main>
         <h1 class="tools-main-title"><div class="container">NCI Analysis Tools</div></h1>
         <div id="landing-blockcontent" class="container">
+             <!-- CCR Analysis Tools -->
+             <h2 class="tools-owner-title">CCR - Center for Cancer Research</h2>
+            <div class="tools-section">
+                <h3>
+                    <a href="/microarray/">MicroArray Analysis Pipeline (MAAPster)</a>
+                </h3>
+                <div>
+                    MAAPster is a comprehensive web tool designed by the CCR Collaborative Bioinformatics Resource (CCBR) that performs transcriptome analysis of human or mouse Affymetrix gene expression data.  Samples may be uploaded locally or accessed from published data by entering a GEO Series identification number.  MAAPster can analyze data from a single experiment that includes multiple samples, and the user may investigate multiple contrasts between groups of samples. Raw CEL files are analyzed using several Bioconductor packages in ‘R’, including limma and oligo.  Output includes quality control plots, differential gene expression analysis, gene expression heatmaps, pathway analysis and single sample GSEA analysis.
+                </div>
+            </div>
+
+
             <!-- DCCPS Analysis Tools -->
             <h2 class="tools-owner-title">DCCPS &ndash; Division of Cancer Control and Population Sciences</h2>
             <div class="tools-section">
@@ -120,7 +132,7 @@
                     <a href="https://ldlink-dev.nci.nih.gov/">LDLink</a>
                 </h3>
                 <div>
-                    A suite of web-based applications designed to easily and efficiently explore linkage disequilibrium in population subgroups. All population genotype data originates from Phase 3 of the 1000 Genomes Project and variant RS numbers are indexed based on dbSNP build 142.
+                    A suite of web-based applications designed to easily and efficiently explore linkage disequilibrium in population subgroups. All population genotype data originates from Phase 3 of the 1000 Genomes Project and variant RS numbers are indexed based on dbSNP build 151.
                 </div>
             </div>
             <div class="tools-section">
@@ -141,12 +153,13 @@
             </div>
             <div class="tools-section">
                 <h3>
-                    <a href="/melanomarisktool/">Melanoma Risk Assessment Tool (MRAT)</a>
+                    <a href="https://mrisktool-dev.cancer.gov/">Melanoma Risk Assessment Tool (MRAT)</a>
                 </h3>
                 <div>
                     The Melanoma Risk Assessment is an interactive tool designed by scientists at the National Cancer Institute (NCI), the University of Pennsylvania, and the University of California, San Francisco, to estimate a person's absolute risk of developing invasive melanoma. The tool helps clinicians identify individuals at increased risk of melanoma in order to plan appropriate screening interventions with them.
                 </div>
             </div>
+
             <div class="tools-section">
                 <h3>
                     <a href="/nevustool/">Moles to Melanoma: Recognizing the ABCDE Features</a>
