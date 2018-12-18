@@ -83,7 +83,7 @@ mod_wsgi-express setup-server $APP_ROOT/app/$APP_NAME.wsgi \\
 --include-file $APP_ROOT/wsgi/additional-configuration.conf \\
 --header-buffer-size 50000000 \\
 --response-buffer-size 50000000 \\
---limit-request-body 2147483647 \\
+--limit-request-body 5368709120 \\
 --initial-workers 1 \\
 --socket-timeout 900 \\
 --queue-timeout 900 \\
