@@ -210,10 +210,10 @@
             </div>
             <div class="tools-section">
                 <h3>
-                    <a href="/vqtl/">vQTL</a>
+                    <a href="/vqtl/">vQTL Analysis Tool (Variance Quantitative Trait Locus)</a>
                 </h3>
                 <div>
-                    A web-based tool for interactively exploring multiple QTL results and prioritizing variants for functional investigation.
+                    vQTL is an online tool for interactively exploring multiple QTL results and prioritizing variants for functional investigation.
                 </div>
             </div>
         </div>
