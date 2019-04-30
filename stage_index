@@ -24,6 +24,16 @@
     <main>
             <h1 class="tools-main-title"><div class="container">NCI Analysis Tools</div></h1>
             <div id="landing-blockcontent" class="container">
+                     <!-- CCR Analysis Tools -->
+             <h2 class="tools-owner-title">CCR - Center for Cancer Research</h2>
+            <div class="tools-section">
+                <h3>
+                    <a href="/microarray/">MicroArray Analysis Pipeline (MAAPster)</a>
+                </h3>
+                <div>
+                    MAAPster is a comprehensive web tool designed by the CCR Collaborative Bioinformatics Resource (CCBR) that performs transcriptome analysis of human or mouse Affymetrix gene expression data.  Samples may be uploaded locally or accessed from published data by entering a GEO Series identification number.  MAAPster can analyze data from a single experiment that includes multiple samples, and the user may investigate multiple contrasts between groups of samples. Raw CEL files are analyzed using several Bioconductor packages in ‘R’, including limma and oligo.  Output includes quality control plots, differential gene expression analysis, gene expression heatmaps, pathway analysis and single sample GSEA analysis.
+                </div>
+            </div>
 
             <!-- DCCPS Analysis Tools -->
             <h2 class="tools-owner-title">DCCPS &ndash; Division of Cancer Control and Population Sciences</h2>
