@@ -213,7 +213,7 @@
                     <a href="/vqtl/">vQTL Analysis Tool (Variance Quantitative Trait Locus)</a>
                 </h3>
                 <div>
-                    vQTL is an online tool for interactively exploring multiple QTL results and prioritizing variants for functional investigation.
+                    A web-based tool for integrative visualization of different Quantitative Trait Loci for GWAS study.
                 </div>
             </div>
         </div>
