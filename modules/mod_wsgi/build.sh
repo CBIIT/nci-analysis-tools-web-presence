@@ -56,9 +56,18 @@ mkdir -p $APP_ROOT/app $APP_ROOT/wsgi $APP_ROOT/logs
 cat << EOF > $APP_ROOT/wsgi/additional-configuration.conf
 
 # Do not serve certain filetypes
-<FilesMatch "\.(conf|db|ini|py|wsgi|xml|R|r|md)$">
+<FilesMatch "\.(conf|db|sqlite|ini|py|pyc|wsgi|xml|R|r|md|yml|yaml)$">
   Require all denied
 </FilesMatch>
+
+<IfModule mod_headers.c> 
+	Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+	Header set X-Frame-Options "SAMEORIGIN"
+	Header set Referrer-Policy "no-referrer-when-downgrade"
+	Header set X-XSS-Protection "1; mode=block"
+	Header set Content-Security-Policy "default-src https: http: data:;"
+	Header set Expect-CT "max-age=31536000"
+</IfModule>
 
 # Workaround for process timeout
 WSGIApplicationGroup %{GLOBAL}
