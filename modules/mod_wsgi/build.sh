@@ -56,7 +56,7 @@ mkdir -p $APP_ROOT/app $APP_ROOT/wsgi $APP_ROOT/logs
 cat << EOF > $APP_ROOT/wsgi/additional-configuration.conf
 
 # Do not serve certain filetypes
-<FilesMatch "\.(conf|db|sqlite|ini|py|pyc|wsgi|xml|R|r|md|yml|yaml)$">
+<FilesMatch "\.(conf|db|sqlite|ini|py|pyc|wsgi|xml|R|r|md|yml|yaml)$|\.git">
   Require all denied
 </FilesMatch>
 
