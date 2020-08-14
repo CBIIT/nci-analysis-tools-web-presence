@@ -69,7 +69,7 @@ cat << EOF > $APP_ROOT/wsgi/additional-configuration.conf
 	Header set X-Frame-Options "SAMEORIGIN"
 	Header set Referrer-Policy "no-referrer-when-downgrade"
 	Header set X-XSS-Protection "1; mode=block"
-	Header set Content-Security-Policy "default-src 'unsafe-inline' https: http: data:;"
+	Header set Content-Security-Policy "default-src 'unsafe-eval' 'unsafe-inline' https: http: data:;"
 	Header set Expect-CT "max-age=31536000"
 </IfModule>
 
