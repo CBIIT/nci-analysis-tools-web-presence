@@ -65,12 +65,12 @@ cat << EOF > $APP_ROOT/wsgi/additional-configuration.conf
 </FilesMatch>
 
 <IfModule mod_headers.c> 
-	Header setifempty Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
-	Header setifempty X-Frame-Options "SAMEORIGIN"
-	Header setifempty Referrer-Policy "no-referrer-when-downgrade"
-	Header setifempty X-XSS-Protection "1; mode=block"
-	Header setifempty Content-Security-Policy "default-src 'unsafe-eval' 'unsafe-inline' https: http: data:;"
-	Header setifempty Expect-CT "max-age=31536000"
+	Header merge Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+	Header merge X-Frame-Options "SAMEORIGIN"
+	Header merge Referrer-Policy "no-referrer-when-downgrade"
+	Header merge X-XSS-Protection "1; mode=block"
+	Header merge Content-Security-Policy "default-src 'unsafe-eval' 'unsafe-inline' https: http: data:;"
+	Header merge Expect-CT "max-age=31536000"
 </IfModule>
 
 # Workaround for process timeout
