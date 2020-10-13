@@ -69,7 +69,8 @@ cat << EOF > $APP_ROOT/wsgi/additional-configuration.conf
 	Header merge X-Frame-Options "SAMEORIGIN"
 	Header merge Referrer-Policy "no-referrer-when-downgrade"
 	Header merge X-XSS-Protection "1; mode=block"
-	Header merge Content-Security-Policy "default-src 'unsafe-eval' 'unsafe-inline' https: http: data:;"
+  # todo: implement csp on a tool-by-tool basis
+	# Header merge Content-Security-Policy "default-src 'unsafe-eval' 'unsafe-inline' https: http: data:;"
 	Header merge Expect-CT "max-age=31536000"
 </IfModule>
 
