@@ -60,7 +60,7 @@ cat << EOF > $APP_ROOT/wsgi/additional-configuration.conf
   Require all denied
 </DirectoryMatch>
 
-<FilesMatch "\.(conf|db|sqlite|ini|py|pyc|wsgi|xml|R|r|md|yml|yaml)$">
+<FilesMatch "\.(conf|db|sqlite|ini|py|pyc|wsgi|xml|R|r|md|yml|yaml|deprecated)$">
   Require all denied
 </FilesMatch>
 
