@@ -34,6 +34,14 @@
                     MAAPster is a comprehensive web tool designed by the CCR Collaborative Bioinformatics Resource (CCBR) that performs transcriptome analysis of human or mouse Affymetrix gene expression data.  Samples may be uploaded locally or accessed from published data by entering a GEO Series identification number.  MAAPster can analyze data from a single experiment that includes multiple samples, and the user may investigate multiple contrasts between groups of samples. Raw CEL files are analyzed using several Bioconductor packages in ‘R’, including limma and oligo.  Output includes quality control plots, differential gene expression analysis, gene expression heatmaps, pathway analysis and single sample GSEA analysis.
                 </div>
             </div>
+            <div class="tools-section">
+                <h3>
+                    <a href="https://scatlaslc-stage.ccr.cancer.gov/#/">Single-cell Atlas in Liver Cancer (scAtlasLC)</a>
+                </h3>
+                <div>
+                    The scAtlasLC (single-cell Atlas in Liver Cancer) tool is a publicly available data portal of single-cell transcriptomic profiles of tumor cell communities in hepatocellular carcinoma and intrahepatic cholangiocarcinoma.
+                </div>
+            </div>
 
             <!-- DCCPS Analysis Tools -->
             <h2 class="tools-owner-title">DCCPS &ndash; Division of Cancer Control and Population Sciences</h2>
