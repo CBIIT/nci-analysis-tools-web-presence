@@ -137,6 +137,14 @@
             </div>
             <div class="tools-section">
                 <h3>
+                    <a href="/ezqtl/">ezQTL</a>
+                </h3>
+                <div>
+                    A web-based tool for integrative visualization of different Quantitative Trait Loci for GWAS study.
+                </div>
+            </div>
+            <div class="tools-section">
+                <h3>
                     <a href="/forge2-tf/">FORGE2 TF</a>
                 </h3>
                 <div>
@@ -238,14 +246,6 @@
                 </h3>
                 <div>
                     A web-based tool to estimate the power of environmental epidemiologic studies to detect spatial clustering of cancer cases in a geographic area of interest.
-                </div>
-            </div>
-            <div class="tools-section">
-                <h3>
-                    <a href="/ezqtl/">ezQTL</a>
-                </h3>
-                <div>
-                    A web-based tool for integrative visualization of different Quantitative Trait Loci for GWAS study.
                 </div>
             </div>
         </div>
