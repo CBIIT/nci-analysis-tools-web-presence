@@ -112,6 +112,22 @@
             </div>
             <div class="tools-section">
                 <h3>
+                    <a href="/ezqtl/">ezQTL</a>
+                </h3>
+                <div>
+                    A web-based tool for integrative visualization of different Quantitative Trait Loci for GWAS study.
+                </div>
+            </div>
+            <div class="tools-section">
+                <h3>
+                    <a href="/forge2-tf/">FORGE2 TF</a>
+                </h3>
+                <div>
+                    A web-based tool designed to enable the exploration of DNase I tag (chromatin accessibility) signal surrounding GWAS array SNPs and the calculation of significance of overlap with transcription factor binding sites from common TF databases.
+                </div>
+            </div>
+            <div class="tools-section">
+                <h3>
                     <a href="https://ldlink-stage.nci.nih.gov">LDLink</a>
                 </h3>
                 <div>
@@ -180,14 +196,6 @@
                 </h3>
                 <div>
                     A standardized occupation coding tool for computer-assisted epidemiologic research. To assist epidemiological researchers incorporate occupational risk into their studies, SOCcer imports free-text job descriptions and suggests the best-fitting SOC-2010 standardized occupation classification code for each job. The application is not intended to replace expert coders, but rather prioritizes job descriptions that would most benefit from expert coders.
-                </div>
-            </div>
-            <div class="tools-section">
-                <h3>
-                    <a href="/vqtl/">vQTL</a>
-                </h3>
-                <div>
-                    A web-based tool for integrative visualization of different Quantitative Trait Loci for GWAS study.
                 </div>
             </div>
         </div>
