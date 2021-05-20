@@ -183,6 +183,14 @@
             </div>
             <div class="tools-section">
                 <h3>
+                    <a href="/spatial-power">Spatial Power</a>
+                </h3>
+                <div>
+                    A web-based tool to estimate the power of environmental epidemiologic studies to detect spatial clustering of cancer cases in a geographic area of interest.
+                </div>
+            </div>
+            <div class="tools-section">
+                <h3>
                     <a href="/vqtl/">vQTL</a>
                 </h3>
                 <div>
