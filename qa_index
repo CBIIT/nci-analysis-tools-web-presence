@@ -134,7 +134,7 @@
                     <a href="/ezqtl/">ezQTL</a>
                 </h3>
                 <div>
-                    A web-based tool for integrative visualization of different Quantitative Trait Loci for GWAS study.
+                    A web-based tool for integrative QTL (Quantitative Trait Loci) visualization and colocalization with GWAS data for individual loci to aid GWAS annotation.
                 </div>
             </div>
             <div class="tools-section">
