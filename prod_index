@@ -191,7 +191,7 @@
             </div>
             <div class="tools-section">
                 <h3>
-                    <a href="/vqtl/">vQTL</a>
+                    <a href="/ezqtl/">ezQTL</a>
                 </h3>
                 <div>
                     A web-based tool for integrative visualization of different Quantitative Trait Loci for GWAS study.
