@@ -106,9 +106,17 @@
                     <a href="https://ccrisktool.cancer.gov/">Colorectal Risk Assessment Tool (CCRAT)</a>
                 </h3>
                 <div>
-                  The Colorectal Risk Assessment Tool is a tool designed for doctors and health providers to use along with their patients to determine their risk for developing colorectal cancer.
+                    The Colorectal Risk Assessment Tool is a tool designed for doctors and health providers to use along with their patients to determine their risk for developing colorectal cancer.
                 </div>
-              </div>
+            </div>
+            <div class="tools-section">
+                <h3>
+                    <a href="/ezqtl/">ezQTL</a>
+                </h3>
+                <div>
+                    A web-based tool for integrative QTL (Quantitative Trait Loci) visualization and colocalization with GWAS data for individual loci to aid GWAS annotation.
+                </div>
+            </div>
             <div class="tools-section">
                 <h3>
                     <a href="https://ldlink.nci.nih.gov/">LDLink</a>
@@ -187,14 +195,6 @@
                 </h3>
                 <div>
                     A web-based tool to estimate the power of environmental epidemiologic studies to detect spatial clustering of cancer cases in a geographic area of interest.
-                </div>
-            </div>
-            <div class="tools-section">
-                <h3>
-                    <a href="/ezqtl/">ezQTL</a>
-                </h3>
-                <div>
-                    A web-based tool for integrative visualization of different Quantitative Trait Loci for GWAS study.
                 </div>
             </div>
         </div>
