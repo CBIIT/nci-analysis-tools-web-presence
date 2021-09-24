@@ -119,6 +119,14 @@
             </div>
             <div class="tools-section">
                 <h3>
+                    <a href="/forge2-tf/">FORGE2 TF</a>
+                </h3>
+                <div>
+                    A web-based tool designed to enable the exploration of DNase I tag (chromatin accessibility) signal surrounding GWAS array SNPs and the calculation of significance of overlap with transcription factor binding sites from common TF databases.
+                </div>
+            </div>
+            <div class="tools-section">
+                <h3>
                     <a href="https://ldlink.nci.nih.gov/">LDLink</a>
                 </h3>
                 <div>
