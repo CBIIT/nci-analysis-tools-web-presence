@@ -28,10 +28,10 @@
              <h2 class="tools-owner-title">CCR - Center for Cancer Research</h2>
              <div class="tools-section">
                 <h3>
-                    <a href="https://cprosite-dev.ccr.cancer.gov/#/">CPTAC Data Analysis (cProSite)</a>
+                    <a href="https://cprosite-dev.ccr.cancer.gov/#/">cProSite - Cancer Proteogenomic Data Analysis Site</a>
                 </h3>
                 <div>
-                    The National Cancer Institute’s Clinical Proteomic Tumor Analysis Consortium (CPTAC) is a national effort to accelerate the understanding of the molecular basis of cancer through the application of large-scale proteome and genome analysis, or proteogenomics. This cProsite tool is to use data from CPTAC to build a web based interactive platform for data analysis.
+                    The National Cancer Institute’s Clinical Proteomic Tumor Analysis Consortium (CPTAC) is a national effort to accelerate the understanding of the molecular basis of cancer through the application of large-scale proteome and genome analysis, or proteogenomics. This cProSite tool is to use data from CPTAC to build a web based interactive platform for data analysis.
                 </div>
             </div>
             <div class="tools-section">
