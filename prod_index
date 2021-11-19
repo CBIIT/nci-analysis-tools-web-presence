@@ -167,6 +167,14 @@
             </div>
             <div class="tools-section">
                 <h3>
+                    <a href="/mutational-signatures/">mSigPortal</a>
+                </h3>
+                <div>
+                    A web-based tool designed to provide state-of-the art methods to explore, visualize and analyze mutational signatures, which will greatly facilitate broad investigation of mutational signatures to elucidate different mutagenesis processes involved in tumorigenesis.
+                </div>
+            </div>
+            <div class="tools-section">
+                <h3>
                     <a href="https://ncidose.cancer.gov/">NCIDose</a>
                 </h3>
                 <div>
