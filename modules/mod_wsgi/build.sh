@@ -7,6 +7,7 @@
 #               : -s | --socket-prefix  The socket prefix for this application. If not specified, this will default to the application's wsgi/ folder
 #               : -o | --processes  The number of processes
 #               : -t | --threads  The number of worker threads per process
+#               : -l | --logging To enable wsgi logging (default: true)
 
 APP_NAME=
 APP_PORT=
@@ -14,6 +15,7 @@ APP_ROOT=
 SOCKET_PREFIX=
 PROCESSES=
 THREADS=
+LOGGING=
 
 # Parse arguments
 while true; do
@@ -24,6 +26,7 @@ while true; do
     -s | --socket-prefix ) SOCKET_PREFIX="$2"; shift 2 ;;
     -o | --processes ) PROCESSES="$2"; shift 2 ;;
     -t | --threads ) THREADS="$2"; shift 2 ;;
+    -l | --logging ) LOGGING="$2"; shift 2 ;;
     * ) break ;;
   esac
 done
@@ -41,6 +44,11 @@ if [ -z "$PROCESSES" ]; then
   PROCESSES=3
 fi
 
+# Use default value for logging if not specified
+if [ -z "$LOGGING" ]; then
+  LOGGING=true
+fi
+
 # Use default value for threads if not specified
 if [ -z "$THREADS" ]; then
   THREADS=1
@@ -49,8 +57,12 @@ fi
 # Create socket prefix directory if it does not exist
 mkdir -p $SOCKET_PREFIX
 
-# Create app_root if it does not exist
-mkdir -p $APP_ROOT/app $APP_ROOT/wsgi $APP_ROOT/logs
+if [ $LOGGING = true ]; then
+  # Create app_root if it does not exist
+  mkdir -p $APP_ROOT/app $APP_ROOT/wsgi $APP_ROOT/logs
+else
+  mkdir -p $APP_ROOT/app $APP_ROOT/wsgi
+fi
 
 # Additional configuration directives
 cat << EOF > $APP_ROOT/wsgi/additional-configuration.conf
@@ -80,9 +92,9 @@ WSGISocketPrefix $SOCKET_PREFIX
 
 EOF
 
-
-# Create setup-<app>.sh
-cat << EOF > $APP_ROOT/setup-$APP_NAME.sh
+if [ $LOGGING = true ]; then
+  # Create setup-<app>.sh with logging
+  cat << EOF > $APP_ROOT/setup-$APP_NAME.sh
 #!/bin/bash
 
 mod_wsgi-express setup-server $APP_ROOT/app/$APP_NAME.wsgi \\
@@ -109,6 +121,33 @@ mod_wsgi-express setup-server $APP_ROOT/app/$APP_NAME.wsgi \\
 --threads $THREADS \\
 --reload-on-changes
 EOF
+else
+  # Create setup-<app>.sh without logging
+cat << EOF > $APP_ROOT/setup-$APP_NAME.sh
+#!/bin/bash
+
+mod_wsgi-express setup-server $APP_ROOT/app/$APP_NAME.wsgi \\
+--port $APP_PORT \\
+--server-root $APP_ROOT/wsgi \\
+--document-root $APP_ROOT/app \\
+--working-directory $APP_ROOT/app \\
+--directory-index index.html \\
+--include-file $APP_ROOT/wsgi/additional-configuration.conf \\
+--header-buffer-size 50000000 \\
+--response-buffer-size 50000000 \\
+--limit-request-body 5368709120 \\
+--initial-workers 1 \\
+--socket-timeout 900 \\
+--queue-timeout 900 \\
+--shutdown-timeout 900 \\
+--graceful-timeout 900 \\
+--connect-timeout 900 \\
+--request-timeout 900 \\
+--processes $PROCESSES \\
+--threads $THREADS \\
+--reload-on-changes
+EOF
+fi
 
 
 # Create start-<app>.sh
@@ -135,9 +174,16 @@ else
 echo Please provide parameters in the following format:
 echo ./build.sh --name app_name --port 0000 --root /path/to/app/root --socket-prefix /optional/path/to/socket/prefix --processes 4 --threads 1
 echo
-echo This script will generate three folders in the specified directory:
-echo   /app  - Contains application files
-echo   /wsgi - Contains wsgi configuration files
-echo   /logs - Contains log files
+if [ $LOGGING = true ]; then
+  echo This script will generate three folders in the specified directory:
+  echo   /app  - Contains application files
+  echo   /wsgi - Contains wsgi configuration files
+  echo   /logs - Contains log files
+else
+  echo This script will generate two folders in the specified directory:
+  echo   /app  - Contains application files
+  echo   /wsgi - Contains wsgi configuration files
+fi
+
 
 fi
