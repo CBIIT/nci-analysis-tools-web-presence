@@ -135,6 +135,14 @@
             </div>
             <div class="tools-section">
                 <h3>
+                    <a href="https://exploregwas.cancer.gov/">GWAS Explorer</a>
+                </h3>
+                <div>
+                    GWAS Explorer serves as an interactive resource for genetics researchers as well as other interested individuals to search for, visualize, and download aggregated association results from genome-wide association analyses (GWAS).
+                </div>
+            </div>
+            <div class="tools-section">
+                <h3>
                     <a href="https://icdgenie.cancer.gov/">ICDGenie</a>
                 </h3>
                 <div>
