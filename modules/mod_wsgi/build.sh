@@ -103,6 +103,7 @@ if [ $LOGGING = true ]; then
   cat << EOF > $APP_ROOT/setup-$APP_NAME.sh
 #!/bin/bash
 
+source /etc/bashrc
 mod_wsgi-express setup-server $APP_ROOT/app/$APP_NAME.wsgi \\
 --user $APP_USER \\
 --group $APP_GROUP \\
