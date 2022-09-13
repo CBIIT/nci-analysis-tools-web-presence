@@ -3,6 +3,8 @@
 #: Description  : Generates scripts to setup, start, and stop a wsgi application using mod_wsgi-express
 #: Options      : -n | --name  The name of the application (the .wsgi file should have the same name as the application)
 #               : -p | --port  The port this application will be running on
+#               : -u | --user  The user this application will be running under (default: ncianalysis)
+#               : -g | --group  The group this application will be running under (default: ncianalysis)
 #               : -r | --root  The root directory of this application. This directory has a folder called "app" that contains all application files
 #               : -s | --socket-prefix  The socket prefix for this application. If not specified, this will default to the application's wsgi/ folder
 #               : -o | --processes  The number of processes
@@ -12,6 +14,8 @@
 APP_NAME=
 APP_PORT=
 APP_ROOT=
+APP_USER=ncianalysis
+APP_GROUP=ncianalysis
 SOCKET_PREFIX=
 PROCESSES=
 THREADS=
@@ -22,6 +26,8 @@ while true; do
   case "$1" in
     -n | --name ) APP_NAME="$2"; shift 2 ;;
     -p | --port ) APP_PORT="$2"; shift 2 ;;
+    -u | --user ) APP_USER="$2"; shift 2 ;;
+    -g | --group ) APP_GROUP="$2"; shift 2 ;;
     -r | --root ) APP_ROOT="$2"; shift 2 ;;
     -s | --socket-prefix ) SOCKET_PREFIX="$2"; shift 2 ;;
     -o | --processes ) PROCESSES="$2"; shift 2 ;;
@@ -98,6 +104,8 @@ if [ $LOGGING = true ]; then
 #!/bin/bash
 
 mod_wsgi-express setup-server $APP_ROOT/app/$APP_NAME.wsgi \\
+--user $APP_USER \\
+--group $APP_GROUP \\
 --port $APP_PORT \\
 --server-root $APP_ROOT/wsgi \\
 --document-root $APP_ROOT/app \\
@@ -127,6 +135,8 @@ cat << EOF > $APP_ROOT/setup-$APP_NAME.sh
 #!/bin/bash
 
 mod_wsgi-express setup-server $APP_ROOT/app/$APP_NAME.wsgi \\
+--user $APP_USER \\
+--group $APP_GROUP \\
 --port $APP_PORT \\
 --server-root $APP_ROOT/wsgi \\
 --document-root $APP_ROOT/app \\
