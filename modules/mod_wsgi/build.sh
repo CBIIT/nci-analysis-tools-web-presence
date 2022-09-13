@@ -134,6 +134,7 @@ else
 cat << EOF > $APP_ROOT/setup-$APP_NAME.sh
 #!/bin/bash
 
+source /etc/bashrc
 mod_wsgi-express setup-server $APP_ROOT/app/$APP_NAME.wsgi \\
 --user $APP_USER \\
 --group $APP_GROUP \\
@@ -164,6 +165,7 @@ fi
 cat << EOF > $APP_ROOT/start-$APP_NAME.sh
 #!/bin/bash
 
+source /etc/bashrc
 . $APP_ROOT/wsgi/apachectl start
 EOF
 
@@ -172,6 +174,7 @@ EOF
 cat << EOF > $APP_ROOT/stop-$APP_NAME.sh
 #!/bin/bash
 
+source /etc/bashrc
 pkill -f $APP_ROOT
 . $APP_ROOT/wsgi/apachectl stop
 EOF
