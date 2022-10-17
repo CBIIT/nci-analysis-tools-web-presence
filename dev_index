@@ -59,6 +59,16 @@
                 </div>
             </div>
 
+            <!-- CGH Analysis Tools -->
+            <h2 class="tools-owner-title">CGH - Center for Global Health</h2>
+            <div class="tools-section">
+               <h3>
+                   <a href="/cervical-cp">CERVICAL-CP - Cervical Cancer Screening Scenario Comparison Tool</a>
+               </h3>
+               <div>
+                    Explore epidemiological outcomes for target populations with the CERVICAL-CP screening impact assessment tool.
+               </div>
+           </div>
 
             <!-- DCCPS Analysis Tools -->
             <h2 class="tools-owner-title">DCCPS &ndash; Division of Cancer Control and Population Sciences</h2>
