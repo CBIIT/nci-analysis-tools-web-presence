@@ -59,6 +59,16 @@
                 </div>
             </div>
 
+            <!-- CGH Analysis Tools -->
+            <h2 class="tools-owner-title">CGH - Center for Global Health</h2>
+            <div class="tools-section">
+               <h3>
+                   <a href="/globalcxca">GlobalCxCa - Cervical Cancer Screening Impact Assessment Tool</a>
+               </h3>
+               <div>
+                    Explore epidemiological outcomes for target populations with the GlobalCxCa screening impact assessment tool.
+               </div>
+           </div>
 
             <!-- DCCPS Analysis Tools -->
             <h2 class="tools-owner-title">DCCPS &ndash; Division of Cancer Control and Population Sciences</h2>
@@ -238,14 +248,6 @@
                 </h3>
                 <div>
                     A web-based tool designed to provide state-of-the art methods to explore, visualize and analyze mutational signatures, which will greatly facilitate broad investigation of mutational signatures to elucidate different mutagenesis processes involved in tumorigenesis.
-                </div>
-            </div>
-            <div class="tools-section">
-                <h3>
-                    <a href="https://ncidose-dev.cancer.gov/">NCIDose</a>
-                </h3>
-                <div>
-                    This website is designed to share the major developments in dose assessment tools and resources with other researchers. Anyone who is interested in obtaining these resources for research can download and submit the Software Transfer Agreement to the NCI Technology Transfer Center.
                 </div>
             </div>
             <div class="tools-section">
