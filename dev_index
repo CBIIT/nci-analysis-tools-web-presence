@@ -147,6 +147,14 @@
             </div>
             <div class="tools-section">
                 <h3>
+                    <a href="https://analysistools-dev.cancer.gov/comets-explorer/">COMETS Explorer Tool (COMETS)</a>
+                </h3>
+                <div>
+                    COMETS explorer description
+                </div>
+            </div>
+            <div class="tools-section">
+                <h3>
                     <a href="/crosstalk/">Comparative Age Period Cohort (CrossTalk) Web Tool</a>
                 </h3>
                 <div>
