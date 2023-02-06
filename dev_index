@@ -71,13 +71,13 @@
             <h2 class="tools-owner-title">CGH - Center for Global Health</h2>
             <div class="tools-section">
                <h3>
-                   <a href="/globalcxca">GlobalCxCa - Cervical Cancer Screening Impact Assessment Tool</a>
+                   <a href="https://d1o0ba569j7ir2.cloudfront.net/">GlobalCxCa - Cervical Cancer Screening Impact Assessment Tool</a>
                </h3>
                <div>
                     Explore epidemiological outcomes for target populations with the GlobalCxCa screening impact assessment tool.
                </div>
            </div>
-
+           
             <!-- DCCPS Analysis Tools -->
             <h2 class="tools-owner-title">DCCPS &ndash; Division of Cancer Control and Population Sciences</h2>
             <div class="tools-section">
@@ -151,6 +151,14 @@
                 </h3>
                 <div>
                     The Colorectal Risk Assessment Tool is a tool designed for doctors and health providers to use along with their patients to determine their risk for developing colorectal cancer.
+                </div>
+            </div>
+            <div class="tools-section">
+                <h3>
+                    <a href="https://analysistools-dev.cancer.gov/comets-explorer/">COMETS Explorer Tool (COMETS)</a>
+                </h3>
+                <div>
+                    COMETS explorer description
                 </div>
             </div>
             <div class="tools-section">
