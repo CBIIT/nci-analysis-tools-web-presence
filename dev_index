@@ -52,14 +52,6 @@
             </div>
             <div class="tools-section">
                 <h3>
-                    <a href="https://mcaexplorer-dev.cancer.gov/#/">mCA Explorer - Mosaic Chromosomal Alteration Explorer</a>
-                </h3>
-                <div>
-                   mCA Explorer - an interactive mCA visualization and analysis tool that allows for aggregation, visualization, and analysis of mCAs in large populations.
-                </div>
-            </div>
-            <div class="tools-section">
-                <h3>
                     <a href="https://scatlaslc-dev.ccr.cancer.gov/#/">Single-cell Atlas in Liver Cancer (scAtlasLC)</a>
                 </h3>
                 <div>
@@ -239,6 +231,14 @@
                 </h3>
                 <div>
                     Statistical analysis tool that predicts a person's risk of lung cancer death based on a series of demographic and clinical risk factors for lung cancer. Findings from the tool support defining the high-risk targeting population for low-dose CT screening where benefits of screening overweigh harms thus improving the selection process for lung-cancer screening.
+                </div>
+            </div>
+            <div class="tools-section">
+                <h3>
+                    <a href="https://mcaexplorer-dev.cancer.gov/#/">mCA Explorer - Mosaic Chromosomal Alteration Explorer</a>
+                </h3>
+                <div>
+                   mCA Explorer - an interactive mCA visualization and analysis tool that allows for aggregation, visualization, and analysis of mCAs in large populations.
                 </div>
             </div>
             <div class="tools-section">
