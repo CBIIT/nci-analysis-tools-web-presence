@@ -76,8 +76,8 @@
                 </div>
             </div>
             
-            <!-- CGBB Analysis Tools -->
-            <h2 class="tools-owner-title">CGBB - Computational Genomics & Bioinformatics Branch</h2>
+            <!-- CBIIT Analysis Tools -->
+            <h2 class="tools-owner-title">CBIIT - Center for Biomedical Informatics & Information Technology</h2>
             <div class="tools-section">
                 <h3>
                     <a href="https://analysistools-dev.cancer.gov/3dvizsnp">3DVizSNP</a>
