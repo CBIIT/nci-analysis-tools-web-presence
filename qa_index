@@ -210,7 +210,7 @@
             </div>
             <div class="tools-section">
                 <h3>
-                    <a href="https://ldlink-qa.nci.nih.gov/">LDLink</a>
+                    <a href="https://ldlink-qa.nih.gov/">LDLink</a>
                 </h3>
                 <div>
                     A suite of web-based applications designed to easily and efficiently explore linkage disequilibrium in population subgroups. All population genotype data originates from Phase 3 of the 1000 Genomes Project and variant RS numbers are indexed based on dbSNP build 151.
