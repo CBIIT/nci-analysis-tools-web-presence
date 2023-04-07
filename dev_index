@@ -80,7 +80,7 @@
             <h2 class="tools-owner-title">CBIIT - CGBB (Computational Genomics & Bioinformatics Branch)</h2>
             <div class="tools-section">
                 <h3>
-                    <a href="https://analysistools-dev.cancer.gov/3dvizsnp">3DVizSNP - Rapid 3D Visualization of SNP Mutations</a>
+                    <a href="/3dvizsnp">3DVizSNP - Rapid 3D Visualization of SNP Mutations</a>
                 </h3>
                 <div>
                     3DVizSNP enables rapid screening of mutations extracted from a variant caller format (VCF) file using the iCn3D protein structure and sequence viewing platform. All you need is a VCF file and you’re ready to go!
