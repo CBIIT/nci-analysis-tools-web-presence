@@ -28,7 +28,7 @@
              <h2 class="tools-owner-title">CCR - Center for Cancer Research</h2>
              <div class="tools-section">
                 <h3>
-                    <a href="https://cprosite.ccr.cancer.gov/#/">cProSite - Cancer Proteogenomic Data Analysis Site</a>
+                    <a href="https://cprosite.ccr.cancer.gov/">cProSite - Cancer Proteogenomic Data Analysis Site</a>
                 </h3>
                 <div>
                     The National Cancer Institute’s Clinical Proteomic Tumor Analysis Consortium (CPTAC) is a national effort to accelerate the understanding of the molecular basis of cancer through the application of large-scale proteome and genome analysis, or proteogenomics. This cProSite tool is to use data from CPTAC to build a web based interactive platform for data analysis.
@@ -52,7 +52,7 @@
             </div>
             <div class="tools-section">
                 <h3>
-                    <a href="https://scatlaslc.ccr.cancer.gov/#/">Single-cell Atlas in Liver Cancer (scAtlasLC)</a>
+                    <a href="https://scatlaslc.ccr.cancer.gov/">Single-cell Atlas in Liver Cancer (scAtlasLC)</a>
                 </h3>
                 <div>
                     The scAtlasLC (single-cell Atlas in Liver Cancer) tool is a publicly available data portal of single-cell transcriptomic profiles of tumor cell communities in hepatocellular carcinoma and intrahepatic cholangiocarcinoma.
@@ -162,6 +162,14 @@
             </div>
             <div class="tools-section">
                 <h3>
+                    <a href="/gwas-target/">GWASTarget</a>
+                </h3>
+                <div>
+                    A comprehensive resource and web tool for identification of target genes and pathways from genome-wide association study (GWAS) data.
+                </div>
+            </div>            
+            <div class="tools-section">
+                <h3>
                     <a href="https://ldlink.nci.nih.gov/">LDLink</a>
                 </h3>
                 <div>
@@ -234,7 +242,7 @@
             </div>
             <div class="tools-section">
                 <h3>
-                    <a href="/spatial-power">Spatial Power</a>
+                    <a href="/spatial-power/">Spatial Power</a>
                 </h3>
                 <div>
                     A web-based tool to estimate the power of environmental epidemiologic studies to detect spatial clustering of cancer cases in a geographic area of interest.

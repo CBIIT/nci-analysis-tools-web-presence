@@ -163,7 +163,7 @@
             </div>
             <div class="tools-section">
                 <h3>
-                    <a href="https://analysistools-stage.cancer.gov/gwas-target/">GWASTarget</a>
+                    <a href="/gwas-target/">GWASTarget</a>
                 </h3>
                 <div>
                     A comprehensive resource and web tool for identification of target genes and pathways from genome-wide association study (GWAS) data.
