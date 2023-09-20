@@ -147,7 +147,7 @@
             </div>
             <div class="tools-section">
                 <h3>
-                    <a href="https://forgedb-dev.cancer.gov/">FORGEdb</a>
+                    <a href="https://forgedb-stage.cancer.gov/">FORGEdb</a>
                 </h3>
                 <div>
                     FORGEdb is a tool that consolidates diverse data on disease-related genetic variants, presenting it with a functional importance score to guide further research.
