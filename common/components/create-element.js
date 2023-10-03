@@ -1,21 +1,38 @@
+/**
+ * Creates an HTML element from a JSON object.
+ * @example
+ * <create-element src="https://example.com/element.json"></create-element>
+ */
 class CreateElement extends HTMLElement {
   static observedAttributes = ["src"];
 
+  /**
+   * Creates a shadow root and attaches it to the element.
+   */
   constructor() {
     super();
     this.shadow = this.attachShadow({ mode: "open" });
   }
 
+  /**
+   * Creates the element when it is added to the DOM.
+   */
   async connectedCallback() {
     const src = this.getAttribute("src");
     const element = await this.createElementFromSource(src);
-    this.replaceChildren(this.shadow, element);
+    this.replaceChild(this.shadow, element);
   }
 
+  /**
+   * Updates the element when an attribute changes.
+   * @param {string} name
+   * @param {string} oldValue
+   * @param {string} newValue
+   */
   async attributeChangedCallback(name, oldValue, newValue) {
     if (name === "src") {
       const element = await this.createElementFromSource(newValue);
-      this.replaceChildren(this.shadow, element);
+      this.replaceChild(this.shadow, element);
     }
   }
 
@@ -26,20 +43,25 @@ class CreateElement extends HTMLElement {
    */
   async createElementFromSource(src) {
     const response = await fetch(src, {cache: "no-store"});
-    const elementContent = await response.json();
-    const element = this.createElement(elementContent);
-    return element;
+    if (response.ok) {
+      const elementContent = await response.json();
+      const element = this.createElement(elementContent);
+      return element;
+    } else {
+      return null;
+    }
   }
 
   /**
-   * Replaces a node's children with new children.
+   * Replaces a node's child with another node.
    * @param {Node} node
    * @param {Node} children
    * @returns {Node}
    */
-  replaceChildren(node, children) {
+  replaceChild(node, child) {
     this.removeChildren(node);
-    node.appendChild(children);
+    if (child)
+      node.appendChild(child);
     return node;
   }
 
