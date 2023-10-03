@@ -1,7 +1,15 @@
 /**
  * Creates an HTML element from a JSON object.
  * @example
- * <create-element src="https://example.com/element.json"></create-element>
+ * <create-element id="myElement" src="https://example.com/element.json"></create-element>
+ * 
+ * @example
+ * // Refresh content every five minutes
+ * const intervalId = setInterval(() => await myElement.refresh(), 1000 * 60 * 5);
+ * 
+ * @example
+ * // Update source url
+ * myElement.setAttribute("src", "https://example.com/element2.json");
  */
 class CreateElement extends HTMLElement {
   static observedAttributes = ["src"];
@@ -18,9 +26,7 @@ class CreateElement extends HTMLElement {
    * Creates the element when it is added to the DOM.
    */
   async connectedCallback() {
-    const src = this.getAttribute("src");
-    const element = await this.createElementFromSource(src);
-    this.replaceChild(this.shadow, element);
+    this.refresh();
   }
 
   /**
@@ -31,9 +37,18 @@ class CreateElement extends HTMLElement {
    */
   async attributeChangedCallback(name, oldValue, newValue) {
     if (name === "src") {
-      const element = await this.createElementFromSource(newValue);
-      this.replaceChild(this.shadow, element);
+      this.refresh();
     }
+  }
+
+  /**
+   * Refreshes the element's content.
+   * @param {string} src 
+   */
+  async refresh() {
+    const sourceUrl = this.getAttribute("src");
+    const element = await this.createElementFromSource(sourceUrl);
+    this.replaceChild(this.shadow, element);
   }
 
   /**
