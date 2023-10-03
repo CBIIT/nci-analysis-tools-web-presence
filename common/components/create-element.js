@@ -2,11 +2,11 @@
  * Creates an HTML element from a JSON object.
  * @example
  * <create-element id="myElement" src="https://example.com/element.json"></create-element>
- * 
+ *
  * @example
  * // Refresh content every five minutes
  * const intervalId = setInterval(() => await myElement.refresh(), 1000 * 60 * 5);
- * 
+ *
  * @example
  * // Update source url
  * myElement.setAttribute("src", "https://example.com/element2.json");
@@ -43,7 +43,7 @@ class CreateElement extends HTMLElement {
 
   /**
    * Refreshes the element's content.
-   * @param {string} src 
+   * @param {string} src
    */
   async refresh() {
     const sourceUrl = this.getAttribute("src");
@@ -53,16 +53,17 @@ class CreateElement extends HTMLElement {
 
   /**
    * Fetches a JSON object and create an element from it.
-   * @param {string} src 
+   * @param {string} src
    * @returns {Promise<HTMLElement>}
    */
   async createElementFromSource(src) {
-    const response = await fetch(src, {cache: "no-store"});
-    if (response.ok) {
+    try {
+      const response = await fetch(src, { cache: "no-store" });
       const elementContent = await response.json();
       const element = this.createElement(elementContent);
       return element;
-    } else {
+    } catch (error) {
+      console.error(error);
       return null;
     }
   }
@@ -75,8 +76,7 @@ class CreateElement extends HTMLElement {
    */
   replaceChild(node, child) {
     this.removeChildren(node);
-    if (child)
-      node.appendChild(child);
+    if (child) node.appendChild(child);
     return node;
   }
 
@@ -127,7 +127,7 @@ class CreateElement extends HTMLElement {
         } else {
           el.appendChild(this.createElement(child));
         }
-      };
+      }
     }
     return el;
   }
