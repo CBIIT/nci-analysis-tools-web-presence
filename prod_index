@@ -216,14 +216,14 @@
                     The Melanoma Risk Assessment is an interactive tool designed by scientists at the National Cancer Institute (NCI), the University of Pennsylvania, and the University of California, San Francisco, to estimate a person's absolute risk of developing invasive melanoma. The tool helps clinicians identify individuals at increased risk of melanoma in order to plan appropriate screening interventions with them.
                 </div>
             </div>
-            <!-- <div class="tools-section">
+            <div class="tools-section">
                 <h3>
                     <a href="/mutational-signatures/">mSigPortal</a>
                 </h3>
                 <div>
                     A web-based tool designed to provide state-of-the art methods to explore, visualize and analyze mutational signatures, which will greatly facilitate broad investigation of mutational signatures to elucidate different mutagenesis processes involved in tumorigenesis.
                 </div>
-            </div> -->
+            </div>
             <div class="tools-section">
                 <h3>
                     <a href="/pathway/">Pathway Analysis Tool</a>
