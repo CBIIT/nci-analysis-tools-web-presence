@@ -13,9 +13,11 @@
     <link rel="stylesheet" href="common/css/style.css" />
     <link rel="icon" type="image/x-icon" href="common/images/favicon.ico" />
     <script src="https://assets.adobedtm.com/f1bfa9f7170c81b1a9a9ecdcc6c5215ee0b03c84/satelliteLib-4b219b82c4737db0e1797b6c511cf10c802c95cb.js"></script>
+    <script src="https://cbiit.github.io/nci-softwaresolutions-elements/components/include-html.js"></script>
   </head>
 
   <body>
+    <include-html src="https://cbiit.github.io/nci-softwaresolutions-elements/banners/government-shutdown.html"></include-html>
     <header>
       <div class="container">
         <a href="https://www.cancer.gov/">
