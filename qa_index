@@ -458,18 +458,6 @@
         </div>
         <div class="tools-section">
           <h3>
-            <a href="/pathway/">Pathway Analysis Tool</a>
-          </h3>
-          <div>
-            This is a web-based tool that conducts pathway analysis using
-            summary data from GWAS and helps researchers to investigate the
-            association between a predefined pathway and an outcome using
-            summary results from GWAS. The backend is a R package "ARTP2"
-            developed by DCEG.
-          </div>
-        </div>
-        <div class="tools-section">
-          <h3>
             <a href="/perc/">PERC</a>
           </h3>
           <div>

@@ -17,7 +17,9 @@
   </head>
 
   <body>
-    <include-html src="https://cbiit.github.io/nci-softwaresolutions-elements/banners/government-shutdown.html"></include-html>
+    <include-html
+      src="https://cbiit.github.io/nci-softwaresolutions-elements/banners/government-shutdown.html"
+    ></include-html>
     <header>
       <div class="container">
         <a href="https://www.cancer.gov/">
@@ -471,18 +473,6 @@
             explore, visualize and analyze mutational signatures, which will
             greatly facilitate broad investigation of mutational signatures to
             elucidate different mutagenesis processes involved in tumorigenesis.
-          </div>
-        </div>
-        <div class="tools-section">
-          <h3>
-            <a href="/pathway/">Pathway Analysis Tool</a>
-          </h3>
-          <div>
-            This is a web-based tool that conducts pathway analysis using
-            summary data from GWAS and helps researchers to investigate the
-            association between a predefined pathway and an outcome using
-            summary results from GWAS. The backend is a R package "ARTP2"
-            developed by DCEG.
           </div>
         </div>
         <div class="tools-section">
