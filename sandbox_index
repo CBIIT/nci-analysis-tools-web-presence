@@ -191,21 +191,6 @@
         </div>
         <div class="tools-section">
           <h3>
-            <a href="/lungCancerScreening/"
-              >Lung Cancer Screening Risk Assessment Tool</a
-            >
-          </h3>
-          <div>
-            Statistical analysis tool that predicts a person's risk of lung
-            cancer death based on a series of demographic and clinical risk
-            factors for lung cancer. Findings from the tool support defining the
-            high-risk targeting population for low-dose CT screening where
-            benefits of screening overweigh harms thus improving the selection
-            process for lung-cancer screening.
-          </div>
-        </div>
-        <div class="tools-section">
-          <h3>
             <a href="https://mrisktool-sandbox.cancer.gov/"
               >Melanoma Risk Assessment Tool (MRAT)</a
             >
