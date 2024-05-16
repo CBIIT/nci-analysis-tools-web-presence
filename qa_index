@@ -392,18 +392,6 @@
         </div>
         <div class="tools-section">
           <h3>
-            <a href="/lungCancerRiskAssessment/"
-              >Lung Cancer Risk Assessment Tool</a
-            >
-          </h3>
-          <div>
-            Statistical analysis tool that predicts a person's risk of lung
-            cancer diagnosis and death based on a series of demographic and
-            clinical risk factors for lung cancer.
-          </div>
-        </div>
-        <div class="tools-section">
-          <h3>
             <a href="/lungCancerScreening/"
               >Lung Cancer Screening Risk Assessment Tool</a
             >
