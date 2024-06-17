@@ -168,16 +168,7 @@
         <!-- DCEG Analysis Tools -->
         <h2 class="tools-owner-title">
           DCEG &ndash; Division of Cancer Epidemiology and Genetics
-        </h2>
-        <div class="tools-section">
-          <h3>
-            <a href="/absoluteRisk/">Absolute Risk Calculator</a>
-          </h3>
-          <div>
-            A web tool for researchers to build an absolute risk model and make
-            absolute risk predictions.
-          </div>
-        </div>
+        </h2>        
         <div class="tools-section">
           <h3>
             <a href="/apc/">Age Period Cohort (APC) Web Tool</a>
