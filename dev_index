@@ -265,24 +265,7 @@
             epidemiologic studies and aids investigators in planning COMETS
             projects.
           </div>
-        </div>
-        <div class="tools-section">
-          <h3>
-            <a href="/crosstalk/"
-              >Comparative Age Period Cohort (CrossTalk) Web Tool</a
-            >
-          </h3>
-          <div>
-            This tool is a companion to the Age Period Cohort (APC) Analysis Web
-            Tool. The APC tool provides age-period-cohort analysis for a single
-            cancer endpoint in a defined population and time period (one-hazard
-            situation where single outcome is being studied), e.g. lung cancer
-            incidence among white women ages 30 – 84 years during 1992 – 2010 in
-            SEER-13 catchment areas. The Crosstalk tool aims at testing the
-            differences between two hazards, e.g. the same cancer in different
-            populations or different cancers in the same population.
-          </div>
-        </div>
+        </div>       
         <div class="tools-section">
           <h3>
             <a href="/econsent/">Electronic Consent (eConsent)</a>
