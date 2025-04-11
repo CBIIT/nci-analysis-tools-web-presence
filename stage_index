@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <title>NCI Analysis Tools Home Page</title>
+    <title>NCI Scientific Applications Home Page</title>
 
     <!-- Latest compiled and minified CSS -->
     <link
@@ -29,18 +29,64 @@
             alt="National Cancer Institute"
           />
         </a>
+        <!-- <a href="https://datascience.cancer.gov/">
+          <img
+            class="img-responsive"
+            src="common/images/cbiit_logo_color.svg"
+            alt="Center for Biomedical Informatics and Information Technology"
+          />
+        </a> -->
       </div>
     </header>
     <main>
       <h1 class="tools-main-title">
-        <div class="container">NCI Analysis Tools</div>
+        <div class="container">NCI Scientific Applications (Analysis Tools and Portals)</div>
       </h1>
       <div id="landing-blockcontent" class="container">
-        <!-- CCR Analysis Tools -->
-        <h2 class="tools-owner-title">CCR - Center for Cancer Research</h2>
+        <!-- Scientific Applications overview -->
+        <div class="sciapps-intro">
+          <p>
+            The <em>Scientific Applications</em> program within the Center for
+            Biomedical Informatics and Information Technology (CBIIT) Digital
+            Services and Solutions Branch (DSSB) delivers robust IT management
+            and software development services to advance cancer research by
+            enabling biomedical researchers with secure, modern, and
+            user-centered analytical tools and data portals. In alignment with
+            the branch’s strategic goals, the program contributes to the
+            modernization of research infrastructure by leveraging emerging
+            technologies and best practices in software engineering and IT
+            service management.
+          </p>
+          <p>
+            Explore the complete list of applications managed within this
+            portfolio, grouped by the associated NCI division, office, or center
+            for easy reference.
+          </p>
+        </div>
+
+        <!-- CBIIT Analysis Tools -->
+        <h2 class="tools-owner-title">
+          CBIIT &ndash; CGBB (Computational Genomics and Bioinformatics Branch)
+        </h2>
         <div class="tools-section">
           <h3>
-            <a href="https://cprosite-stage.ccr.cancer.gov/#/"
+            <a href="/3dvizsnp/"
+              >3DVizSNP - Rapid 3D Visualization of SNP Mutations</a
+            >
+          </h3>
+          <div>
+            3DVizSNP enables rapid screening of mutations extracted from a
+            variant caller format (VCF) file using the iCn3D protein structure
+            and sequence viewing platform. All you need is a VCF file and you’re
+            ready to go!
+          </div>
+        </div>
+
+        <!-- CCR Analysis Tools -->
+        <h2 class="tools-owner-title">CCR &ndash; Center for Cancer Research</h2>
+        <div class="tools-section">
+          <h3>
+            <a href="https://cprosite-stage.ccr.cancer.gov/"
               >cProSite - Cancer Proteogenomic Data Analysis Site</a
             >
           </h3>
@@ -67,7 +113,9 @@
         </div>
         <div class="tools-section">
           <h3>
-            <a href="/microarray/">MicroArray Analysis Pipeline (MAAPster)</a>
+            <a href="https://maap-stage.ccr.cancer.gov/"
+              >MicroArray Analysis Pipeline (MAAPster)</a
+            >
           </h3>
           <div>
             MAAPster is a comprehensive web tool designed by the CCR
@@ -86,7 +134,7 @@
         </div>
         <div class="tools-section">
           <h3>
-            <a href="https://scatlaslc-stage.ccr.cancer.gov/#/"
+            <a href="https://scatlaslc-stage.ccr.cancer.gov/"
               >Single-cell Atlas in Liver Cancer (scAtlasLC)</a
             >
           </h3>
@@ -98,26 +146,8 @@
           </div>
         </div>
 
-        <!-- CBIIT Analysis Tools -->
-        <h2 class="tools-owner-title">
-          CBIIT - CGBB (Computational Genomics & Bioinformatics Branch)
-        </h2>
-        <div class="tools-section">
-          <h3>
-            <a href="/3dvizsnp/"
-              >3DVizSNP - Rapid 3D Visualization of SNP Mutations</a
-            >
-          </h3>
-          <div>
-            3DVizSNP enables rapid screening of mutations extracted from a
-            variant caller format (VCF) file using the iCn3D protein structure
-            and sequence viewing platform. All you need is a VCF file and you’re
-            ready to go!
-          </div>
-        </div>
-
         <!-- CGH Analysis Tools -->
-        <h2 class="tools-owner-title">CGH - Center for Global Health</h2>
+        <h2 class="tools-owner-title">CGH &ndash; Center for Global Health</h2>
         <div class="tools-section">
           <h3>
             <a href="https://globalcxca-stage.cancer.gov/"
@@ -129,13 +159,63 @@
             CC3S Cervical Cancer Screening Scenario Simulator.
           </div>
         </div>
+        <div class="tools-section">
+          <h3>
+            <a href="https://www.icrpartnership.org/"
+              >ICRP – International Cancer Research Partnership</a
+            >
+          </h3>
+          <div>
+            A web portal for ICRP that enables senior representatives of cancer
+            research funding organizations to connect, network, and collaborate
+            to enhance global cancer research.
+          </div>
+        </div>
+
+        <!-- CSSI Analysis Tools -->
+        <h2 class="tools-owner-title">
+          CSSI &ndash; Center for Strategic Scientific Initiatives
+        </h2>
+        <div class="tools-section">
+          <h3>
+            <a href="https://www.comets-analytics.org/"
+              >COnsortium of METabolomics Studies (COMETS) Analytics Web Tool</a
+            >
+          </h3>
+          <div>
+            COMETS Analytics supports and streamlines consortium-based analyses
+            of metabolomics and other -omics data. COMET Analytics was designed
+            to simplify meta-analysis at the consortia level. Users prepare data
+            input, and then the software verifies data integrity, performs data
+            analyses securely, and aggregates results in a standardized format.
+          </div>
+        </div>
+
         <!-- DCCPS Analysis Tools -->
         <h2 class="tools-owner-title">
           DCCPS &ndash; Division of Cancer Control and Population Sciences
         </h2>
         <div class="tools-section">
           <h3>
-            <a href="/jpsurv/">JPSurv</a>
+            <a href="https://cedcd-stage.nci.nih.gov/">CEDCD – Cancer Epidemiology
+              Descriptive Cohort Database</a>
+          </h3>
+          <div>
+            CEDCD contains descriptive information about cohort studies that
+            follow groups of persons over time for cancer incidence, mortality,
+            and other health outcomes. CEDCD is a searchable database that
+            contains general study information (e.g., eligibility criteria and
+            size), the type of data collected at baseline, cancer sites, number
+            of participants diagnosed with cancer, and biospecimen information.
+            All data included in this database are aggregated for each cohort;
+            there are no individual level data. The goal of the CEDCD is to
+            facilitate collaboration and highlight the opportunities for
+            research within existing cohort studies.
+          </div>
+        </div>
+        <div class="tools-section">
+          <h3>
+            <a href="/jpsurv/">JPSurv - JoinPoint Survival Model</a>
           </h3>
           <div>
             JPSurv is a tool for estimating and presenting survival trend. It
@@ -172,12 +252,25 @@
         </h2>
         <div class="tools-section">
           <h3>
-            <a href="/apc/">Age Period Cohort (APC) Web Tool</a>
+            <a href="https://act24-stage.cancer.gov/">ACT24 - Activities Completed over Time in 24 hours
+            </a>
           </h3>
           <div>
-            Age-Period-Cohort analysis identifies patterns in cancer incidence
-            or mortality rates from population-based Count (numerator) and
-            Population (denominator) data. Often the data come from a Cancer
+            Activities Completed over Time in 24 hours (ACT24) is a web-based
+            previous-day recall instrument that was designed to estimate daily
+            summary values for physical activity and sedentary behavior,
+            including energy expenditure, time spent sitting and in different
+            types and intensities of physical activity.
+          </div>
+        </div>
+        <div class="tools-section">
+          <h3>
+            <a href="/apc/">APC - Age Period Cohort Web Tool</a>
+          </h3>
+          <div>
+            Age Period Cohort (APC) analysis identifies patterns in cancer
+            incidence or mortality rates from population-based Count (numerator)
+            and Population (denominator) data. Often the data come from a Cancer
             Registry (e.g., SEER) in the form of a table showing the numbers of
             cancer cases or cancer deaths (counts) and corresponding
             person-years at risk (population) for particular age groups and
@@ -188,9 +281,7 @@
         </div>
         <div class="tools-section">
           <h3>
-            <a href="https://authorarranger-stage.nci.nih.gov/"
-              >AuthorArranger</a
-            >
+            <a href="https://authorarranger-stage.nci.nih.gov/">AuthorArranger</a>
           </h3>
           <div>
             AuthorArranger is a free web tool designed to help authors of
@@ -201,7 +292,19 @@
             resources by helping you conquer journal title pages in seconds.
           </div>
         </div>
-
+        <div class="tools-section">
+          <h3>
+            <a href="https://bcrisktool-stage.cancer.gov/"
+              >BCRAT - Breast Cancer Risk Assessment Tool</a
+            >
+          </h3>
+          <div>
+            The Breast Cancer Risk Assessment Tool (BCRAT) is an interactive
+            tool designed by scientists at the National Cancer Institute (NCI)
+            and the National Surgical Adjuvant Breast and Bowel Project (NSABP)
+            to estimate a woman's risk of developing invasive breast cancer.
+          </div>
+        </div>
         <div class="tools-section">
           <h3>
             <a href="/biomarkerTools/">Biomarker Tools</a>
@@ -230,37 +333,51 @@
         </div>
         <div class="tools-section">
           <h3>
-            <a href="https://bcrisktool-stage.cancer.gov/"
-              >Breast Cancer Risk Assessment Tool (BCRAT)</a
-            >
-          </h3>
-          <div>
-            The Breast Cancer Risk Assessment Tool is an interactive tool
-            designed by scientists at the National Cancer Institute (NCI) and
-            the National Surgical Adjuvant Breast and Bowel Project (NSABP) to
-            estimate a woman's risk of developing invasive breast cancer.
-          </div>
-        </div>
-        <div class="tools-section">
-          <h3>
             <a href="https://ccrisktool-stage.cancer.gov/"
-              >Colorectal Risk Assessment Tool (CCRAT)</a
+              >CCRAT - Colorectal Risk Assessment Tool</a
             >
           </h3>
           <div>
-            The Colorectal Risk Assessment Tool is a tool designed for doctors
-            and health providers to use along with their patients to determine
-            their risk for developing colorectal cancer.
+            The Colorectal Risk Assessment Tool (CCRAT) is a tool designed for
+            doctors and health providers to use along with their patients to
+            determine their risk for developing colorectal cancer.
           </div>
         </div>
         <div class="tools-section">
           <h3>
-            <a href="/ezqtl/">ezQTL</a>
+            <a href="https://chornobyltissuebank-stage.cancer.gov/"
+              >CTB - Chornobyl Tissue Bank</a
+            >
           </h3>
           <div>
-            A web-based tool for integrative QTL (Quantitative Trait Loci)
+            TThe Chernobyl (Chornobyl in Ukrainian) Tissue Bank (CTB) is a
+            repository of samples donated by patients with thyroid tumors who
+            live in the areas affected by the accident at the Chernobyl Nuclear
+            Power Plant. The purpose of the CTB is to collect, document, and
+            store these materials, and to facilitate access to these unique
+            resources by bona fide researchers.
+          </div>
+        </div>
+        <div class="tools-section">
+          <h3>
+            <a href="/ezqtl/">ezQTL - Visualization of Quantitative Trait
+              Loci</a>
+          </h3>
+          <div>
+            A web-based tool for integrative Quantitative Trait Loci (QTL)
             visualization and colocalization with GWAS data for individual loci
             to aid GWAS annotation.
+          </div>
+        </div>
+        <div class="tools-section">
+          <h3>
+            <a href="/forge2-tf/">FORGE2-TF</a>
+          </h3>
+          <div>
+            A web-based tool designed to enable the exploration of DNase I tag
+            (chromatin accessibility) signal surrounding GWAS array SNPs and the
+            calculation of significance of overlap with transcription factor
+            binding sites from common TF databases.
           </div>
         </div>
         <div class="tools-section">
@@ -275,24 +392,13 @@
         </div>
         <div class="tools-section">
           <h3>
-            <a href="/forge2-tf/">FORGE2 TF</a>
-          </h3>
-          <div>
-            A web-based tool designed to enable the exploration of DNase I tag
-            (chromatin accessibility) signal surrounding GWAS array SNPs and the
-            calculation of significance of overlap with transcription factor
-            binding sites from common TF databases.
-          </div>
-        </div>
-        <div class="tools-section">
-          <h3>
             <a href="https://exploregwas-stage.cancer.gov/">GWAS Explorer</a>
           </h3>
           <div>
             GWAS Explorer serves as an interactive resource for genetics
             researchers as well as other interested individuals to search for,
             visualize, and download aggregated association results from
-            genome-wide association analyses (GWAS).
+            genome-wide association studies (GWAS) analyses.
           </div>
         </div>
         <div class="tools-section">
@@ -301,10 +407,10 @@
           </h3>
           <div>
             A comprehensive resource and web tool for identification of target
-            genes and pathways from genome-wide association study (GWAS) data.
+            genes and pathways from genome-wide association studies (GWAS) data.
           </div>
         </div>
-        <div class="tools-section">
+        <!-- <div class="tools-section">
           <h3>
             <a href="https://hpvvisuals-stage.cancer.gov/">HPV Visuals</a>
           </h3>
@@ -317,7 +423,7 @@
             images that are true representations of meaningful changes in the
             appearance of the cervix that require clinical action.
           </div>
-        </div>
+        </div> -->
         <div class="tools-section">
           <h3>
             <a href="https://icdgenie-stage.cancer.gov/">ICDGenie</a>
@@ -333,7 +439,8 @@
         </div>
         <div class="tools-section">
           <h3>
-            <a href="https://ldlink-stage.nih.gov">LDLink</a>
+            <a href="https://ldlink-stage.nih.gov/">LDLink - Linkage Disequilibrium
+              Web Tools</a>
           </h3>
           <div>
             A suite of web-based applications designed to easily and efficiently
@@ -344,25 +451,38 @@
         </div>
         <div class="tools-section">
           <h3>
-            <a href="https://mrisktool-stage.cancer.gov/"
-              >Melanoma Risk Assessment Tool (MRAT)</a
-            >
+            <a href="https://mrisktool-stage.cancer.gov/">MRAT - Melanoma Risk
+              Assessment Tool</a
+              >
           </h3>
           <div>
-            The Melanoma Risk Assessment is an interactive tool designed by
-            scientists at the National Cancer Institute (NCI), the University of
-            Pennsylvania, and the University of California, San Francisco, to
-            estimate a person's absolute risk of developing invasive melanoma.
-            The tool helps clinicians identify individuals at increased risk of
-            melanoma in order to plan appropriate screening interventions with
-            them.
+            The Melanoma Risk Assessment Tool (MRAT) is an interactive tool
+            designed by scientists at the National Cancer Institute (NCI), the
+            University of Pennsylvania, and the University of California, San
+            Francisco, to estimate a person's absolute risk of developing
+            invasive melanoma. The tool helps clinicians identify individuals at
+            increased risk of melanoma in order to plan appropriate screening
+            interventions with them.
           </div>
         </div>
         <div class="tools-section">
           <h3>
-            <a href="/nevustool/"
-              >Moles to Melanoma: Recognizing the ABCDE Features</a
-            >
+            <a href="/mutational-signatures/">mSigPortal - Mutational Signature
+              Portal</a
+              >
+          </h3>
+          <div>
+            A web-based tool designed to provide state-of-the art methods to
+            explore, visualize and analyze mutational signatures, which will
+            greatly facilitate broad investigation of mutational signatures to
+            elucidate different mutagenesis processes involved in tumorigenesis.
+          </div>
+        </div>
+        <div class="tools-section">
+          <h3>
+            <a href="/nevustool/">Nevus – Moles
+              to Melanoma: Recognizing the ABCDE Features</a
+              >
           </h3>
           <div>
             A web-based educational tool with a collection of pictures assembled
@@ -370,17 +490,6 @@
             nevi and melanomas that started in dysplastic nevi. Dysplastic nevi
             (DN) are atypical moles that are important risk markers for
             melanoma, and precursor lesions for some melanomas.
-          </div>
-        </div>
-        <div class="tools-section">
-          <h3>
-            <a href="/mutational-signatures/">mSigPortal</a>
-          </h3>
-          <div>
-            A web-based tool designed to provide state-of-the art methods to
-            explore, visualize and analyze mutational signatures, which will
-            greatly facilitate broad investigation of mutational signatures to
-            elucidate different mutagenesis processes involved in tumorigenesis.
           </div>
         </div>
         <div class="tools-section">
@@ -396,28 +505,64 @@
         </div>
         <div class="tools-section">
           <h3>
-            <a href="http://soccer-stage.nci.nih.gov/">SOCcer Web Tool</a>
+            <a href="http://soccer-stage.nci.nih.gov/">SOCcer - Standardized
+              Occupation Coding for computer-assisted epidemiologic research Web Tool</a>
           </h3>
           <div>
-            A standardized occupation coding tool for computer-assisted
-            epidemiologic research. To assist epidemiological researchers
-            incorporate occupational risk into their studies, SOCcer imports
-            free-text job descriptions and suggests the best-fitting SOC-2010
-            standardized occupation classification code for each job. The
-            application is not intended to replace expert coders, but rather
-            prioritizes job descriptions that would most benefit from expert
-            coders.
+            A Standardized Occupation Coding for computer-assisted
+            epidemiologic research (SOCcer) is a web tool to assist
+            epidemiological researchers in incorporating occupational risk into
+            their studies, SOCcer imports free-text job descriptions and
+            suggests the best-fitting SOC-2010 standardized occupation
+            classification code for each job. The application is not intended to
+            replace expert coders but rather prioritizes job descriptions that
+            would most benefit from expert coders.
           </div>
         </div>
         <div class="tools-section">
           <h3>
-            <a href="/spatial-power">Spatial Power</a>
+            <a href="/spatial-power/">Spatial Power</a>
           </h3>
           <div>
             A web-based tool to estimate the power of environmental
             epidemiologic studies to detect spatial clustering of cancer cases
             in a geographic area of interest.
           </div>
+        </div>
+        <div class="tools-section">
+          <h3>
+            <a href="https://tp53-stage.cancer.gov/">TP53 Database</a>
+          </h3>
+          <div>
+            The TP53 database compiles various types of data and information
+            from the literature and generalist databases on human TP53 gene
+            variations related to cancer.
+          </div>
+        </div>
+
+        <!-- DCTD Analysis Tools -->
+        <h2 class="tools-owner-title">
+          DCTD &ndash; Division of Cancer Treatment and Diagnosis
+        </h2>
+        <div class="tools-section">
+          <h3>
+            <a href="https://indagent-stage.cancer.gov/"
+              >CIP IND Directory</a>
+          </h3>
+          <div>
+            Cancer Imaging Program (CIP) Investigational New Drug (IND)
+            Directory is a centralized resource to facilitate the sharing of IND
+            information.
+          </div>
+        </div>
+
+        <div class="sciapps-outro">
+          <p>
+            These applications were developed in collaboration between scientific stakeholders and CBIIT, with ongoing support provided by both CBIIT and the associated NCI division, office, or center.
+          </p>
+          <p>
+            Questions or comments? <a href="mailto:NCICBIITScientificApplicationsSupport@mail.nih.gov">Contact us via email</a>.
+          </p>
         </div>
       </div>
     </main>
