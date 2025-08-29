@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>NCI Analysis Tools Home Page</title>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="common/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="common/images/favicon.ico" />
+    <script src="https://assets.adobedtm.com/f1bfa9f7170c81b1a9a9ecdcc6c5215ee0b03c84/satelliteLib-4b219b82c4737db0e1797b6c511cf10c802c95cb.js"></script>
+    <script src="https://cbiit.github.io/nci-softwaresolutions-elements/components/include-html.js"></script>
+  </head>
+
+  <body>
+    <include-html
+      src="https://cbiit.github.io/nci-softwaresolutions-elements/banners/government-shutdown.html"
+    ></include-html>
+    <header>
+      <div class="container">
+        <a href="https://www.cancer.gov/">
+          <img
+            class="img-responsive"
+            src="common/images/nci-logo-full.svg"
+            alt="National Cancer Institute"
+          />
+        </a>
+      </div>
+    </header>
+    <main>
+      <h1 class="tools-main-title">
+        <div class="container">NCI Analysis Tools</div>
+      </h1>
+      <div id="landing-blockcontent" class="container">
+        <!-- CCR Analysis Tools -->
+        <h2 class="tools-owner-title">CCR - Center for Cancer Research</h2>
+        <div class="tools-section">
+          <h3>
+            <a href="https://cprosite-qa.ccr.cancer.gov/#/"
+              >cProSite - Cancer Proteogenomic Data Analysis Site</a
+            >
+          </h3>
+          <div>
+            The National Cancer Institute’s Clinical Proteomic Tumor Analysis
+            Consortium (CPTAC) is a national effort to accelerate the
+            understanding of the molecular basis of cancer through the
+            application of large-scale proteome and genome analysis, or
+            proteogenomics. This cProSite tool is to use data from CPTAC to
+            build a web based interactive platform for data analysis.
+          </div>
+        </div>
+        <div class="tools-section">
+          <h3>
+            <a href="https://methylscape-qa.ccr.cancer.gov/"
+              >Methylscape Analysis</a
+            >
+          </h3>
+          <div>
+            A Web Tool to explore the clinically-reportable assay that uses
+            genome-wide DNA methylation profiling as a diagnostic tool for
+            tumors of the central nervous system.
+          </div>
+        </div>
+        <div class="tools-section">
+          <h3>
+            <a href="/microarray/">MicroArray Analysis Pipeline (MAAPster)</a>
+          </h3>
+          <div>
+            MAAPster is a comprehensive web tool designed by the CCR
+            Collaborative Bioinformatics Resource (CCBR) that performs
+            transcriptome analysis of human or mouse Affymetrix gene expression
+            data. Samples may be uploaded locally or accessed from published
+            data by entering a GEO Series identification number. MAAPster can
+            analyze data from a single experiment that includes multiple
+            samples, and the user may investigate multiple contrasts between
+            groups of samples. Raw CEL files are analyzed using several
+            Bioconductor packages in ‘R’, including limma and oligo. Output
+            includes quality control plots, differential gene expression
+            analysis, gene expression heatmaps, pathway analysis and single
+            sample GSEA analysis.
+          </div>
+        </div>
+        <div class="tools-section">
+          <h3>
+            <a href="https://scatlaslc-qa.ccr.cancer.gov/#/"
+              >Single-cell Atlas in Liver Cancer (scAtlasLC)</a
+            >
+          </h3>
+          <div>
+            The scAtlasLC (single-cell Atlas in Liver Cancer) tool is a publicly
+            available data portal of single-cell transcriptomic profiles of
+            tumor cell communities in hepatocellular carcinoma and intrahepatic
+            cholangiocarcinoma.
+          </div>
+        </div>
+
+        <!-- CBIIT Analysis Tools -->
+        <h2 class="tools-owner-title">
+          CBIIT - CGBB (Computational Genomics & Bioinformatics Branch)
+        </h2>
+        <div class="tools-section">
+          <h3>
+            <a href="/3dvizsnp/"
+              >3DVizSNP - Rapid 3D Visualization of SNP Mutations</a
+            >
+          </h3>
+          <div>
+            3DVizSNP enables rapid screening of mutations extracted from a
+            variant caller format (VCF) file using the iCn3D protein structure
+            and sequence viewing platform. All you need is a VCF file and you’re
+            ready to go!
+          </div>
+        </div>
+
+        <!-- CGH Analysis Tools -->
+        <h2 class="tools-owner-title">CGH - Center for Global Health</h2>
+        <div class="tools-section">
+          <h3>
+            <a href="https://globalcxca-qa.cancer.gov/"
+              >CC3S - Cervical Cancer Screening Scenario Simulator</a
+            >
+          </h3>
+          <div>
+            Explore epidemiological outcomes for target populations with the
+            CC3S Cervical Cancer Screening Scenario Simulator.
+          </div>
+        </div>
+
+        <!-- DCCPS Analysis Tools -->
+        <h2 class="tools-owner-title">
+          DCCPS &ndash; Division of Cancer Control and Population Sciences
+        </h2>
+        <div class="tools-section">
+          <h3>
+            <a href="https://survivalstatstools-qa.cancer.gov/">JPSurv</a>
+          </h3>
+          <div>
+            JPSurv is a tool for estimating and presenting survival trend. It
+            can be used to predict survival in any given year and any time
+            interval. Two implemented statistical methods are joinpoint survival
+            model and trend measures. Five supported types of trend measures are
+            Annual percentage changes of hazard, Annual percentage changes of
+            cumulative relative survival, Annual changes of cumulative relative
+            survival, Average annual absolute percent changes, and Average
+            annual relative percent changes.
+          </div>
+        </div>
+        <div class="tools-section">
+          <h3>
+            <a href="/recurrence/">RecurRisk</a>
+          </h3>
+          <div>
+            This tool has been developed to estimate the risk of progressing to
+            distant recurrence using disease-specific survival typically
+            provided by cancer registries. The disease-specific survival is
+            assessed via cause-specific survival using SEER*Stat software.The
+            cause-specific survival is assumed to follow a mixture-cure model
+            and the risk of recurrence is inferred from the survival among the
+            non-cured fraction. The cure fraction and parametric survival
+            distribution among those not cured are estimated using CanSurv
+            software. The current version can handle Weibull and log-logistic
+            distributions for the non-cured survival.
+          </div>
+        </div>
+        <!-- DCEG Analysis Tools -->
+        <h2 class="tools-owner-title">
+          DCEG &ndash; Division of Cancer Epidemiology and Genetics
+        </h2>        
+        <div class="tools-section">
+          <h3>
+            <a href="/apc/">Age Period Cohort (APC) Web Tool</a>
+          </h3>
+          <div>
+            Age-Period-Cohort analysis identifies patterns in cancer incidence
+            or mortality rates from population-based Count (numerator) and
+            Population (denominator) data. Often the data come from a Cancer
+            Registry (e.g., SEER) in the form of a table showing the numbers of
+            cancer cases or cancer deaths (counts) and corresponding
+            person-years at risk (population) for particular age groups and
+            calendar time periods. This toolset provides a comprehensive
+            solution to age-period-cohort analysis for cancer endpoints in
+            defined populations and time periods.
+          </div>
+        </div>
+        <div class="tools-section">
+          <h3>
+            <a href="https://authorarranger-qa.nci.nih.gov/">AuthorArranger</a>
+          </h3>
+          <div>
+            AuthorArranger is a free web tool designed to help authors of
+            research manuscripts automatically generate correctly formatted
+            title pages for manuscript journal submission in a fraction of the
+            time it takes to create the pages manually. Whether your manuscript
+            has 20 authors or 200, AuthorArranger can save you time and
+            resources by helping you conquer journal title pages in seconds.
+          </div>
+        </div>
+        <div class="tools-section">
+          <h3>
+            <a href="/biomarkerTools/">Biomarker Tools</a>
+          </h3>
+          <div>
+            <p>
+              This toolset estimates risk stratification from early biomarker
+              data and includes math and strategies to advance biomarkers or
+              other risk measures identified case-control studies to clinical or
+              public health applications. The toolset will show quantities for
+              which people's intuition is poor, such as need for high
+              specificity for a single marker of a rare disease to improve
+              management by some serious intervention.
+            </p>
+            <p>
+              The toolset will allow to evaluate the feasibility of biomarkers
+              called promising before they get press office attention;
+              investigators spend efforts on hopeless pursuit; wasteful.
+              unethical clinical testing begins. Thus, using these strategies
+              will allow focusing on the most promising markers early on, making
+              specific improvements if required, or abandoning markers that are
+              most likely to fail.
+            </p>
+          </div>
+        </div>
+        <div class="tools-section">
+          <h3>
+            <a href="https://bcrisktool-qa.cancer.gov/"
+              >Breast Cancer Risk Assessment Tool (BCRAT)</a
+            >
+          </h3>
+          <div>
+            The Breast Cancer Risk Assessment Tool is an interactive tool
+            designed by scientists at the National Cancer Institute (NCI) and
+            the National Surgical Adjuvant Breast and Bowel Project (NSABP) to
+            estimate a woman's risk of developing invasive breast cancer.
+          </div>
+        </div>
+        <div class="tools-section">
+          <h3>
+            <a href="https://ccrisktool-qa.cancer.gov/"
+              >Colorectal Risk Assessment Tool (CCRAT)</a
+            >
+          </h3>
+          <div>
+            The Colorectal Risk Assessment Tool is a tool designed for doctors
+            and health providers to use along with their patients to determine
+            their risk for developing colorectal cancer.
+          </div>
+        </div>
+        <div class="tools-section">
+          <h3>
+            <a href="https://analysistools-qa.cancer.gov/comets-explorer/"
+              >COMETS Explorer Tool (COMETS)</a
+            >
+          </h3>
+          <div>
+            COMETS Explorer is a user-friendly tool for exploring metabolite
+            data from the Consortium of Metabolomics Studies (COMETS). This
+            resource facilitates the analysis of metabolomics data in
+            epidemiologic studies and aids investigators in planning COMETS
+            projects.
+          </div>
+        </div>        
+        <div class="tools-section">
+          <h3>
+            <a href="/econsent/">Electronic Consent (eConsent)</a>
+          </h3>
+          <div>
+            A web-based tool that provides an electronic informed consent
+            (eConsent) platform for consenting participants either on site or at
+            home (or other remote location) using a computer based consent form
+            rather than traditional paper documentation.
+          </div>
+        </div>
+        <div class="tools-section">
+          <h3>
+            <a href="/ezqtl/">ezQTL</a>
+          </h3>
+          <div>
+            A web-based tool for integrative QTL (Quantitative Trait Loci)
+            visualization and colocalization with GWAS data for individual loci
+            to aid GWAS annotation.
+          </div>
+        </div>
+        <div class="tools-section">
+          <h3>
+            <a href="https://forgedb-qa.cancer.gov/">FORGEdb</a>
+          </h3>
+          <div>
+            FORGEdb is a tool that consolidates diverse data on disease-related
+            genetic variants, presenting it with a functional importance score
+            to guide further research.
+          </div>
+        </div>
+        <div class="tools-section">
+          <h3>
+            <a href="/forge2-tf/">FORGE2 TF</a>
+          </h3>
+          <div>
+            A web-based tool designed to enable the exploration of DNase I tag
+            (chromatin accessibility) signal surrounding GWAS array SNPs and the
+            calculation of significance of overlap with transcription factor
+            binding sites from common TF databases.
+          </div>
+        </div>
+        <div class="tools-section">
+          <h3>
+            <a href="https://exploregwas-qa.cancer.gov/">GWAS Explorer</a>
+          </h3>
+          <div>
+            GWAS Explorer serves as an interactive resource for genetics
+            researchers as well as other interested individuals to search for,
+            visualize, and download aggregated association results from
+            genome-wide association analyses (GWAS).
+          </div>
+        </div>
+        <div class="tools-section">
+          <h3>
+            <a href="https://analysistools-qa.cancer.gov/gwas-target/"
+              >GWASTarget</a
+            >
+          </h3>
+          <div>
+            A comprehensive resource and web tool for identification of target
+            genes and pathways from genome-wide association study (GWAS) data.
+          </div>
+        </div>
+        <div class="tools-section">
+          <h3>
+            <a href="https://hpvvisuals-qa.cancer.gov/">HPV Visuals</a>
+          </h3>
+          <div>
+            The Human Papillomavirus Visuals (HPV Visuals) website provides
+            visual examples of the natural history/carcinogenic process of HPV
+            infection and progression to precancer, accompanied by relevant
+            clinical data. This platform addresses a significant gap in clinical
+            comprehension of the carcinogenic process and provides exposure to
+            images that are true representations of meaningful changes in the
+            appearance of the cervix that require clinical action.
+          </div>
+        </div>
+        <div class="tools-section">
+          <h3>
+            <a href="https://icdgenie-qa.cancer.gov/">ICDGenie</a>
+          </h3>
+          <div>
+            ICD Genie is a web-based tool that can assist epidemiologists,
+            pathologists, research assistants, and data scientists to more
+            easily access, translate and validate codes and text descriptions
+            from the International Classification of Diseases (10th Edition) and
+            International Classification of Diseases for Oncology, 3rd Edition
+            (ICD-O-3).
+          </div>
+        </div>
+        <div class="tools-section">
+          <h3>
+            <a href="https://ldlink-qa.nih.gov/">LDlink</a>
+          </h3>
+          <div>
+            A suite of web-based applications designed to easily and efficiently
+            explore linkage disequilibrium in population subgroups. All
+            population genotype data originates from Phase 3 of the 1000 Genomes
+            Project and variant RS numbers are indexed based on dbSNP build 151.
+          </div>
+        </div>
+        <div class="tools-section">
+          <h3>
+            <a href="https://mcaexplorer-qa.cancer.gov/#/"
+              >mCA Explorer - Mosaic Chromosomal Alteration Explorer</a
+            >
+          </h3>
+          <div>
+            mCA Explorer - an interactive mCA visualization and analysis tool
+            that allows for aggregation, visualization, and analysis of mCAs in
+            large populations.
+          </div>
+        </div>
+        <div class="tools-section">
+          <h3>
+            <a href="https://mrisktool-qa.cancer.gov/"
+              >Melanoma Risk Assessment Tool (MRAT)</a
+            >
+          </h3>
+          <div>
+            The Melanoma Risk Assessment is an interactive tool designed by
+            scientists at the National Cancer Institute (NCI), the University of
+            Pennsylvania, and the University of California, San Francisco, to
+            estimate a person's absolute risk of developing invasive melanoma.
+            The tool helps clinicians identify individuals at increased risk of
+            melanoma in order to plan appropriate screening interventions with
+            them.
+          </div>
+        </div>
+        <div class="tools-section">
+          <h3>
+            <a href="/nevustool/"
+              >Moles to Melanoma: Recognizing the ABCDE Features</a
+            >
+          </h3>
+          <div>
+            A web-based educational tool with a collection of pictures assembled
+            to help patients and others in the lay public recognize dysplastic
+            nevi and melanomas that started in dysplastic nevi. Dysplastic nevi
+            (DN) are atypical moles that are important risk markers for
+            melanoma, and precursor lesions for some melanomas.
+          </div>
+        </div>
+        <div class="tools-section">
+          <h3>
+            <a href="/mutational-signatures/">mSigPortal</a>
+          </h3>
+          <div>
+            A web-based tool designed to provide state-of-the art methods to
+            explore, visualize and analyze mutational signatures, which will
+            greatly facilitate broad investigation of mutational signatures to
+            elucidate different mutagenesis processes involved in tumorigenesis.
+          </div>
+        </div>
+        <div class="tools-section">
+          <h3>
+            <a href="/perc/">PERC</a>
+          </h3>
+          <div>
+            A web-based tool for PERC (Polyphenol Enriched Resource for Coffee)
+            is a complementary database and food frequency questionnaire (FFQ)
+            module, in order to better estimate intake of phenolic and other key
+            bioactive compounds in coffee.
+          </div>
+        </div>
+        <div class="tools-section">
+          <h3>
+            <a href="/pimixture/">PIMixture</a>
+          </h3>
+          <div>
+            The web tool, PIMixture estimates the absolute risk of asymptomatic
+            disease or disease precursors. Because asymptomatic disease/disease
+            precursors are often discovered through screening, collected data
+            may present challenges for absolute and relative risk estimation.
+          </div>
+        </div>
+        <div class="tools-section">
+          <h3>
+            <a href="https://soccer-qa.nci.nih.gov/">SOCcer Web Tool</a>
+          </h3>
+          <div>
+            A standardized occupation coding tool for computer-assisted
+            epidemiologic research. To assist epidemiological researchers
+            incorporate occupational risk into their studies, SOCcer imports
+            free-text job descriptions and suggests the best-fitting SOC-2010
+            standardized occupation classification code for each job. The
+            application is not intended to replace expert coders, but rather
+            prioritizes job descriptions that would most benefit from expert
+            coders.
+          </div>
+        </div>
+        <div class="tools-section">
+          <h3>
+            <a href="/spatial-power">Spatial Power</a>
+          </h3>
+          <div>
+            A web-based tool to estimate the power of environmental
+            epidemiologic studies to detect spatial clustering of cancer cases
+            in a geographic area of interest.
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="center-block">
+        <ul class="list-inline">
+          <li>
+            <a href="https://www.cancer.gov/" target="_blank">Home</a>
+          </li>
+          <li>|</li>
+          <li>
+            <a href="https://www.cancer.gov/global/web/policies" target="_blank"
+              >Policies</a
+            >
+          </li>
+          <li>|</li>
+          <li>
+            <a
+              href="https://www.hhs.gov/vulnerability-disclosure-policy/index.html"
+              target="_blank"
+              >HHS Vulnerability Disclosure</a
+            >
+          </li>
+          <li>|</li>
+          <li>
+            <a
+              href="https://www.cancer.gov/global/web/policies/accessibility"
+              target="_blank"
+              >Accessibility</a
+            >
+          </li>
+          <li>|</li>
+          <li>
+            <a href="https://cancer.gov/global/viewing-files" target="_blank"
+              >Viewing Files</a
+            >
+          </li>
+          <li>|</li>
+          <li>
+            <a
+              href="https://www.cancer.gov/global/web/policies/foia"
+              target="_blank"
+              >FOIA</a
+            >
+          </li>
+        </ul>
+        <ul class="list-inline">
+          <li>
+            <a href="https://www.hhs.gov/" target="_blank"
+              >U.S. Department of Health and Human Services</a
+            >
+          </li>
+          <li>|</li>
+          <li>
+            <a href="https://www.nih.gov" target="_blank"
+              >National Institutes of Health</a
+            >
+          </li>
+          <li>|</li>
+          <li>
+            <a href="https://www.cancer.gov/" target="_blank"
+              >National Cancer Institute</a
+            >
+          </li>
+          <li>|</li>
+          <li>
+            <a href="https://usa.gov" target="_blank">USA.gov</a>
+          </li>
+        </ul>
+        <div class="text-center">
+          NIH ... Turning Discovery Into Health
+          <sup>®</sup>
+        </div>
+      </div>
+    </footer>
+    <script>
+      _satellite.pageBottom();
+    </script>
+  </body>
+</html>
