@@ -437,7 +437,7 @@
             genes and pathways from genome-wide association studies (GWAS) data.
           </div>
         </div>
-        <div class="tools-section">
+        <!-- <div class="tools-section">
           <h3>
             <a href="https://hpvvisuals-dev.cancer.gov/">HPV Visuals</a>
           </h3>
@@ -450,7 +450,7 @@
             images that are true representations of meaningful changes in the
             appearance of the cervix that require clinical action.
           </div>
-        </div>
+        </div> -->
         <div class="tools-section">
           <h3>
             <a href="https://icdgenie-dev.cancer.gov/">ICDGenie</a>
