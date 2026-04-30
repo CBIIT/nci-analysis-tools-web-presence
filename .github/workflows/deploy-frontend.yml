@@ -1,0 +1,99 @@
+name: Deploy Frontend
+on:
+  workflow_dispatch:
+    inputs:
+      tier:
+        description: "Deploy environment"
+        required: true
+        default: "dev"
+        type: choice
+        options:
+          - dev
+          - qa
+          - stage
+          - prod
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy-cloudfront:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.tier }}
+    env:
+      APP: analysistools
+      TZ: America/New_York
+      AWS_REGION: us-east-1
+      CICD_ROLE_ARN: arn:aws:iam::${{ vars.AWS_ACCOUNT_ID }}:role/power-user-github-actions-cicd
+      TIER: ${{ inputs.tier }}
+
+    steps:
+      - uses: "actions/checkout@v6.0.2"
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v6.0.0
+        with:
+          role-to-assume: ${{ env.CICD_ROLE_ARN }}
+          role-session-name: ${{ env.TIER }}-${{ env.APP }}-deploy-${{ github.ref_name }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Assemble deploy artifacts
+        run: |
+          mkdir -p deploy
+          cp ${{ env.TIER }}_index deploy/index.html
+          cp -r common/ deploy/common/
+
+      - name: Copy build assets to S3
+        run: |
+          echo "Deploying to S3..."
+          aws s3 sync deploy/ s3://nci-cbiit-${{ env.APP }}-website-${{ env.TIER }} --delete
+
+      - name: Invalidate CloudFront Cache
+        run: |
+          DISTRIBUTION_ID=$(aws cloudformation describe-stacks \
+            --stack-name "${{ env.TIER }}-${{ env.APP }}-website" \
+            --query "Stacks[0].Outputs[?OutputKey=='DistributionId'].OutputValue" \
+            --output text)
+
+          if [ -z "$DISTRIBUTION_ID" ] || [ "$DISTRIBUTION_ID" = "None" ]; then
+            echo "CloudFront Distribution ID not found. Redeploy CloudFront stack to get the output."
+            exit 1
+          fi
+
+          echo "Invalidating CloudFront cache..."
+          aws cloudfront create-invalidation \
+            --distribution-id "$DISTRIBUTION_ID" \
+            --paths "/*" \
+            --output table \
+            --query "Invalidation.{Status:Status,CreateTime:CreateTime}" 2>/dev/null
+
+          if [ $? -eq 0 ]; then
+            echo "CloudFront cache invalidation successful"
+          else
+            echo "CloudFront cache invalidation failed"
+            exit 1
+          fi
+
+      - name: Deployment Summary
+        run: |
+          DISTRIBUTION_ID=$(aws cloudformation describe-stacks \
+            --stack-name "${{ env.TIER }}-${{ env.APP }}-website" \
+            --query "Stacks[0].Outputs[?OutputKey=='DistributionId'].OutputValue" \
+            --output text)
+
+          CLOUDFRONT_URL=$(aws cloudfront get-distribution \
+            --id "$DISTRIBUTION_ID" \
+            --query "Distribution.DomainName" \
+            --output text)
+
+          CUSTOM_DOMAIN=$([[ "${{ env.TIER }}" == "prod" ]] && echo "analysistools.cancer.gov" || echo "analysistools-${{ env.TIER }}.cancer.gov")
+
+          echo "## Deployment Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- **Tier:** ${{ env.TIER }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Branch:** ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **S3 Bucket:** nci-cbiit-${{ env.APP }}-website-${{ env.TIER }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **CloudFront URL:** https://$CLOUDFRONT_URL" >> $GITHUB_STEP_SUMMARY
+          echo "- **Custom Domain:** https://$CUSTOM_DOMAIN" >> $GITHUB_STEP_SUMMARY
