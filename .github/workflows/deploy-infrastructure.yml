@@ -1,0 +1,92 @@
+name: Deploy Infrastructure
+on:
+  workflow_dispatch:
+    inputs:
+      tier:
+        description: "Environment to deploy to"
+        required: true
+        default: "dev"
+        type: choice
+        options:
+          - dev
+          - qa
+          - stage
+          - prod
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy-infrastructure:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.tier }}
+    env:
+      APP: analysistools
+      TZ: America/New_York
+      AWS_REGION: us-east-1
+      CICD_ROLE_ARN: arn:aws:iam::${{ vars.AWS_ACCOUNT_ID }}:role/power-user-github-actions-cicd
+      TIER: ${{ inputs.tier }}
+      SSL_CERTIFICATE_ARN: ${{ vars.SSL_CERTIFICATE_ARN }}
+
+    steps:
+      - uses: "actions/checkout@v6.0.2"
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v6.0.0
+        with:
+          role-to-assume: ${{ env.CICD_ROLE_ARN }}
+          role-session-name: ${{ env.TIER }}-${{ env.APP }}-deploy-${{ github.ref_name }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Install CDK and dependencies
+        run: |
+          npm install -g aws-cdk
+          cd infrastructure
+          npm ci
+
+      - name: Deploy CloudFront Stack
+        run: |
+          cd infrastructure
+          echo "Deploying CloudFront and S3 for ${{ env.TIER }} environment..."
+          npx cdk deploy \
+            AnalysisToolsStack-${{ env.TIER }} \
+            --require-approval never
+
+      - name: Invalidate CloudFront Cache
+        run: |
+          DISTRIBUTION_ID=$(aws cloudformation describe-stacks \
+            --stack-name "${{ env.TIER }}-${{ env.APP }}-website" \
+            --query "Stacks[0].Outputs[?OutputKey=='DistributionId'].OutputValue" \
+            --output text)
+
+          if [ -z "$DISTRIBUTION_ID" ] || [ "$DISTRIBUTION_ID" = "None" ]; then
+            echo "CloudFront Distribution ID not found. Redeploy CloudFront stack to get the output."
+            exit 1
+          fi
+
+          echo "Invalidating CloudFront cache..."
+          aws cloudfront create-invalidation \
+            --distribution-id "$DISTRIBUTION_ID" \
+            --paths "/*" \
+            --output table \
+            --query "Invalidation.{Status:Status,CreateTime:CreateTime}" 2>/dev/null
+
+          if [ $? -eq 0 ]; then
+            echo "CloudFront cache invalidation successful"
+          else
+            echo "CloudFront cache invalidation failed"
+            exit 1
+          fi
+
+      - name: Deployment Summary
+        run: |
+          cd infrastructure
+          echo "Infrastructure Deployment Complete!"
+          echo ""
+          echo "Environment: ${{ env.TIER }}"
+          echo "Region: ${{ env.AWS_REGION }}"
+          echo ""
+          echo "Stack Outputs:"
+          npx cdk output AnalysisToolsStack-${{ env.TIER }} --all 2>/dev/null || echo "Stack outputs not available yet"
