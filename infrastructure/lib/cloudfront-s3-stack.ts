@@ -4,7 +4,7 @@ import * as origins from "aws-cdk-lib/aws-cloudfront-origins";
 import * as s3 from "aws-cdk-lib/aws-s3";
 import * as certificatemanager from "aws-cdk-lib/aws-certificatemanager";
 import { Construct } from "constructs";
-import { createTags } from "./utils/tags.js";
+import { createTags } from "./utils/tags";
 
 export class CloudFrontS3Stack extends cdk.Stack {
   public readonly bucket: s3.Bucket;
