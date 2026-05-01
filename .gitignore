@@ -5,7 +5,7 @@
 *.pydevproject
 .project
 .metadata
-bin/
+/bin/
 tmp/
 *.tmp
 *.bak
@@ -15,7 +15,6 @@ local.properties
 .classpath
 .settings/
 .loadpath
-
 # External tool builders
 .externalToolBuilders/
 
@@ -226,3 +225,18 @@ pip-log.txt
 # *.sublime-project
 # sftp configuration file
 sftp-config.json
+
+#############
+## CDK / Infrastructure
+#############
+
+infrastructure/node_modules/
+infrastructure/cdk.out/
+infrastructure/*.js
+infrastructure/*.d.ts
+
+#############
+## Deployment
+#############
+
+deploy/
