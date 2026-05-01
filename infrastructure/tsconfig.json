@@ -1,14 +1,8 @@
 {
-  "ts-node": {
-    "compilerOptions": {
-      "module": "CommonJS",
-      "moduleResolution": "Node"
-    }
-  },
   "compilerOptions": {
     "target": "ES2022",
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
+    "module": "CommonJS",
+    "moduleResolution": "Node10",
     "lib": [
       "es2022"
     ],
