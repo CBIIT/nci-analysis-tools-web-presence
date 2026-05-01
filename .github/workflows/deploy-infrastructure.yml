@@ -26,6 +26,7 @@ jobs:
       APP: analysistools
       TZ: America/New_York
       AWS_REGION: us-east-1
+      AWS_ACCOUNT_ID: ${{ vars.AWS_ACCOUNT_ID }}
       CICD_ROLE_ARN: arn:aws:iam::${{ vars.AWS_ACCOUNT_ID }}:role/power-user-github-actions-cicd
       TIER: ${{ inputs.tier }}
       SSL_CERTIFICATE_ARN: ${{ vars.SSL_CERTIFICATE_ARN }}
