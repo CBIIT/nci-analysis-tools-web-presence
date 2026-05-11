@@ -1,25 +1,23 @@
-name: Deploy Infrastructure
+name: Deploy ECR
+permissions:
+  id-token: write
+  contents: read
+
 on:
   workflow_dispatch:
     inputs:
       tier:
-        description: "Environment to deploy to"
+        description: "Deploy environment"
         required: true
         default: "dev"
         type: choice
         options:
           - dev
-          - qa
           - stage
-          - prod
-
-permissions:
-  id-token: write
-  contents: read
 
 jobs:
-  deploy-infrastructure:
-    timeout-minutes: 30
+  deploy-ecr:
+    timeout-minutes: 15
     runs-on: ubuntu-latest
     environment: ${{ inputs.tier }}
     env:
@@ -36,7 +34,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v6.0.0
         with:
           role-to-assume: ${{ env.CICD_ROLE_ARN }}
-          role-session-name: ${{ env.TIER }}-analysistools-portal-infra-${{ github.run_id }}
+          role-session-name: ${{ env.TIER }}-analysistools-portal-ecr-${{ github.run_id }}
           aws-region: ${{ env.AWS_REGION }}
 
       - name: Download env file from S3
@@ -61,20 +59,13 @@ jobs:
 
       - name: CDK diff (preview changes)
         working-directory: ${{ env.CDK_DIR }}
-        run: npx cdk diff --app "npx ts-node bin/cdk.ts" || true
+        run: npx cdk diff --app "npx ts-node bin/ecr.ts" || true
 
       - name: CDK deploy
         working-directory: ${{ env.CDK_DIR }}
-        run: npx cdk deploy --app "npx ts-node bin/cdk.ts" --require-approval never
+        run: npx cdk deploy --app "npx ts-node bin/ecr.ts" --require-approval never
 
       - name: Clean up env files
         if: always()
         working-directory: ${{ env.CDK_DIR }}
         run: rm -f cdk.env
-
-      - name: Deployment Summary
-        run: |
-          echo "## Infrastructure Deployment Complete!" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "- **Environment:** ${{ env.TIER }}" >> $GITHUB_STEP_SUMMARY
-          echo "- **Region:** ${{ env.AWS_REGION }}" >> $GITHUB_STEP_SUMMARY
