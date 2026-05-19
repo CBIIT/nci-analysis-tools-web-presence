@@ -347,17 +347,6 @@
         </div>        
         <div class="tools-section">
           <h3>
-            <a href="/econsent/">Electronic Consent (eConsent)</a>
-          </h3>
-          <div>
-            A web-based tool that provides an electronic informed consent
-            (eConsent) platform for consenting participants either on site or at
-            home (or other remote location) using a computer based consent form
-            rather than traditional paper documentation.
-          </div>
-        </div>
-        <div class="tools-section">
-          <h3>
             <a href="https://ccrisktool-qa.cancer.gov/"
               >CCRAT - Colorectal Risk Assessment Tool</a
             >
@@ -519,7 +508,7 @@
         </div>
         <div class="tools-section">
           <h3>
-            <a href="/nevustool/">Nevus – Moles
+            <a href="https://moles-melanoma-tool-qa.cancer.gov/#/">Nevus – Moles
               to Melanoma: Recognizing the ABCDE Features</a
               >
           </h3>
@@ -585,7 +574,7 @@
         </h2>
         <div class="tools-section">
           <h3>
-            <a href="https://indagent-qa.cancer.gov/"
+            <a href="https://indagent-test.cancer.gov/"
               >CIP IND Directory</a>
           </h3>
           <div>
