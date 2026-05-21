@@ -31,7 +31,6 @@ jobs:
       ECS_WEB_TASK_CPU_UNITS: 256
       ECS_WEB_TASK_MEMORY_UNITS: 512
       TIER: ${{ inputs.tier }}
-      IMAGE_TIER: ${{ contains(fromJson('["dev","qa"]'), inputs.tier) && 'development' || 'release' }}
       CICD_ROLE_ARN: arn:aws:iam::${{ vars.AWS_ACCOUNT_ID }}:role/power-user-github-actions-cicd
 
     steps:
@@ -49,8 +48,8 @@ jobs:
           TIMESTAMP=$(date +"%Y%m%d%H%M%S")
           REPO=${{ vars.AWS_ACCOUNT_ID }}.dkr.ecr.$AWS_REGION.amazonaws.com/$APP
           echo "IMAGE_REPOSITORY=$REPO" >> $GITHUB_ENV
-          echo "WEB_IMAGE=$REPO:$IMAGE_TIER-${{ github.ref_name }}-$TIMESTAMP" >> $GITHUB_ENV
-          echo "WEB_IMAGE_LATEST=$REPO:${TIER}-latest" >> $GITHUB_ENV
+          echo "WEB_IMAGE=$REPO:frontend-${{ github.ref_name }}-$TIMESTAMP" >> $GITHUB_ENV
+          echo "WEB_IMAGE_LATEST=$REPO:frontend-${{ github.ref_name }}-latest" >> $GITHUB_ENV
           echo "PARAMETER_PATH=/analysistools/${TIER}/${APP}" >> $GITHUB_ENV
           echo "ENVIRONMENT_TIER=${TIER^^}" >> $GITHUB_ENV
 
@@ -96,7 +95,7 @@ jobs:
           tags: |
             ${{ env.WEB_IMAGE }}
             ${{ env.WEB_IMAGE_LATEST }}
-          cache-from: type=registry,ref=${{ env.IMAGE_REPOSITORY }}:cache
+          cache-from: type=registry,ref=${{ env.WEB_IMAGE_LATEST }}
           cache-to: type=inline
 
       - name: Render task definition
