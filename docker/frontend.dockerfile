@@ -7,6 +7,7 @@ RUN dnf upgrade -y --releasever=latest && \
     dnf clean all && \
     chmod 700 /usr/bin/python3.9
 
+COPY docker/nginx.conf /etc/nginx/conf.d/default.conf
 COPY ${TIER}_index /usr/share/nginx/html/index.html
 COPY common/ /usr/share/nginx/html/common/
 
