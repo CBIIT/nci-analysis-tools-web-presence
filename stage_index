@@ -434,15 +434,16 @@
         </div> -->
         <div class="tools-section">
           <h3>
-            <a href="https://icdgenie-stage.cancer.gov/">ICDGenie</a>
+            <a href="https://icdgenie-stage.cancer.gov/">ICD Genie</a>
           </h3>
           <div>
             ICD Genie is a web-based tool that can assist epidemiologists,
             pathologists, research assistants, and data scientists to more
             easily access, translate and validate codes and text descriptions
-            from the International Classification of Diseases (10th Edition) and
-            International Classification of Diseases for Oncology, 3rd Edition
-            (ICD-O-3).
+            from the International Classification of Diseases, 10th and 11th
+            Editions (ICD-10-CM, ICD-10-PCS, and ICD-11), and International
+            Classification of Diseases for Oncology, 3rd and 4th Editions
+            (ICD-O-3 and ICD-O-4).
           </div>
         </div>
         <div class="tools-section">
