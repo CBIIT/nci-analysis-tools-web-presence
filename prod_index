@@ -579,12 +579,12 @@
       <div class="center-block">
         <ul class="list-inline">
           <li>
-            <a href="https://www.cancer.gov/" target="_blank">Home</a>
+            <a href="https://www.cancer.gov/" target="_blank">Home<span class="sr-only"> (opens in a new tab)</span></a>
           </li>
           <li>|</li>
           <li>
             <a href="https://www.cancer.gov/global/web/policies" target="_blank"
-              >Policies</a
+              >Policies<span class="sr-only"> (opens in a new tab)</span></a
             >
           </li>
           <li>|</li>
@@ -592,7 +592,7 @@
             <a
               href="https://www.hhs.gov/vulnerability-disclosure-policy/index.html"
               target="_blank"
-              >HHS Vulnerability Disclosure</a
+              >HHS Vulnerability Disclosure<span class="sr-only"> (opens in a new tab)</span></a
             >
           </li>
           <li>|</li>
@@ -600,13 +600,13 @@
             <a
               href="https://www.cancer.gov/global/web/policies/accessibility"
               target="_blank"
-              >Accessibility</a
+              >Accessibility<span class="sr-only"> (opens in a new tab)</span></a
             >
           </li>
           <li>|</li>
           <li>
             <a href="https://cancer.gov/global/viewing-files" target="_blank"
-              >Viewing Files</a
+              >Viewing Files<span class="sr-only"> (opens in a new tab)</span></a
             >
           </li>
           <li>|</li>
@@ -614,31 +614,31 @@
             <a
               href="https://www.cancer.gov/global/web/policies/foia"
               target="_blank"
-              >FOIA</a
+              >FOIA<span class="sr-only"> (opens in a new tab)</span></a
             >
           </li>
         </ul>
         <ul class="list-inline">
           <li>
             <a href="https://www.hhs.gov/" target="_blank"
-              >U.S. Department of Health and Human Services</a
+              >U.S. Department of Health and Human Services<span class="sr-only"> (opens in a new tab)</span></a
             >
           </li>
           <li>|</li>
           <li>
             <a href="https://www.nih.gov" target="_blank"
-              >National Institutes of Health</a
+              >National Institutes of Health<span class="sr-only"> (opens in a new tab)</span></a
             >
           </li>
           <li>|</li>
           <li>
             <a href="https://www.cancer.gov/" target="_blank"
-              >National Cancer Institute</a
+              >National Cancer Institute<span class="sr-only"> (opens in a new tab)</span></a
             >
           </li>
           <li>|</li>
           <li>
-            <a href="https://usa.gov" target="_blank">USA.gov</a>
+            <a href="https://usa.gov" target="_blank">USA.gov<span class="sr-only"> (opens in a new tab)</span></a>
           </li>
         </ul>
         <div class="text-center">
