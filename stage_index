@@ -14,6 +14,14 @@
     <link rel="icon" type="image/x-icon" href="common/images/favicon.ico" />
     <script src="https://assets.adobedtm.com/f1bfa9f7170c81b1a9a9ecdcc6c5215ee0b03c84/satelliteLib-4b219b82c4737db0e1797b6c511cf10c802c95cb.js"></script>
     <script src="https://cbiit.github.io/nci-softwaresolutions-elements/components/include-html.js"></script>
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2PTXQ845PE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-2PTXQ845PE');
+    </script>
   </head>
 
   <body>
@@ -426,15 +434,16 @@
         </div> -->
         <div class="tools-section">
           <h3>
-            <a href="https://icdgenie-stage.cancer.gov/">ICDGenie</a>
+            <a href="https://icdgenie-stage.cancer.gov/">ICD Genie</a>
           </h3>
           <div>
             ICD Genie is a web-based tool that can assist epidemiologists,
             pathologists, research assistants, and data scientists to more
             easily access, translate and validate codes and text descriptions
-            from the International Classification of Diseases (10th Edition) and
-            International Classification of Diseases for Oncology, 3rd Edition
-            (ICD-O-3).
+            from the International Classification of Diseases, 10th and 11th
+            Editions (ICD-10-CM, ICD-10-PCS, and ICD-11), and International
+            Classification of Diseases for Oncology, 3rd and 4th Editions
+            (ICD-O-3 and ICD-O-4).
           </div>
         </div>
         <div class="tools-section">
@@ -570,66 +579,66 @@
       <div class="center-block">
         <ul class="list-inline">
           <li>
-            <a href="https://www.cancer.gov/" target="_blank">Home</a>
+            <a href="https://www.cancer.gov/" target="_blank" rel="noopener noreferrer">Home<span class="sr-only"> (opens in a new tab)</span></a>
           </li>
           <li>|</li>
           <li>
-            <a href="https://www.cancer.gov/global/web/policies" target="_blank"
-              >Policies</a
+            <a href="https://www.cancer.gov/global/web/policies" target="_blank" rel="noopener noreferrer"
+              >Policies<span class="sr-only"> (opens in a new tab)</span></a
             >
           </li>
           <li>|</li>
           <li>
             <a
               href="https://www.hhs.gov/vulnerability-disclosure-policy/index.html"
-              target="_blank"
-              >HHS Vulnerability Disclosure</a
+              target="_blank" rel="noopener noreferrer"
+              >HHS Vulnerability Disclosure<span class="sr-only"> (opens in a new tab)</span></a
             >
           </li>
           <li>|</li>
           <li>
             <a
               href="https://www.cancer.gov/global/web/policies/accessibility"
-              target="_blank"
-              >Accessibility</a
+              target="_blank" rel="noopener noreferrer"
+              >Accessibility<span class="sr-only"> (opens in a new tab)</span></a
             >
           </li>
           <li>|</li>
           <li>
-            <a href="https://cancer.gov/global/viewing-files" target="_blank"
-              >Viewing Files</a
+            <a href="https://cancer.gov/global/viewing-files" target="_blank" rel="noopener noreferrer"
+              >Viewing Files<span class="sr-only"> (opens in a new tab)</span></a
             >
           </li>
           <li>|</li>
           <li>
             <a
               href="https://www.cancer.gov/global/web/policies/foia"
-              target="_blank"
-              >FOIA</a
+              target="_blank" rel="noopener noreferrer"
+              >FOIA<span class="sr-only"> (opens in a new tab)</span></a
             >
           </li>
         </ul>
         <ul class="list-inline">
           <li>
-            <a href="https://www.hhs.gov/" target="_blank"
-              >U.S. Department of Health and Human Services</a
+            <a href="https://www.hhs.gov/" target="_blank" rel="noopener noreferrer"
+              >U.S. Department of Health and Human Services<span class="sr-only"> (opens in a new tab)</span></a
             >
           </li>
           <li>|</li>
           <li>
-            <a href="https://www.nih.gov" target="_blank"
-              >National Institutes of Health</a
+            <a href="https://www.nih.gov" target="_blank" rel="noopener noreferrer"
+              >National Institutes of Health<span class="sr-only"> (opens in a new tab)</span></a
             >
           </li>
           <li>|</li>
           <li>
-            <a href="https://www.cancer.gov/" target="_blank"
-              >National Cancer Institute</a
+            <a href="https://www.cancer.gov/" target="_blank" rel="noopener noreferrer"
+              >National Cancer Institute<span class="sr-only"> (opens in a new tab)</span></a
             >
           </li>
           <li>|</li>
           <li>
-            <a href="https://usa.gov" target="_blank">USA.gov</a>
+            <a href="https://usa.gov" target="_blank" rel="noopener noreferrer">USA.gov<span class="sr-only"> (opens in a new tab)</span></a>
           </li>
         </ul>
         <div class="text-center">
