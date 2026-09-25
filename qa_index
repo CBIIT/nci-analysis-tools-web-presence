@@ -223,8 +223,24 @@
         </div>
         <div class="tools-section">
           <h3>
+            <a href="https://survivalstatstools-qa.cancer.gov/">Survival Stats Tools</a>
+          </h3>
+          <div>
+            The Survival Stats Tools website is a suite of tools to analyze population-based survival data. 
+            These include  <a href="https://survivalstatstools-qa.cancer.gov/jpsurv">JPSurv</a>, 
+            a tool to estimate trends in cancer survival by calendar year of diagnosis,
+             <a href="https://survivalstatstools-qa.cancer.gov/cansurv/">CanSurv</a>,
+              a tool to fit models, including standard Cox proportional hazards and mixture cure models, 
+             to grouped survival data, and <a href=" https://survivalstatstools-qa.cancer.gov/recurrence">RecurRisk</a>, a tool to estimate the probability of 
+             progressing to distant recurrence.
+          </div>
+        </div>
+        
+        <!-- <div class="tools-section">
+          <h3>
             <a href="https://survivalstatstools-qa.cancer.gov/">JPSurv</a>
           </h3>
+          
           <div>
             JPSurv is a tool for estimating and presenting survival trend. It
             can be used to predict survival in any given year and any time
@@ -238,7 +254,20 @@
         </div>
         <div class="tools-section">
           <h3>
-            <a href="/recurrence/">RecurRisk</a>
+            <a href="https://survivalstatstools-dev.cancer.gov/cansurv/">CanSurv</a>
+          </h3>
+          <div>
+              CanSurv is used to analyze grouped population-based survival data. 
+              The tool can fit both standard parametric survival models, Cox proportional 
+              hazards models, and mixture cure survival models. The survival data can be either 
+              relative survival or cause-specific survival. Various graphs are provided for
+               model diagnosis: plots of actuarial and estimated survival functions, 
+               k-year survival probabilities, and deviance residuals.
+          </div>
+        </div>
+        <div class="tools-section">
+          <h3>
+            <a href=" https://survivalstatstools-dev.cancer.gov/recurrence">RecurRisk</a>
           </h3>
           <div>
             This tool has been developed to estimate the risk of progressing to
@@ -252,7 +281,7 @@
             software. The current version can handle Weibull and log-logistic
             distributions for the non-cured survival.
           </div>
-        </div>
+        </div> -->
 
         <!-- DCEG Analysis Tools -->
         <h2 class="tools-owner-title">

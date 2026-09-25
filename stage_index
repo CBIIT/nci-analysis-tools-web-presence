@@ -223,6 +223,21 @@
         </div>
         <div class="tools-section">
           <h3>
+            <a href="https://survivalstatstools-stage.cancer.gov/">Survival Stats Tools</a>
+          </h3>
+          <div>
+            The Survival Stats Tools website is a suite of tools to analyze population-based survival data. 
+            These include  <a href="https://survivalstatstools-stage.cancer.gov/jpsurv">JPSurv</a>, 
+            a tool to estimate trends in cancer survival by calendar year of diagnosis,
+             <a href="https://survivalstatstools-stage.cancer.gov/cansurv/">CanSurv</a>,
+              a tool to fit models, including standard Cox proportional hazards and mixture cure models, 
+             to grouped survival data, and <a href=" https://survivalstatstools-stage.cancer.gov/recurrence">RecurRisk</a>, a tool to estimate the probability of 
+             progressing to distant recurrence.
+          </div>
+        </div>
+
+        <!-- <div class="tools-section">
+          <h3>
             <a href="https://survivalstatstools-stage.cancer.gov/">JPSurv</a>
           </h3>
           <div>
@@ -252,7 +267,7 @@
             software. The current version can handle Weibull and log-logistic
             distributions for the non-cured survival.
           </div>
-        </div>
+        </div> -->
 
         <!-- DCEG Analysis Tools -->
         <h2 class="tools-owner-title">
