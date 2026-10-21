@@ -143,14 +143,16 @@
         <div class="tools-section">
           <h3>
             <a href="https://scatlaslc-dev.ccr.cancer.gov/"
-              >Single-cell Atlas in Liver Cancer (scAtlasLC)</a
+              >Spatial and Single-Cell Atlas of Liver Cancer (scAtlasLC)</a
             >
           </h3>
           <div>
-            The scAtlasLC (single-cell Atlas in Liver Cancer) tool is a publicly
-            available data portal of single-cell transcriptomic profiles of
-            tumor cell communities in hepatocellular carcinoma and intrahepatic
-            cholangiocarcinoma.
+            The scAtlasLC is a publicly available multi-omics data portal for
+            characterizing cellular communities in liver cancer at single-cell and
+            spatial resolution. It includes single-cell transcriptomics, spatial
+            transcriptomics, and spatial proteomics data from hepatocellular
+            carcinoma (HCC) and intrahepatic cholangiocarcinoma (iCCA), the two
+            major subtypes of primary liver cancer.
           </div>
         </div>
 
