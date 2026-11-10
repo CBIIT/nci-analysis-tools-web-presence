@@ -558,14 +558,14 @@
             melanoma, and precursor lesions for some melanomas.
           </div>
         </div>
-        <div class="tools-section">
+        <!-- <div class="tools-section">
           <h3>
             <a href="https://pedigree-qa.cancer.gov/">Pedigree Builder</a>
           </h3>
           <div>
            TBD
           </div>
-        </div>
+        </div> -->
         <div class="tools-section">
           <h3>
             <a href="/pimixture/">PIMixture</a>
