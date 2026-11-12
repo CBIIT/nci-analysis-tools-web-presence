@@ -114,7 +114,7 @@
             >
           </h3>
           <div>
-            A Web Tool to explore the clinically-reportable assay that uses
+            A web tool to explore the clinically-reportable assay that uses
             genome-wide DNA methylation profiling as a diagnostic tool for
             tumors of the central nervous system.
           </div>
@@ -350,20 +350,18 @@
           </h3>
           <div>
             <p>
-              This toolset estimates risk stratification from early biomarker
-              data and includes math and strategies to advance biomarkers or
-              other risk measures identified case-control studies to clinical or
-              public health applications. The toolset will show quantities for
-              which people's intuition is poor, such as need for high
-              specificity for a single marker of a rare disease to improve
-              management by some serious intervention.
+              This toolset estimates risk stratification from early biomarker data and 
+              provides strategies to advance biomarkers or other risk measures identified 
+              through case-control studies to clinical or public health applications. 
+              The toolset will show quantities for which people's intuition is poor, 
+              such as need for a single marker of a rare disease to improve management 
+              by some serious intervention.
             </p>
 
             <p>
-              The toolset will allow to evaluate the feasibility of biomarkers
-              called promising before they get press office attention;
-              investigators spend efforts on hopeless pursuit; wasteful.
-              unethical clinical testing begins. Thus, using these strategies
+              The toolset will allow to evaluate the feasibility of promising biomarkers 
+              before they get press office attention,  investigators spend efforts on hopeless pursuits,
+              and wasteful, unethical clinical testing begins. Thus, using these strategies
               will allow focusing on the most promising markers early on, making
               specific improvements if required, or abandoning markers that are
               most likely to fail.
@@ -387,11 +385,11 @@
         <div class="tools-section">
           <h3>
             <a href="https://ccrisktool-qa.cancer.gov/"
-              >CCRAT - Colorectal Risk Assessment Tool</a
+              >CCRAT - Colorectal Cancer Risk Assessment Tool</a
             >
           </h3>
           <div>
-            The Colorectal Risk Assessment Tool (CCRAT) is a tool designed for
+            The Colorectal Cancer Risk Assessment Tool (CCRAT) is a tool designed for
             doctors and health providers to use along with their patients to
             determine their risk for developing colorectal cancer.
           </div>
@@ -403,7 +401,7 @@
             >
           </h3>
           <div>
-            TThe Chernobyl (Chornobyl in Ukrainian) Tissue Bank (CTB) is a
+            The Chernobyl (Chornobyl in Ukrainian) Tissue Bank (CTB) is a
             repository of samples donated by patients with thyroid tumors who
             live in the areas affected by the accident at the Chernobyl Nuclear
             Power Plant. The purpose of the CTB is to collect, document, and
@@ -560,12 +558,20 @@
             melanoma, and precursor lesions for some melanomas.
           </div>
         </div>
+        <!-- <div class="tools-section">
+          <h3>
+            <a href="https://pedigree-qa.cancer.gov/">Pedigree Builder</a>
+          </h3>
+          <div>
+           TBD
+          </div>
+        </div> -->
         <div class="tools-section">
           <h3>
             <a href="/pimixture/">PIMixture</a>
           </h3>
           <div>
-            The web tool, PIMixture estimates the absolute risk of asymptomatic
+            The web tool PIMixture estimates the absolute risk of asymptomatic
             disease or disease precursors. Because asymptomatic disease/disease
             precursors are often discovered through screening, collected data
             may present challenges for absolute and relative risk estimation.
