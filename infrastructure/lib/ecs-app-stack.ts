@@ -57,13 +57,19 @@ export class EcsAppStack extends cdk.Stack {
       gracePeriod,
     } = props;
 
-    // Stack-level tags
-    cdk.Tags.of(this).add("EnvironmentTier", tier);
-    cdk.Tags.of(this).add("ResourceName", `${tier}-${appName}`);
-    cdk.Tags.of(this).add("ManagedBy", "cdk");
-    cdk.Tags.of(this).add("CreatedBy", "cdk");
-    cdk.Tags.of(this).add("Project", "dceg-analysistools");
-    cdk.Tags.of(this).add("ApplicationName", appName);
+    // Newer CDK versions support tagging these resources; preserve existing deployments.
+    const tagOptions: cdk.TagProps = {
+      excludeResourceTypes: [
+        "AWS::ApplicationAutoScaling::ScalableTarget",
+        "AWS::ElasticLoadBalancingV2::ListenerRule",
+      ],
+    };
+    cdk.Tags.of(this).add("EnvironmentTier", tier, tagOptions);
+    cdk.Tags.of(this).add("ResourceName", `${tier}-${appName}`, tagOptions);
+    cdk.Tags.of(this).add("ManagedBy", "cdk", tagOptions);
+    cdk.Tags.of(this).add("CreatedBy", "cdk", tagOptions);
+    cdk.Tags.of(this).add("Project", "dceg-analysistools", tagOptions);
+    cdk.Tags.of(this).add("ApplicationName", appName, tagOptions);
 
     // Import existing shared resources
     const vpc = ec2.Vpc.fromLookup(this, "Vpc", { vpcId });
