@@ -12,7 +12,7 @@
     />
     <link rel="stylesheet" href="common/css/style.css" />
     <link rel="icon" type="image/x-icon" href="common/images/favicon.ico" />
-    <script src="https://assets.adobedtm.com/f1bfa9f7170c81b1a9a9ecdcc6c5215ee0b03c84/satelliteLib-4b219b82c4737db0e1797b6c511cf10c802c95cb.js"></script>
+    <script src="https://assets.adobedtm.com/6a4249cd0a2c/785de09de161/launch-70d67a6a40a8.min.js" async></script>
     <script src="https://cbiit.github.io/nci-softwaresolutions-elements/components/include-html.js"></script>
     <!-- Google Analytics (GA4) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2PTXQ845PE"></script>
@@ -78,7 +78,7 @@
         </h2>
         <div class="tools-section">
           <h3>
-            <a href="/3dvizsnp/"
+            <a href="https://www.cancergenomicscloud.org/tools-and-resources"
               >3DVizSNP - Rapid 3D Visualization of SNP Mutations</a
             >
           </h3>
@@ -114,7 +114,7 @@
             >
           </h3>
           <div>
-            A Web Tool to explore the clinically-reportable assay that uses
+            A web tool to explore the clinically-reportable assay that uses
             genome-wide DNA methylation profiling as a diagnostic tool for
             tumors of the central nervous system.
           </div>
@@ -143,14 +143,16 @@
         <div class="tools-section">
           <h3>
             <a href="https://scatlaslc-qa.ccr.cancer.gov/"
-              >Single-cell Atlas in Liver Cancer (scAtlasLC)</a
+              >Spatial and Single-Cell Atlas of Liver Cancer (scAtlasLC)</a
             >
           </h3>
           <div>
-            The scAtlasLC (single-cell Atlas in Liver Cancer) tool is a publicly
-            available data portal of single-cell transcriptomic profiles of
-            tumor cell communities in hepatocellular carcinoma and intrahepatic
-            cholangiocarcinoma.
+            The scAtlasLC is a publicly available multi-omics data portal for
+            characterizing cellular communities in liver cancer at single-cell and
+            spatial resolution. It includes single-cell transcriptomics, spatial
+            transcriptomics, and spatial proteomics data from hepatocellular
+            carcinoma (HCC) and intrahepatic cholangiocarcinoma (iCCA), the two
+            major subtypes of primary liver cancer.
           </div>
         </div>
 
@@ -223,8 +225,24 @@
         </div>
         <div class="tools-section">
           <h3>
+            <a href="https://survivalstatstools-qa.cancer.gov/">Survival Stats Tools</a>
+          </h3>
+          <div>
+            The Survival Stats Tools website is a suite of tools to analyze population-based survival data. 
+            These include  <a href="https://survivalstatstools-qa.cancer.gov/jpsurv">JPSurv</a>, 
+            a tool to estimate trends in cancer survival by calendar year of diagnosis,
+             <a href="https://survivalstatstools-qa.cancer.gov/cansurv/">CanSurv</a>,
+              a tool to fit models, including standard Cox proportional hazards and mixture cure models, 
+             to grouped survival data, and <a href=" https://survivalstatstools-qa.cancer.gov/recurrence">RecurRisk</a>, a tool to estimate the probability of 
+             progressing to distant recurrence.
+          </div>
+        </div>
+        
+        <!-- <div class="tools-section">
+          <h3>
             <a href="https://survivalstatstools-qa.cancer.gov/">JPSurv</a>
           </h3>
+          
           <div>
             JPSurv is a tool for estimating and presenting survival trend. It
             can be used to predict survival in any given year and any time
@@ -238,7 +256,20 @@
         </div>
         <div class="tools-section">
           <h3>
-            <a href="/recurrence/">RecurRisk</a>
+            <a href="https://survivalstatstools-dev.cancer.gov/cansurv/">CanSurv</a>
+          </h3>
+          <div>
+              CanSurv is used to analyze grouped population-based survival data. 
+              The tool can fit both standard parametric survival models, Cox proportional 
+              hazards models, and mixture cure survival models. The survival data can be either 
+              relative survival or cause-specific survival. Various graphs are provided for
+               model diagnosis: plots of actuarial and estimated survival functions, 
+               k-year survival probabilities, and deviance residuals.
+          </div>
+        </div>
+        <div class="tools-section">
+          <h3>
+            <a href=" https://survivalstatstools-dev.cancer.gov/recurrence">RecurRisk</a>
           </h3>
           <div>
             This tool has been developed to estimate the risk of progressing to
@@ -252,7 +283,7 @@
             software. The current version can handle Weibull and log-logistic
             distributions for the non-cured survival.
           </div>
-        </div>
+        </div> -->
 
         <!-- DCEG Analysis Tools -->
         <h2 class="tools-owner-title">
@@ -289,7 +320,7 @@
         </div>
         <div class="tools-section">
           <h3>
-            <a href="https://authorarranger-qa.nci.nih.gov/">AuthorArranger</a>
+            <a href="https://authorarranger-qa.nih.gov/">AuthorArranger</a>
           </h3>
           <div>
             AuthorArranger is a free web tool designed to help authors of
@@ -319,20 +350,18 @@
           </h3>
           <div>
             <p>
-              This toolset estimates risk stratification from early biomarker
-              data and includes math and strategies to advance biomarkers or
-              other risk measures identified case-control studies to clinical or
-              public health applications. The toolset will show quantities for
-              which people's intuition is poor, such as need for high
-              specificity for a single marker of a rare disease to improve
-              management by some serious intervention.
+              This toolset estimates risk stratification from early biomarker data and 
+              provides strategies to advance biomarkers or other risk measures identified 
+              through case-control studies to clinical or public health applications. 
+              The toolset will show quantities for which people's intuition is poor, 
+              such as need for a single marker of a rare disease to improve management 
+              by some serious intervention.
             </p>
 
             <p>
-              The toolset will allow to evaluate the feasibility of biomarkers
-              called promising before they get press office attention;
-              investigators spend efforts on hopeless pursuit; wasteful.
-              unethical clinical testing begins. Thus, using these strategies
+              The toolset will allow to evaluate the feasibility of promising biomarkers 
+              before they get press office attention,  investigators spend efforts on hopeless pursuits,
+              and wasteful, unethical clinical testing begins. Thus, using these strategies
               will allow focusing on the most promising markers early on, making
               specific improvements if required, or abandoning markers that are
               most likely to fail.
@@ -356,11 +385,11 @@
         <div class="tools-section">
           <h3>
             <a href="https://ccrisktool-qa.cancer.gov/"
-              >CCRAT - Colorectal Risk Assessment Tool</a
+              >CCRAT - Colorectal Cancer Risk Assessment Tool</a
             >
           </h3>
           <div>
-            The Colorectal Risk Assessment Tool (CCRAT) is a tool designed for
+            The Colorectal Cancer Risk Assessment Tool (CCRAT) is a tool designed for
             doctors and health providers to use along with their patients to
             determine their risk for developing colorectal cancer.
           </div>
@@ -372,7 +401,7 @@
             >
           </h3>
           <div>
-            TThe Chernobyl (Chornobyl in Ukrainian) Tissue Bank (CTB) is a
+            The Chernobyl (Chornobyl in Ukrainian) Tissue Bank (CTB) is a
             repository of samples donated by patients with thyroid tumors who
             live in the areas affected by the accident at the Chernobyl Nuclear
             Power Plant. The purpose of the CTB is to collect, document, and
@@ -529,12 +558,20 @@
             melanoma, and precursor lesions for some melanomas.
           </div>
         </div>
+        <!-- <div class="tools-section">
+          <h3>
+            <a href="https://pedigree-qa.cancer.gov/">Pedigree Builder</a>
+          </h3>
+          <div>
+           TBD
+          </div>
+        </div> -->
         <div class="tools-section">
           <h3>
             <a href="/pimixture/">PIMixture</a>
           </h3>
           <div>
-            The web tool, PIMixture estimates the absolute risk of asymptomatic
+            The web tool PIMixture estimates the absolute risk of asymptomatic
             disease or disease precursors. Because asymptomatic disease/disease
             precursors are often discovered through screening, collected data
             may present challenges for absolute and relative risk estimation.
